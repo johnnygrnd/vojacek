@@ -116,7 +116,7 @@ export default function Negotiation() {
           <div className="space-y-6">
             {[
               "Oddělíte emoce od procesu. Profesionální vyjednavač jedná racionálně i pod tlakem.",
-              "Zachováte vztah s protistranou. „Tvrdé" požadavky vznáší někdo jiný.",
+              'Zachováte vztah s protistranou. \u201ETvrdé\u201C požadavky vznáší někdo jiný.',
               "Získáte lepší podmínky. Zkušenost, techniky a příprava vedou k měřitelným výsledkům.",
               "Ušetříte čas. Vyjednavač řeší jednání, vy se věnujete svému byznysu.",
             ].map((text, i) => (
