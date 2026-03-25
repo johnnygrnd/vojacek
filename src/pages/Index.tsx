@@ -252,7 +252,7 @@ export default function Index() {
               <p className="body-lg text-primary-foreground/70 mb-8">
                 {audience === "firmy"
                   ? "Když je ve hře cena, riziko nebo vztah, slabá příprava je drahá. Pomohu vám vyjednat i vybojovat prostor pro dohodu."
-                  : "Pomohu vám, když se nechcete spoléhat na náhodu, emoce a „nějak to dopadne"."}
+                  : 'Pomohu vám, když se nechcete spoléhat na náhodu, emoce a \u201Enějak to dopadne\u201C.'}
               </p>
               <ul className="space-y-4 mb-10">
                 {(audience === "firmy" ? firmy : jednotlivci).map((item, i) => (
