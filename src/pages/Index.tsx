@@ -120,7 +120,7 @@ const testimonials = [
 ];
 
 const faqs = [
-  { q: "Je vhodné najmout vyjednavače jen kvůli ceně?", a: "Ano. Cena je jedním z nejčastějších důvodů. Profesionální příprava a zastoupení přináší měřitelné výsledky i v případech, kde jde „jen" o vyjednání lepší ceny." },
+  { q: "Je vhodné najmout vyjednavače jen kvůli ceně?", a: 'Ano. Cena je jedním z nejčastějších důvodů. Profesionální příprava a zastoupení přináší měřitelné výsledky i v případech, kde jde \u201Ejen\u201C o vyjednání lepší ceny.' },
   { q: "Co budete potřebovat na začátku?", a: "Stručný popis situace, vaše cíle a představu o ideálním výsledku. Vše ostatní řešíme společně na úvodním hovoru." },
   { q: "Jak rychle se umíme posunout?", a: "Úvodní hovor lze domluvit do 24 hodin. Přípravu strategie obvykle zvládáme v řádu dní." },
   { q: "Zastupujete i jednotlivce?", a: "Ano. Pracuji s firmami i jednotlivci. Od nemovitostních transakcí po pojistné události a majetkové spory." },
