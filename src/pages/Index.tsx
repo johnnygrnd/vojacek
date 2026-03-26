@@ -335,13 +335,14 @@ export default function Index() {
             title="Výsledek je měřitelný. A přichází z přípravy."
           />
 
+          {/* 3×2 grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {results.map((r, i) => (
+            {results.slice(0, 6).map((r, i) => (
               <AnimatedSection key={i} delay={i * 0.06}>
-                <div className="premium-card text-center py-10 px-8 h-full flex flex-col items-center justify-center">
-                  <p className="micro-text mb-4">{r.label}</p>
-                  <p className="text-sm text-muted-foreground mb-2">{r.beforeAfter}</p>
-                  <p className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-2">
+                <div className="premium-card text-center py-8 px-6 h-full flex flex-col items-center justify-center">
+                  <p className="micro-text mb-3">{r.label}</p>
+                  <p className="text-sm text-muted-foreground mb-1">{r.beforeAfter}</p>
+                  <p className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-1">
                     {r.main}
                   </p>
                   <p className="body-sm text-muted-foreground">{r.context}</p>
@@ -349,6 +350,20 @@ export default function Index() {
               </AnimatedSection>
             ))}
           </div>
+
+          {/* Featured card */}
+          {results[6] && (
+            <AnimatedSection delay={0.4} className="mt-5">
+              <div className="premium-card flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 py-10 px-10 md:px-16 bg-foreground/[0.03]">
+                <p className="micro-text shrink-0">{results[6].label}</p>
+                <p className="text-sm text-muted-foreground">{results[6].beforeAfter}</p>
+                <p className="font-serif text-3xl md:text-4xl font-semibold text-foreground">
+                  {results[6].main}
+                </p>
+                <p className="body-sm text-muted-foreground">{results[6].context}</p>
+              </div>
+            </AnimatedSection>
+          )}
 
           <AnimatedSection className="text-center mt-8">
             <p className="text-xs text-muted-foreground">
