@@ -18,47 +18,46 @@ import {
 
 const results = [
   {
-    context: "Nákup nemovitosti",
-    before: "145 mil. Kč",
-    after: "104,5 mil. Kč",
-    diff: "40,5 mil. Kč",
-    featured: true,
+    label: "Nákup nemovitosti",
+    beforeAfter: "145 mil. Kč → 104,5 mil. Kč",
+    main: "−40,5 mil. Kč",
+    context: "úspora při nákupu",
   },
   {
-    context: "Prodej podniku",
-    before: "12 mil. Kč",
-    after: "26,4 mil. Kč",
-    diff: "+14,4 mil. Kč",
+    label: "Prodej podniku",
+    beforeAfter: "12 mil. Kč → 26,4 mil. Kč",
+    main: "+14,4 mil. Kč",
+    context: "navýšení hodnoty při prodeji",
   },
   {
-    context: "Mzdové vyjednávání",
-    before: "16 %",
-    after: "7,5 %",
-    diff: "−8,5 p.b.",
+    label: "Mzdové vyjednávání",
+    beforeAfter: "16 % → 7,5 %",
+    main: "−8,5 p.b.",
+    context: "snížení mzdových nákladů",
   },
   {
-    context: "Nákup technologie",
-    before: "3,2 mil. Kč",
-    after: "2,1 mil. Kč",
-    diff: "1,1 mil. Kč",
+    label: "Nákup technologie",
+    beforeAfter: "3,2 mil. Kč → 2,1 mil. Kč",
+    main: "−1,1 mil. Kč",
+    context: "úspora při nákupu",
   },
   {
-    context: "Česká energetika",
-    before: "—",
-    after: "—",
-    diff: "14 mld. Kč úspora",
+    label: "Česká energetika",
+    beforeAfter: "—",
+    main: "14 mld. Kč",
+    context: "celková dosažená úspora",
   },
   {
-    context: "Vyjednávání o dotacích",
-    before: "—",
-    after: "—",
-    diff: "10 mld. Kč udrženo v ČR",
+    label: "Dotace",
+    beforeAfter: "—",
+    main: "10 mld. Kč",
+    context: "udrženo v ČR",
   },
   {
-    context: "Strategické vyjednávání",
-    before: "0 Kč",
-    after: "18 mil. Kč",
-    diff: "+18 mil. Kč získaná hodnota",
+    label: "Strategické vyjednávání",
+    beforeAfter: "0 Kč → 18 mil. Kč",
+    main: "+18 mil. Kč",
+    context: "nově vytvořená hodnota",
   },
 ];
 
@@ -336,48 +335,16 @@ export default function Index() {
             title="Výsledek je měřitelný. A přichází z přípravy."
           />
 
-          {/* Featured result */}
-          <AnimatedSection className="mb-12">
-            <div className="bg-foreground text-primary-foreground p-10 md:p-16 text-center max-w-3xl mx-auto">
-              <p className="micro-text text-primary-foreground/40 mb-6">
-                {results[0].context}
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 mb-6">
-                <div>
-                  <p className="text-sm text-primary-foreground/40 mb-1">Původní nabídka</p>
-                  <p className="font-serif text-2xl md:text-3xl font-semibold text-primary-foreground/60 line-through decoration-primary-foreground/20">
-                    {results[0].before}
-                  </p>
-                </div>
-                <div className="text-primary-foreground/20 text-2xl hidden sm:block">→</div>
-                <div>
-                  <p className="text-sm text-primary-foreground/40 mb-1">Výsledek</p>
-                  <p className="font-serif text-2xl md:text-3xl font-semibold text-primary-foreground">
-                    {results[0].after}
-                  </p>
-                </div>
-              </div>
-              <p className="font-serif text-xl md:text-2xl font-semibold text-accent">
-                → rozdíl {results[0].diff}
-              </p>
-            </div>
-          </AnimatedSection>
-
-          {/* Grid results */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {results.slice(1).map((r, i) => (
-              <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="premium-card text-center py-8">
-                  <p className="micro-text mb-4">{r.context}</p>
-                  {r.before !== "—" && (
-                    <p className="text-sm text-muted-foreground mb-1">
-                      <span className="line-through decoration-muted-foreground/30">{r.before}</span>{" "}
-                      → {r.after}
-                    </p>
-                  )}
-                  <p className="font-serif text-2xl md:text-3xl font-semibold text-primary mt-2">
-                    {r.diff}
+            {results.map((r, i) => (
+              <AnimatedSection key={i} delay={i * 0.06}>
+                <div className="premium-card text-center py-10 px-8 h-full flex flex-col items-center justify-center">
+                  <p className="micro-text mb-4">{r.label}</p>
+                  <p className="text-sm text-muted-foreground mb-2">{r.beforeAfter}</p>
+                  <p className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-2">
+                    {r.main}
                   </p>
+                  <p className="body-sm text-muted-foreground">{r.context}</p>
                 </div>
               </AnimatedSection>
             ))}
