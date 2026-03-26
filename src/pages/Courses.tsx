@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import SectionHeading from "@/components/sections/SectionHeading";
-import trainingImg from "@/assets/training-workshop.jpg";
+import trainingImg from "@/assets/training-photo.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const courses = [
