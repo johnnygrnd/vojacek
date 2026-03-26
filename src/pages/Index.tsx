@@ -484,20 +484,27 @@ export default function Index() {
       </section>
 
       {/* ═══════ TESTIMONIALS ═══════ */}
-      <section className="py-24 md:py-32 lg:py-36">
+      <section className="py-24 md:py-32 lg:py-36 bg-secondary/30">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-16">
             <p className="micro-text mb-4">Reference</p>
             <h2 className="heading-lg">Co říkají klienti</h2>
           </AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-6">
+
+          <div className="columns-1 md:columns-2 gap-6 space-y-6">
             {testimonials.map((t, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="bg-foreground p-8 md:p-10">
-                  <p className="font-serif text-xl md:text-2xl text-primary-foreground/85 mb-6 leading-relaxed">
-                    „{t.quote}"
+                <div
+                  className="break-inside-avoid rounded-2xl border border-foreground/[0.06] p-8 md:p-10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                  style={{
+                    background: `linear-gradient(135deg, hsl(var(--foreground) / 0.95), hsl(var(--foreground) / 0.88))`,
+                  }}
+                >
+                  <span className="block font-serif text-4xl text-primary-foreground/15 leading-none mb-3 select-none">„</span>
+                  <p className={`font-serif ${i === 0 ? 'text-xl md:text-2xl' : 'text-lg md:text-xl'} text-primary-foreground/85 leading-[1.55] mb-6`}>
+                    {t.quote}
                   </p>
-                  <p className="text-sm text-primary-foreground/40">{t.author}</p>
+                  <p className="text-sm text-primary-foreground/35">— {t.author}</p>
                 </div>
               </AnimatedSection>
             ))}
