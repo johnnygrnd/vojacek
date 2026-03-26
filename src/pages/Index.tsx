@@ -155,19 +155,20 @@ export default function Index() {
       {/* HERO */}
       <section className="relative min-h-[90vh] flex items-end">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Ondřej Vojáček" className="w-full h-full object-cover object-top" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/30 to-transparent" />
+          <img src={heroImg} alt="Ondřej Vojáček" className="w-full h-full object-cover object-[30%_20%]" width={1920} height={1080} />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/95 via-foreground/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-l from-foreground/60 via-transparent to-transparent" />
         </div>
         <div className="relative container-wide pb-16 md:pb-20 pt-40">
-          <AnimatedSection className="max-w-2xl">
+          <AnimatedSection className="max-w-xl ml-auto text-right">
             <p className="micro-text text-primary-foreground/50 mb-4">Vyjednavač · Konzultant · Lektor</p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] tracking-tight text-primary-foreground mb-5" style={{ fontFamily: 'var(--font-serif)' }}>
               Vyjednám vám lepší podmínky. Nebo vás naučím, jak je vyjednávat sami.
             </h1>
-            <p className="body-md text-primary-foreground/60 mb-8 max-w-lg">
+            <p className="body-md text-primary-foreground/60 mb-8">
               Pomáhám firmám i jednotlivcům ve chvílích, kdy na výsledku skutečně záleží – v kontraktech, sporech, cenách i strategických jednáních.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-5">
+            <div className="flex flex-col sm:flex-row gap-4 mb-5 justify-end">
               <Button variant="premium" size="xl" asChild>
                 <Link to="/kontakt">Domluvit úvodní hovor</Link>
               </Button>
