@@ -54,6 +54,12 @@ const results = [
     after: "—",
     diff: "10 mld. Kč udrženo v ČR",
   },
+  {
+    context: "Strategické vyjednávání",
+    before: "0 Kč",
+    after: "18 mil. Kč",
+    diff: "+18 mil. Kč získaná hodnota",
+  },
 ];
 
 const situations = [
