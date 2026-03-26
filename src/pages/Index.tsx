@@ -153,67 +153,33 @@ export default function Index() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="relative min-h-screen bg-foreground text-primary-foreground overflow-hidden">
-        {/* Background photo – full bleed, desaturated, dimmed */}
+      <section className="relative min-h-[90vh] flex items-end">
         <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt="Ondřej Vojáček"
-            className="w-full h-full object-cover object-top scale-105"
-            width={1920}
-            height={1080}
-          />
-          <div className="absolute inset-0 bg-foreground/60" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/80 to-transparent" />
+          <img src={heroImg} alt="Ondřej Vojáček" className="w-full h-full object-cover object-top" width={1920} height={1080} />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/30 to-transparent" />
         </div>
-
-        {/* Content – anchored left, vertically centered */}
-        <div className="relative min-h-screen flex items-center">
-          <div className="container-wide py-32">
-            <div className="max-w-xl">
-              <AnimatedSection>
-                <div className="w-12 h-px bg-accent mb-8" />
-                <p className="text-sm tracking-[0.3em] uppercase text-primary-foreground/40 mb-8">
-                  Vyjednavač · Konzultant · Lektor
-                </p>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.1}>
-                <h1
-                  className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight mb-8"
-                  style={{ fontFamily: 'var(--font-serif)' }}
-                >
-                  Vyjednám vám lepší
-                  <br />
-                  <span className="text-accent">podmínky.</span>
-                </h1>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.2}>
-                <p className="text-lg leading-relaxed text-primary-foreground/50 mb-12 max-w-md">
-                  Pomáhám firmám i jednotlivcům ve chvílích, kdy na výsledku skutečně záleží.
-                </p>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.3}>
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Button variant="premium" size="xl" asChild>
-                    <Link to="/kontakt">Domluvit úvodní hovor</Link>
-                  </Button>
-                  <Button variant="premium-outline" size="xl" asChild className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-                    <Link to="/kurzy">Zobrazit kurzy</Link>
-                  </Button>
-                </div>
-                <p className="text-xs text-primary-foreground/25 tracking-wide">
-                  Diskrétnost je samozřejmost. Do 24 hodin navrhnu další krok.
-                </p>
-              </AnimatedSection>
+        <div className="relative container-wide pb-16 md:pb-20 pt-40">
+          <AnimatedSection className="max-w-2xl">
+            <p className="micro-text text-primary-foreground/50 mb-4">Vyjednavač · Konzultant · Lektor</p>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] tracking-tight text-primary-foreground mb-5" style={{ fontFamily: 'var(--font-serif)' }}>
+              Vyjednám vám lepší podmínky. Nebo vás naučím, jak je vyjednávat sami.
+            </h1>
+            <p className="body-md text-primary-foreground/60 mb-8 max-w-lg">
+              Pomáhám firmám i jednotlivcům ve chvílích, kdy na výsledku skutečně záleží – v kontraktech, sporech, cenách i strategických jednáních.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-5">
+              <Button variant="premium" size="xl" asChild>
+                <Link to="/kontakt">Domluvit úvodní hovor</Link>
+              </Button>
+              <Button variant="premium-outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
+                <Link to="/kurzy">Zobrazit kurzy</Link>
+              </Button>
             </div>
-          </div>
+            <p className="text-xs text-primary-foreground/35">
+              Diskrétnost je samozřejmost. Stručně popíšete situaci, do 24 hodin navrhnu další krok.
+            </p>
+          </AnimatedSection>
         </div>
-
-        {/* Bottom accent line */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-accent/60 via-accent/20 to-transparent" />
       </section>
 
       {/* PROOF TILES */}
