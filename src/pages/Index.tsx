@@ -153,33 +153,47 @@ export default function Index() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-end">
-        <div className="absolute inset-0">
-          <img src={heroImg} alt="Ondřej Vojáček" className="w-full h-full object-cover object-[25%_15%]" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/30 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-l from-foreground/70 via-foreground/20 to-transparent md:via-transparent" />
-        </div>
-        <div className="relative container-wide pb-16 md:pb-20 pt-40 flex justify-end">
-          <AnimatedSection className="max-w-lg text-right">
-            <p className="micro-text text-primary-foreground/50 mb-4">Vyjednavač · Konzultant · Lektor</p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] tracking-tight text-primary-foreground mb-5" style={{ fontFamily: 'var(--font-serif)' }}>
-              Vyjednám vám lepší podmínky. Nebo vás naučím, jak je vyjednávat sami.
-            </h1>
-            <p className="body-md text-primary-foreground/60 mb-8">
-              Pomáhám firmám i jednotlivcům ve chvílích, kdy na výsledku skutečně záleží – v kontraktech, sporech, cenách i strategických jednáních.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-5 justify-end">
-              <Button variant="premium" size="xl" asChild>
-                <Link to="/kontakt">Domluvit úvodní hovor</Link>
-              </Button>
-              <Button variant="premium-outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
-                <Link to="/kurzy">Zobrazit kurzy</Link>
-              </Button>
+      {/* HERO – split layout */}
+      <section className="relative bg-foreground">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[90vh]">
+            {/* Left: Image */}
+            <div className="relative min-h-[50vh] md:min-h-0">
+              <img
+                src={heroImg}
+                alt="Ondřej Vojáček"
+                className="absolute inset-0 w-full h-full object-cover object-[35%_15%]"
+                width={1920}
+                height={1080}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-foreground/80 hidden md:block" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-foreground/70 md:hidden" />
             </div>
-            <p className="text-xs text-primary-foreground/35">
-              Diskrétnost je samozřejmost. Stručně popíšete situaci, do 24 hodin navrhnu další krok.
-            </p>
-          </AnimatedSection>
+
+            {/* Right: Text */}
+            <div className="relative flex items-center py-16 md:py-24 md:pl-16 lg:pl-24 px-6 md:px-0">
+              <AnimatedSection className="max-w-[520px]">
+                <p className="micro-text text-primary-foreground/50 mb-5">Vyjednavač · Konzultant · Lektor</p>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] tracking-tight text-primary-foreground mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
+                  Vyjednám vám lepší podmínky. Nebo vás naučím, jak je vyjednávat&nbsp;sami.
+                </h1>
+                <p className="body-md text-primary-foreground/55 mb-10 max-w-md">
+                  Pomáhám firmám i jednotlivcům ve chvílích, kdy na výsledku skutečně záleží – v kontraktech, sporech, cenách i strategických jednáních.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                  <Button variant="premium" size="xl" asChild>
+                    <Link to="/kontakt">Domluvit úvodní hovor</Link>
+                  </Button>
+                  <Button variant="premium-outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
+                    <Link to="/kurzy">Zobrazit kurzy</Link>
+                  </Button>
+                </div>
+                <p className="text-xs text-primary-foreground/30">
+                  Diskrétnost je samozřejmost. Stručně popíšete situaci, do 24 hodin navrhnu další krok.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
         </div>
       </section>
 
