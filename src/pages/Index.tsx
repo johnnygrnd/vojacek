@@ -21,7 +21,7 @@ const results = [
     context: "Nákup nemovitosti",
     before: "145 mil. Kč",
     after: "104,5 mil. Kč",
-    diff: "40 mil. Kč",
+    diff: "40,5 mil. Kč",
     featured: true,
   },
   {
