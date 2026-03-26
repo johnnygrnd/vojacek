@@ -335,48 +335,16 @@ export default function Index() {
             title="Výsledek je měřitelný. A přichází z přípravy."
           />
 
-          {/* Featured result */}
-          <AnimatedSection className="mb-12">
-            <div className="bg-foreground text-primary-foreground p-10 md:p-16 text-center max-w-3xl mx-auto">
-              <p className="micro-text text-primary-foreground/40 mb-6">
-                {results[0].context}
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 mb-6">
-                <div>
-                  <p className="text-sm text-primary-foreground/40 mb-1">Původní nabídka</p>
-                  <p className="font-serif text-2xl md:text-3xl font-semibold text-primary-foreground/60 line-through decoration-primary-foreground/20">
-                    {results[0].before}
-                  </p>
-                </div>
-                <div className="text-primary-foreground/20 text-2xl hidden sm:block">→</div>
-                <div>
-                  <p className="text-sm text-primary-foreground/40 mb-1">Výsledek</p>
-                  <p className="font-serif text-2xl md:text-3xl font-semibold text-primary-foreground">
-                    {results[0].after}
-                  </p>
-                </div>
-              </div>
-              <p className="font-serif text-xl md:text-2xl font-semibold text-accent">
-                → rozdíl {results[0].diff}
-              </p>
-            </div>
-          </AnimatedSection>
-
-          {/* Grid results */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {results.slice(1).map((r, i) => (
-              <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="premium-card text-center py-8">
-                  <p className="micro-text mb-4">{r.context}</p>
-                  {r.before !== "—" && (
-                    <p className="text-sm text-muted-foreground mb-1">
-                      <span className="line-through decoration-muted-foreground/30">{r.before}</span>{" "}
-                      → {r.after}
-                    </p>
-                  )}
-                  <p className="font-serif text-2xl md:text-3xl font-semibold text-primary mt-2">
-                    {r.diff}
+            {results.map((r, i) => (
+              <AnimatedSection key={i} delay={i * 0.06}>
+                <div className="premium-card text-center py-10 px-8 h-full flex flex-col items-center justify-center">
+                  <p className="micro-text mb-4">{r.label}</p>
+                  <p className="text-sm text-muted-foreground mb-2">{r.beforeAfter}</p>
+                  <p className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-2">
+                    {r.main}
                   </p>
+                  <p className="body-sm text-muted-foreground">{r.context}</p>
                 </div>
               </AnimatedSection>
             ))}
