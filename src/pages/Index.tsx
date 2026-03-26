@@ -484,16 +484,16 @@ export default function Index() {
       </section>
 
       {/* ═══════ TESTIMONIALS ═══════ */}
-      <section className="py-24 md:py-32 lg:py-36 bg-foreground text-primary-foreground">
+      <section className="py-24 md:py-32 lg:py-36">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-16">
-            <p className="micro-text text-primary-foreground/40 mb-4">Reference</p>
-            <h2 className="heading-lg text-primary-foreground">Co říkají klienti</h2>
+            <p className="micro-text mb-4">Reference</p>
+            <h2 className="heading-lg">Co říkají klienti</h2>
           </AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((t, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="border border-primary-foreground/10 p-8 md:p-10">
+                <div className="bg-foreground p-8 md:p-10">
                   <p className="font-serif text-xl md:text-2xl text-primary-foreground/85 mb-6 leading-relaxed">
                     „{t.quote}"
                   </p>
