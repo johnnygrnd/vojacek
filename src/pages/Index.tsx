@@ -153,46 +153,68 @@ export default function Index() {
   return (
     <Layout>
       {/* HERO */}
-      {/* HERO – split layout */}
-      <section className="relative bg-foreground">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 md:grid-cols-2 min-h-[90vh]">
-            {/* Left: Image */}
-            <div className="relative min-h-[50vh] md:min-h-0">
-              <img
-                src={heroImg}
-                alt="Ondřej Vojáček"
-                className="absolute inset-0 w-full h-full object-cover object-[35%_15%]"
-                width={1920}
-                height={1080}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-foreground/80 hidden md:block" />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-foreground/70 md:hidden" />
-            </div>
+      {/* HERO – cinematic blend */}
+      <section className="relative bg-foreground min-h-[90vh] flex items-center overflow-hidden">
+        {/* Image – edge to edge left */}
+        <div className="absolute inset-0 md:right-[35%]">
+          <img
+            src={heroImg}
+            alt="Ondřej Vojáček"
+            className="w-full h-full object-cover object-[35%_15%]"
+            width={1920}
+            height={1080}
+          />
+        </div>
 
-            {/* Right: Text */}
-            <div className="relative flex items-center py-16 md:py-24 md:pl-16 lg:pl-24 px-6 md:px-0">
-              <AnimatedSection className="max-w-[520px]">
-                <p className="micro-text text-primary-foreground/50 mb-5">Vyjednavač · Konzultant · Lektor</p>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] tracking-tight text-primary-foreground mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
-                  Vyjednám vám lepší podmínky. Nebo vás naučím, jak je vyjednávat&nbsp;sami.
-                </h1>
-                <p className="body-md text-primary-foreground/55 mb-10 max-w-md">
-                  Pomáhám firmám i jednotlivcům ve chvílích, kdy na výsledku skutečně záleží – v kontraktech, sporech, cenách i strategických jednáních.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                  <Button variant="premium" size="xl" asChild>
-                    <Link to="/kontakt">Domluvit úvodní hovor</Link>
-                  </Button>
-                  <Button variant="premium-outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
-                    <Link to="/kurzy">Zobrazit kurzy</Link>
-                  </Button>
-                </div>
-                <p className="text-xs text-primary-foreground/30">
-                  Diskrétnost je samozřejmost. Stručně popíšete situaci, do 24 hodin navrhnu další krok.
-                </p>
-              </AnimatedSection>
-            </div>
+        {/* Gradient dissolve – desktop */}
+        <div
+          className="absolute inset-0 hidden md:block pointer-events-none"
+          style={{
+            background: `linear-gradient(to right, 
+              hsl(var(--foreground) / 0) 0%, 
+              hsl(var(--foreground) / 0.15) 30%, 
+              hsl(var(--foreground) / 0.6) 50%, 
+              hsl(var(--foreground) / 0.92) 65%, 
+              hsl(var(--foreground)) 75%
+            )`,
+          }}
+        />
+
+        {/* Gradient – mobile (bottom fade) */}
+        <div
+          className="absolute inset-0 md:hidden pointer-events-none"
+          style={{
+            background: `linear-gradient(to bottom, 
+              hsl(var(--foreground) / 0) 30%, 
+              hsl(var(--foreground) / 0.5) 60%, 
+              hsl(var(--foreground)) 85%
+            )`,
+          }}
+        />
+
+        {/* Text – right side */}
+        <div className="relative w-full container-wide">
+          <div className="md:ml-auto md:max-w-[520px] mt-[55vh] md:mt-0 px-6 md:px-0 pb-16 md:pb-0">
+            <AnimatedSection>
+              <p className="micro-text text-primary-foreground/50 mb-5">Vyjednavač · Konzultant · Lektor</p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] tracking-tight text-primary-foreground mb-6" style={{ fontFamily: 'var(--font-serif)' }}>
+                Vyjednám vám lepší podmínky. Nebo vás naučím, jak je vyjednávat&nbsp;sami.
+              </h1>
+              <p className="body-md text-primary-foreground/55 mb-10 max-w-md">
+                Pomáhám firmám i jednotlivcům ve chvílích, kdy na výsledku skutečně záleží – v kontraktech, sporech, cenách i strategických jednáních.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                <Button variant="premium" size="xl" asChild>
+                  <Link to="/kontakt">Domluvit úvodní hovor</Link>
+                </Button>
+                <Button variant="premium-outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
+                  <Link to="/kurzy">Zobrazit kurzy</Link>
+                </Button>
+              </div>
+              <p className="text-xs text-primary-foreground/30">
+                Diskrétnost je samozřejmost. Stručně popíšete situaci, do 24 hodin navrhnu další krok.
+              </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
