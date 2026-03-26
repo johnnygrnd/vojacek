@@ -175,7 +175,7 @@ const courses = [
 const faqs = [
   {
     q: "Je vhodné najmout vyjednavače jen kvůli ceně?",
-    a: "Ano. Cena je jedním z nejčastějších důvodů. Profesionální příprava a zastoupení přináší měřitelné výsledky i v případech, kde jde „jen" o vyjednání lepší ceny.",
+    a: 'Ano. Cena je jedním z nejčastějších důvodů. Profesionální příprava a zastoupení přináší měřitelné výsledky i v případech, kde jde \u201Ejen\u201C o vyjednání lepší ceny.',
   },
   {
     q: "Co budete potřebovat na začátku?",
