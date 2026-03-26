@@ -17,6 +17,7 @@ import Terms from "./pages/Terms.tsx";
 import Privacy from "./pages/Privacy.tsx";
 import Admin from "./pages/Admin.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
