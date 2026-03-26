@@ -491,17 +491,17 @@ export default function Index() {
             <h2 className="heading-lg">Co říkají klienti</h2>
           </AnimatedSection>
 
-          <div className="columns-1 md:columns-2 gap-6 space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((t, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div
-                  className="break-inside-avoid rounded-2xl border border-foreground/[0.06] p-8 md:p-10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                  className="h-full rounded-2xl border border-foreground/[0.06] p-8 md:p-10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
                   style={{
                     background: `linear-gradient(135deg, hsl(var(--foreground) / 0.95), hsl(var(--foreground) / 0.88))`,
                   }}
                 >
                   <span className="block font-serif text-4xl text-primary-foreground/15 leading-none mb-3 select-none">„</span>
-                  <p className={`font-serif ${i === 0 ? 'text-xl md:text-2xl' : 'text-lg md:text-xl'} text-primary-foreground/85 leading-[1.55] mb-6`}>
+                  <p className="font-serif text-lg md:text-xl text-primary-foreground/85 leading-[1.55] mb-6 flex-1">
                     {t.quote}
                   </p>
                   <p className="text-sm text-primary-foreground/35">— {t.author}</p>
