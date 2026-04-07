@@ -5,8 +5,8 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navItems = [
-  { label: "Služby", href: "/sluzby" },
-  { label: "Kurzy", href: "/kurzy" },
+  { label: "Vyjednávání", href: "/vyjednavani" },
+  { label: "Tréninky", href: "/kurzy" },
   { label: "Reference", href: "/reference" },
   { label: "Články", href: "/clanky" },
   { label: "O mně", href: "/o-mne" },

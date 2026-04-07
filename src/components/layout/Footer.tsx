@@ -22,9 +22,8 @@ export default function Footer() {
             <h4 className="micro-text text-primary-foreground/40 mb-4">Navigace</h4>
             <ul className="space-y-3">
               {[
-                { label: "Služby", href: "/sluzby" },
                 { label: "Vyjednávání", href: "/vyjednavani" },
-                { label: "Kurzy", href: "/kurzy" },
+                { label: "Tréninky vyjednávání", href: "/kurzy" },
                 { label: "Veřejný trénink", href: "/verejny-trenink" },
                 { label: "Reference", href: "/reference" },
               ].map((item) => (
