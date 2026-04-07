@@ -9,51 +9,51 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const courses = [
   {
     title: "Veřejný trénink",
-    desc: "Třídenní komplexní trénink vyjednávání. Psychologie, techniky, simulace.",
+    desc: "Třídenní komplexní trénink vyjednávání. Psychologie, techniky, simulace reálných situací.",
     audience: "Pro jednotlivce i zástupce firem",
     duration: "3 dny",
     price: "39 000 Kč",
-    cta: "Termíny a registrace",
-    href: "/verejny-trenink",
+    cta: "Detail a registrace",
+    href: "/kurzy/verejny-trenink",
     featured: true,
   },
   {
-    title: "Firemní trénink – Strategie a psychologie",
-    desc: "Dvoudenní kurz pro firemní týmy. Strategie vyjednávání, psychologie protistrany, simulace reálných situací.",
+    title: "Firemní trénink",
+    desc: "Strategie a psychologie ve vyjednávání. Trénink na míru pro firemní týmy.",
     audience: "Pro obchodní, nákupní a manažerské týmy",
-    duration: "2 dny",
+    duration: "2–3 dny",
     price: "od 132 000 Kč",
-    cta: "Poptat firemní školení",
-    href: "/kontakt",
+    cta: "Detail tréninku",
+    href: "/kurzy/firemni-trenink",
     featured: false,
   },
   {
     title: "Vyjednávání o cenách",
-    desc: "Dvoudenní trénink zaměřený na cenová vyjednávání. Příprava argumentace, taktiky a kontrola ústupků.",
+    desc: "Dvoudenní intenzivní trénink zaměřený na cenová vyjednávání a kontrolu ústupků.",
     audience: "Pro nákupčí, obchodníky a management",
     duration: "2 dny",
     price: "od 126 000 Kč",
-    cta: "Poptat kurz",
-    href: "/kontakt",
+    cta: "Detail kurzu",
+    href: "/kurzy/vyjednavani-o-cenach",
     featured: false,
   },
   {
     title: "Individuální trénink",
-    desc: "Trénink na míru. Konkrétní situace, příprava na jednání, rozvoj vyjednávací dovednosti.",
-    audience: "Pro jednotlivce",
+    desc: "Příprava na konkrétní jednání nebo rozvoj vyjednávací dovednosti na míru.",
+    audience: "Pro manažery a jednatele",
     duration: "Dle potřeby",
     price: "Cena na dotaz",
-    cta: "Domluvit individuální trénink",
-    href: "/kontakt",
+    cta: "Detail tréninku",
+    href: "/kurzy/individualni-trenink",
     featured: false,
   },
 ];
 
 const faqs = [
-  { q: "Pro koho jsou kurzy vhodné?", a: "Pro každého, kdo vyjednává – obchodníky, nákupčí, manažery, právníky, podnikatele i jednotlivce." },
+  { q: "Pro koho jsou tréninky vhodné?", a: "Pro každého, kdo vyjednává — obchodníky, nákupčí, manažery, právníky, podnikatele i jednotlivce." },
   { q: "Proč simulace místo teorie?", a: "Vyjednávání je dovednost, ne znalost. Dovednost se buduje praxí. Simulace jsou nejefektivnější cesta." },
-  { q: "Lze firemní kurz upravit na míru?", a: "Ano. Každý firemní kurz přizpůsobuji odvětví, rolím a reálným situacím klienta." },
-  { q: "Kolik lidí může být na firemním kurzu?", a: "Optimální skupina je 8–16 účastníků. Simulace vyžadují aktivní zapojení každého." },
+  { q: "Lze firemní trénink upravit na míru?", a: "Ano. Každý firemní trénink přizpůsobuji odvětví, rolím a reálným situacím klienta." },
+  { q: "Kolik lidí může být na firemním tréninku?", a: "Optimální skupina je 8–16 účastníků. Simulace vyžadují aktivní zapojení každého." },
 ];
 
 export default function Courses() {
@@ -61,14 +61,14 @@ export default function Courses() {
     <Layout>
       {/* Hero */}
       <section className="relative">
-        <img src={trainingImg} alt="Kurzy vyjednávání" className="w-full h-64 md:h-96 object-cover" width={1200} height={800} />
+        <img src={trainingImg} alt="Tréninky vyjednávání" className="w-full h-64 md:h-96 object-cover" width={1200} height={800} />
         <div className="absolute inset-0 bg-foreground/60 flex items-center">
           <div className="container-wide">
             <AnimatedSection>
-              <p className="micro-text text-primary-foreground/60 mb-4">Kurzy</p>
-              <h1 className="heading-xl text-primary-foreground">Kurzy vyjednávání pro firmy i jednotlivce</h1>
+              <p className="micro-text text-brass mb-4">Tréninky</p>
+              <h1 className="heading-xl text-primary-foreground">Tréninky vyjednávání</h1>
               <p className="body-lg text-primary-foreground/70 mt-4 max-w-xl">
-                Osvědčené postupy, které vás dovedou k výsledku. Prakticky. V simulacích.
+                Praktické výcviky postavené na simulacích. Žádná teorie — dovednost, kterou použijete hned.
               </p>
             </AnimatedSection>
           </div>
@@ -81,8 +81,8 @@ export default function Courses() {
           <div className="grid sm:grid-cols-2 gap-6">
             {courses.map((c, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className={`premium-card flex flex-col h-full ${c.featured ? "border-primary/30" : ""}`}>
-                  {c.featured && <p className="micro-text text-primary mb-4">Nejoblíbenější</p>}
+                <div className={`premium-card flex flex-col h-full ${c.featured ? "border-brass/30" : ""}`}>
+                  {c.featured && <p className="text-xs font-semibold text-brass tracking-[0.15em] uppercase mb-4">Nejoblíbenější</p>}
                   <h3 className="heading-sm mb-3">{c.title}</h3>
                   <p className="body-md text-muted-foreground mb-4">{c.desc}</p>
                   <div className="space-y-2 mb-6 flex-1">
@@ -104,9 +104,10 @@ export default function Courses() {
       <section className="section-padding bg-foreground text-primary-foreground">
         <div className="container-narrow text-center">
           <AnimatedSection>
+            <p className="micro-text text-brass mb-4">Přístup</p>
             <h2 className="heading-lg text-primary-foreground mb-6">Proč simulace místo teorie</h2>
             <p className="body-lg text-primary-foreground/70 max-w-2xl mx-auto">
-              Vyjednávání se nedá naučit z knihy. Je to dovednost, která se buduje opakovanou praxí v bezpečném prostředí. Na kurzech vyjednáváte – ne posloucháte.
+              Vyjednávání se nedá naučit z knihy. Je to dovednost, která se buduje opakovanou praxí v bezpečném prostředí. Na kurzech vyjednáváte — ne posloucháte.
             </p>
           </AnimatedSection>
         </div>
@@ -115,7 +116,7 @@ export default function Courses() {
       {/* FAQ */}
       <section className="section-padding">
         <div className="container-narrow">
-          <SectionHeading title="Časté dotazy ke kurzům" />
+          <SectionHeading title="Časté dotazy" />
           <Accordion type="single" collapsible className="space-y-2">
             {faqs.map((f, i) => (
               <AccordionItem key={i} value={`faq-${i}`} className="border border-border/60 bg-card px-6">
@@ -134,9 +135,9 @@ export default function Courses() {
         <div className="container-narrow text-center">
           <AnimatedSection>
             <h2 className="heading-lg mb-6">Chcete trénink na míru?</h2>
-            <p className="body-lg text-muted-foreground mb-8">Napište mi a připravím návrh kurzu přesně pro vaše potřeby.</p>
+            <p className="body-lg text-muted-foreground mb-8">Napište mi a připravím návrh tréninku přesně pro vaše potřeby.</p>
             <Button variant="premium" size="xl" asChild>
-              <Link to="/kontakt">Poptat firemní školení</Link>
+              <Link to="/kontakt">Poptat firemní trénink</Link>
             </Button>
           </AnimatedSection>
         </div>

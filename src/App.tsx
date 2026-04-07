@@ -4,9 +4,9 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
-import Services from "./pages/Services.tsx";
 import Negotiation from "./pages/Negotiation.tsx";
 import Courses from "./pages/Courses.tsx";
+import CourseDetail from "./pages/CourseDetail.tsx";
 import PublicTraining from "./pages/PublicTraining.tsx";
 import References from "./pages/References.tsx";
 import Blog from "./pages/Blog.tsx";
@@ -30,9 +30,9 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/sluzby" element={<Services />} />
           <Route path="/vyjednavani" element={<Negotiation />} />
           <Route path="/kurzy" element={<Courses />} />
+          <Route path="/kurzy/:slug" element={<CourseDetail />} />
           <Route path="/verejny-trenink" element={<PublicTraining />} />
           <Route path="/reference" element={<References />} />
           <Route path="/clanky" element={<Blog />} />

@@ -23,7 +23,7 @@ export default function Negotiation() {
         </div>
         <div className="relative container-wide py-20">
           <AnimatedSection className="max-w-2xl">
-            <p className="micro-text text-primary-foreground/60 mb-6">Vyjednávání a zastupování</p>
+            <p className="micro-text text-brass mb-6">Vyjednávání a zastupování</p>
             <h1 className="heading-xl text-primary-foreground mb-6">
               Vyjednám vám, co potřebujete. Rychle a účinně.
             </h1>
@@ -38,17 +38,35 @@ export default function Negotiation() {
                 <a href="tel:+420731407976">Zavolat</a>
               </Button>
             </div>
-            <p className="text-xs text-primary-foreground/40">
-              Čím citlivější situace, tím víc dává smysl chladná hlava a detailní příprava.
-            </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* What I solve */}
+      {/* Co to znamená */}
       <section className="section-padding">
         <div className="container-wide">
-          <SectionHeading label="Oblasti" title="Co typicky řeším" />
+          <SectionHeading label="Služba" title="Co vyjednávání a zastupování znamená" />
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl">
+            <AnimatedSection>
+              <p className="body-md text-muted-foreground">
+                Převezmu za vás jednání s protistranou — připravím strategii, argumentaci a scénáře. 
+                Řídím celý proces od analýzy situace po finální dohodu. Vy se soustředíte na rozhodování.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <p className="body-md text-muted-foreground">
+                Nebo vás na jednání připravím — dodám plán, rozbor protistrany a trénink klíčových momentů. 
+                Jednáte vy, ale s kontrolou nad výsledkem.
+              </p>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Pro koho */}
+      <section className="section-padding bg-secondary/50">
+        <div className="container-wide">
+          <SectionHeading label="Pro koho" title="V jakých situacích pomáhám" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { t: "Obchodní smlouvy", d: "Kontrakty, podmínky, sankce, ceny. Od prvního návrhu po finální podpis." },
@@ -67,22 +85,50 @@ export default function Negotiation() {
         </div>
       </section>
 
-      {/* How I work */}
+      {/* Jak probíhá spolupráce */}
+      <section className="section-padding">
+        <div className="container-wide">
+          <SectionHeading label="Proces" title="Jak probíhá spolupráce" />
+          <div className="relative grid md:grid-cols-4 gap-8 md:gap-10">
+            <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-border" />
+            {[
+              { step: "01", title: "Úvodní konzultace", desc: "Popíšete situaci, definujeme cíle a posoudíme, jaký přístup je pro vás vhodný." },
+              { step: "02", title: "Analýza a strategie", desc: "Zmapuji protistranu, připravím scénáře, argumentaci a detailní plán jednání." },
+              { step: "03", title: "Vyjednávání", desc: "Jednám za vás nebo vás vedu. S cílem dosáhnout nejlepšího možného výsledku." },
+              { step: "04", title: "Výsledek a follow-up", desc: "Vyhodnocení dohody, doporučení dalších kroků a podpora při implementaci." },
+            ].map((s, i) => (
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <div className="relative">
+                  <div className="w-10 h-10 rounded-full bg-foreground text-primary-foreground flex items-center justify-center font-serif text-sm font-semibold mb-6 relative z-10">
+                    {s.step}
+                  </div>
+                  <h3 className="heading-sm mb-3">{s.title}</h3>
+                  <p className="body-md text-muted-foreground">{s.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Co získáte */}
       <section className="section-padding bg-foreground text-primary-foreground">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-16">
-            <p className="micro-text text-primary-foreground/40 mb-4">Přístup</p>
-            <h2 className="heading-lg text-primary-foreground">Jak pracuji</h2>
+            <p className="micro-text text-brass mb-4">Přínos</p>
+            <h2 className="heading-lg text-primary-foreground">Co získáte</h2>
           </AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { t: "Příprava", d: "Každé vyjednávání začíná důkladnou analýzou. Cíle, alternativy, prostor pro dohodu, profil protistrany." },
-              { t: "Kontrola", d: "Pracuji se scénáři. Vím, co říct, kdy ustoupit a kdy neustupovat. Nic není ponecháno náhodě." },
-              { t: "Diskrétnost", d: "Mnoho zakázek je citlivých. Pracuji pod NDA a s maximální ochranou informací klienta." },
-              { t: "Výsledek", d: "Měřitelný dopad. Lepší cena, nižší riziko, silnější pozice. To je to, co klienti ode mě očekávají." },
+              { t: "Kontrola rizik", d: "Pracuji se scénáři a alternativami. Připravím vás na každý průběh jednání." },
+              { t: "Strategický náhled", d: "Rozumím dynamice vyjednávání. Vidím prostor, kde je dohoda možná." },
+              { t: "Odstup a jasný plán", d: "Oddělím emoce od rozhodování. Přinesu strukturu tam, kde chybí." },
+              { t: "Silnější pozice", d: "Důkladná příprava znamená silnější argumenty a lepší výsledek." },
+              { t: "Profesionální příprava", d: "BATNA, vyjednávací prostor, profil protistrany. Nic není ponecháno náhodě." },
+              { t: "Zkušenost z praxe", d: "Stovky jednání od roku 2009. Výsledky v řádech miliard i milionů." },
             ].map((item, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="border-l border-primary-foreground/20 pl-6">
+              <AnimatedSection key={i} delay={i * 0.08}>
+                <div className="border-l border-brass/40 pl-6">
                   <h3 className="font-serif text-xl font-medium text-primary-foreground mb-2">{item.t}</h3>
                   <p className="body-md text-primary-foreground/60">{item.d}</p>
                 </div>
@@ -109,20 +155,20 @@ export default function Negotiation() {
         </div>
       </section>
 
-      {/* Why negotiator */}
+      {/* Proč vyjednavač */}
       <section className="section-padding bg-secondary/50">
         <div className="container-narrow">
-          <SectionHeading title="Proč dává smysl zapojit vyjednavače" />
+          <SectionHeading title="Proč se ozvat právě sem" />
           <div className="space-y-6">
             {[
               "Oddělíte emoce od procesu. Profesionální vyjednavač jedná racionálně i pod tlakem.",
-              'Zachováte vztah s protistranou. \u201ETvrdé\u201C požadavky vznáší někdo jiný.',
+              "Zachováte vztah s protistranou. „Tvrdé" požadavky vznáší někdo jiný.",
               "Získáte lepší podmínky. Zkušenost, techniky a příprava vedou k měřitelným výsledkům.",
               "Ušetříte čas. Vyjednavač řeší jednání, vy se věnujete svému byznysu.",
             ].map((text, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div className="flex items-start gap-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-brass mt-2.5 shrink-0" />
                   <p className="body-md text-muted-foreground">{text}</p>
                 </div>
               </AnimatedSection>
@@ -132,14 +178,14 @@ export default function Negotiation() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding">
+      <section className="section-padding bg-foreground text-primary-foreground">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-lg mb-6">Potřebujete vyjednat lepší podmínky?</h2>
-            <p className="body-lg text-muted-foreground mb-8">
+            <h2 className="heading-lg text-primary-foreground mb-6">Potřebujete vyjednat lepší podmínky?</h2>
+            <p className="body-lg text-primary-foreground/60 mb-8">
               Popište situaci. Navrhnu postup a odhadnu, co je realisticky dosažitelné.
             </p>
-            <Button variant="premium" size="xl" asChild>
+            <Button variant="premium" size="xl" asChild className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90">
               <Link to="/kontakt">Domluvit úvodní hovor</Link>
             </Button>
           </AnimatedSection>
