@@ -151,8 +151,8 @@ export default function Index() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {results.slice(0, 6).map((r, i) => (
               <AnimatedSection key={i} delay={i * 0.06}>
-                <div className="premium-card text-center py-8 px-6 h-full flex flex-col items-center justify-center">
-                  <p className="micro-text mb-3">{r.label}</p>
+                <div className="premium-card text-center py-8 px-6 h-full flex flex-col items-center justify-center border-t-2 border-brass/30">
+                  <p className="micro-text text-brass mb-3">{r.label}</p>
                   <p className="text-sm text-muted-foreground mb-1">{r.beforeAfter}</p>
                   <p className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-1">{r.main}</p>
                   <p className="body-sm text-muted-foreground">{r.context}</p>
