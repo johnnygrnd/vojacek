@@ -16,7 +16,7 @@ const results = [
   { label: "Nákup technologie", beforeAfter: "3,2 mil. Kč → 2,1 mil. Kč", main: "−1,1 mil. Kč", context: "úspora při nákupu" },
   { label: "Česká energetika", beforeAfter: "—", main: "14 mld. Kč", context: "celková dosažená úspora" },
   { label: "Dotace", beforeAfter: "—", main: "10 mld. Kč", context: "udrženo v ČR" },
-  { label: "Strategické vyjednávání", beforeAfter: "0 Kč → 18 mil. Kč", main: "+18 mil. Kč", context: "nově vytvořená hodnota" },
+  
 ];
 
 const testimonials = [
