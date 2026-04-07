@@ -236,12 +236,12 @@ export default function Index() {
       </section>
 
       {/* ═══════ FINAL CTA ═══════ */}
-      <section className="py-24 md:py-32 lg:py-36 bg-foreground text-primary-foreground">
+      <section className="py-24 md:py-32 lg:py-36 bg-gradient-to-br from-brass/90 to-brass text-foreground">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-lg text-primary-foreground mb-4">Řekněte mi, co řešíte. Navrhnu další&nbsp;krok.</h2>
-            <p className="body-lg text-primary-foreground/60 mb-10">Stačí krátký popis situace. Ozvu se do 24 hodin.</p>
-            <Button variant="premium" size="xl" asChild className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90">
+            <h2 className="heading-lg text-foreground mb-4">Řekněte mi, co řešíte. Navrhnu další&nbsp;krok.</h2>
+            <p className="body-lg text-foreground/70 mb-10">Stačí krátký popis situace. Ozvu se do 24 hodin.</p>
+            <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
               <Link to="/kontakt">Získat návrh postupu</Link>
             </Button>
           </AnimatedSection>
