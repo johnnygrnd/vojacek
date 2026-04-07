@@ -31,7 +31,7 @@ const courseData: Record<string, {
     ],
     notFor: [
       "Hledáte motivační přednášku nebo team building",
-      "Chcete „inspirativní workshop" bez tlaku",
+      "Chcete inspirativní workshop bez tlaku",
       "Nechcete aktivně vyjednávat před ostatními",
     ],
     whatChanges: [
