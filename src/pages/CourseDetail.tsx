@@ -21,49 +21,48 @@ const courseData: Record<string, {
 }> = {
   "verejny-trenink": {
     title: "Veřejný trénink vyjednávání",
-    outcome: "Třídenní intenzivní výcvik, po kterém budete vyjednávat jinak — s přípravou, strategií a kontrolou nad výsledkem.",
-    targetAudience: "Pro jednotlivce, manažery a profesionály, kteří chtějí zvládnout vyjednávání jako disciplínu.",
+    outcome: "Třídenní intenzivní výcvik. Po absolvování budete vyjednávat s přípravou, strategií a kontrolou nad výsledkem.",
+    targetAudience: "Pro jednotlivce, manažery a profesionály, kteří chtějí ovládnout vyjednávání jako disciplínu.",
     forWhom: [
       "Manažeři a jednatelé, kteří pravidelně vyjednávají",
-      "Obchodníci a nákupčí, kteří chtějí lepší výsledky",
+      "Obchodníci a nákupčí, kteří chtějí měřitelně lepší výsledky",
       "Podnikatelé před důležitým jednáním",
       "Profesionálové, kteří chtějí systém místo improvizace",
     ],
     notFor: [
-      "Hledáte motivační přednášku nebo team building",
-      "Chcete inspirativní workshop bez tlaku",
+      "Hledáte motivační přednášku nebo teambuilding",
+      "Očekáváte workshop bez tlaku a simulací",
       "Nechcete aktivně vyjednávat před ostatními",
     ],
     whatChanges: [
-      "Půjdete do jednání s jasnou strategií místo improvizace",
-      "Budete umět číst protistranu a reagovat na manipulaci",
-      "Naučíte se řídit ústupky a kontrolovat průběh",
+      "Půjdete do jednání s jasnou strategií, ne s improvizací",
+      "Budete rozpoznávat taktiky protistrany a reagovat na ně",
+      "Naučíte se řídit ústupky a kontrolovat průběh jednání",
       "Získáte systematický přístup, který funguje opakovaně",
     ],
     modules: [
-      { title: "Příprava a strategie", desc: "BATNA, vyjednávací prostor, profil protistrany, scénáře. Základ každého úspěšného jednání." },
-      { title: "Psychologie vyjednávání", desc: "Čtení signálů, práce s emocemi, rozpoznání manipulace. Co se děje pod povrchem." },
+      { title: "Příprava a strategie", desc: "Vyjednávací prostor, profil protistrany, scénáře. Základ každého úspěšného jednání." },
+      { title: "Psychologie vyjednávání", desc: "Čtení signálů, práce s emocemi, rozpoznání manipulace." },
       { title: "Techniky a taktiky", desc: "Kotvení, framing, řízení ústupků, práce s časem a tlakem." },
-      { title: "Simulace a rozbory", desc: "Reálné vyjednávací situace pod tlakem. Video rozbor, zpětná vazba, iterace." },
+      { title: "Simulace a rozbory", desc: "Reálné vyjednávací situace pod tlakem. Rozbor, zpětná vazba, iterace." },
     ],
     format: [
       "3 dny prezenčně (Praha)",
       "Max. 16 účastníků",
       "70 % praxe, 30 % teorie",
-      "Reálné simulace s video rozborem",
+      "Simulace s rozborem a zpětnou vazbou",
       "Materiály a checklisty pro praxi",
     ],
     benefits: [
-      "Okamžitě použitelné dovednosti",
+      "Dovednosti použitelné ihned po kurzu",
       "Certifikát o absolvování",
-      "Follow-up konzultace po kurzu",
+      "Follow-up konzultace po tréninku",
       "Přístup k materiálům a nástrojům",
     ],
     trustIndicators: [
       "Nejkomplexnější otevřený trénink vyjednávání v ČR",
       "Vedený vyjednavačem s 15+ lety praxe",
       "100+ realizovaných tréninků",
-      "Absolventi z firem jako…", // intentionally vague for privacy
     ],
     duration: "3 dny",
     price: "39 000 Kč",
@@ -71,10 +70,10 @@ const courseData: Record<string, {
   },
   "firemni-trenink": {
     title: "Firemní trénink vyjednávání",
-    outcome: "Trénink na míru pro váš tým. Simulace z vašeho prostředí, strategie pro vaše situace, měřitelný posun v dohodách.",
-    targetAudience: "Pro firemní týmy, které potřebují vyjednávat systematicky a s lepšími výsledky.",
+    outcome: "Trénink na míru pro váš tým. Simulace z vašeho prostředí, strategie pro vaše situace, měřitelný posun.",
+    targetAudience: "Pro firemní týmy, které potřebují vyjednávat systematicky a dosahovat lepších dohod.",
     forWhom: [
-      "Obchodní týmy, které chtějí lepší podmínky",
+      "Obchodní týmy, které chtějí lepší podmínky v dohodách",
       "Nákupní oddělení s opakujícími se vyjednáváními",
       "Management a vedení firmy",
       "Key account manažeři",
@@ -82,36 +81,36 @@ const courseData: Record<string, {
     notFor: [
       "Hledáte obecný kurz komunikace nebo soft skills",
       "Tým má méně než 6 lidí (zvažte individuální trénink)",
-      "Potřebujete jednorázovou přednášku",
+      "Potřebujete jednorázovou přednášku bez simulací",
     ],
     whatChanges: [
-      "Tým vyjednává systematicky a jednotně",
+      "Tým vyjednává systematicky a s jednotnou metodikou",
       "Obchodní podmínky se měřitelně zlepší",
-      "Lidé přestanou dávat zbytečné ústupky",
+      "Lidé přestanou dávat zbytečné ústupky bez protihodnoty",
       "Vyjednávání přestane být o improvizaci",
     ],
     modules: [
-      { title: "Vyjednávací strategie", desc: "Přizpůsobená vašemu odvětví a typickým vyjednávacím situacím." },
+      { title: "Vyjednávací strategie", desc: "Přizpůsobená vašemu odvětví a typickým situacím." },
       { title: "Práce s cenou a ústupky", desc: "Kotvení, protihodnoty, kontrola cenového prostoru." },
-      { title: "Psychologie a manipulace", desc: "Rozpoznání taktik protistrany, práce s tlakem." },
-      { title: "Týmové simulace", desc: "Reálné scénáře z vašeho byznysového prostředí." },
+      { title: "Psychologie a taktiky", desc: "Rozpoznání taktik protistrany, práce s tlakem a emocemi." },
+      { title: "Týmové simulace", desc: "Scénáře vycházející z vašeho reálného byznysového prostředí." },
     ],
     format: [
       "2–3 dny dle rozsahu",
       "U vás ve firmě nebo v externím prostředí",
       "Obsah přizpůsobený odvětví a rolím",
-      "Simulace z vašeho byznysového prostředí",
+      "Simulace z vašeho prostředí",
       "8–16 účastníků",
     ],
     benefits: [
-      "Tým vyjednává systematicky a jednotně",
+      "Tým vyjednává s jednotnou metodikou",
       "Měřitelné zlepšení obchodních podmínek",
       "Materiály a nástroje pro denní praxi",
       "Možnost navazujícího follow-up tréninku",
     ],
     trustIndicators: [
       "Realizováno pro firmy z energetiky, IT, výroby, FMCG",
-      "Vedený vyjednavačem, ne lektorem z příručky",
+      "Vedený vyjednavačem, ne lektorem z učebnice",
       "Simulace přizpůsobené reálným situacím klienta",
     ],
     duration: "2–3 dny",
@@ -120,17 +119,17 @@ const courseData: Record<string, {
   },
   "vyjednavani-o-cenach": {
     title: "Vyjednávání o cenách",
-    outcome: "Dvoudenní specializovaný trénink zaměřený na cenová vyjednávání. Kotvení, kontrola ústupků, práce s cenovým prostorem.",
+    outcome: "Dvoudenní trénink zaměřený na cenová vyjednávání. Kotvení, kontrola ústupků, práce s cenovým prostorem.",
     targetAudience: "Pro každého, kdo pravidelně vyjednává o ceně — na straně nákupu i prodeje.",
     forWhom: [
       "Nákupčí a procurement manažeři",
       "Obchodníci a sales manažeři",
-      "Finanční ředitelé",
-      "Každý, kdo vyjednává o ceně",
+      "Finanční ředitelé a management",
+      "Každý, kdo pravidelně vyjednává o ceně",
     ],
     notFor: [
       "Hledáte obecný kurz vyjednávání (zvažte veřejný trénink)",
-      "Nevyjednáváte o cenách pravidelně",
+      "Cenová vyjednávání nejsou součástí vaší práce",
     ],
     whatChanges: [
       "Budete umět kotvit a bránit svou cenu",
@@ -141,7 +140,7 @@ const courseData: Record<string, {
     modules: [
       { title: "Cenová příprava", desc: "Analýza cenového prostoru, příprava argumentace, scénáře." },
       { title: "Kotvení a framing", desc: "Jak ovlivnit vnímání ceny dříve, než padne první číslo." },
-      { title: "Řízení ústupků", desc: "Kdy ustoupit, kolik, za co. Kontrola nad každým ústupkem." },
+      { title: "Řízení ústupků", desc: "Kdy ustoupit, kolik a za co. Kontrola nad každým ústupkem." },
       { title: "Cenové simulace", desc: "Reálné situace pod tlakem. Prodejní i nákupní strana." },
     ],
     format: [
@@ -166,13 +165,13 @@ const courseData: Record<string, {
   },
   "individualni-trenink": {
     title: "Individuální trénink",
-    outcome: "Příprava šitá na míru — na konkrétní jednání, nebo jako dlouhodobý rozvoj vyjednávací dovednosti.",
+    outcome: "Příprava šitá na míru — na konkrétní jednání, nebo jako systematický rozvoj vyjednávací dovednosti.",
     targetAudience: "Pro jednatele, manažery a podnikatele, kteří řeší důležité jednání nebo chtějí osobní posun.",
     forWhom: [
       "CEO a jednatelé před klíčovým jednáním",
       "Manažeři, kteří chtějí silnější vyjednávací pozici",
       "Podnikatelé řešící důležitou dohodu",
-      "Kdokoli, kdo chce maximální osobní přípravu",
+      "Kdokoli, kdo potřebuje osobní přípravu na míru",
     ],
     notFor: [
       "Hledáte skupinový kurz (zvažte veřejný trénink)",
@@ -181,7 +180,7 @@ const courseData: Record<string, {
     whatChanges: [
       "Půjdete do jednání s jasným plánem a scénáři",
       "Budete mít kontrolu nad průběhem i výsledkem",
-      "Sebevědomí podložené přípravou, ne improvizací",
+      "Sebevědomí podložené přípravou, ne odhadem",
       "Možnost podpory přímo v průběhu jednání",
     ],
     modules: [
@@ -193,7 +192,7 @@ const courseData: Record<string, {
     format: [
       "Rozsah dle potřeby (typicky 1–2 dny)",
       "Prezenčně nebo online",
-      "100 % zaměřeno na vaši situaci",
+      "Plně zaměřeno na vaši situaci",
       "Maximální diskrétnost",
     ],
     benefits: [

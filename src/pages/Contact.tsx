@@ -11,7 +11,6 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    // Simulate submission delay - ready for real endpoint
     await new Promise(resolve => setTimeout(resolve, 800));
     setSubmitting(false);
     setSubmitted(true);
@@ -29,7 +28,7 @@ export default function Contact() {
                 Popište situaci. Navrhnu další krok.
               </h1>
               <p className="body-lg text-muted-foreground mb-10">
-                Ať hledáte zastoupení, přípravu na jednání nebo trénink — začneme krátkým rozhovorem.
+                Ať hledáte zastoupení, přípravu na jednání nebo trénink — začneme krátkým rozhovorem. Společně určíme, jaký formát spolupráce dává smysl.
               </p>
 
               <div className="space-y-6 mb-10">
@@ -58,9 +57,9 @@ export default function Contact() {
               </div>
 
               <div className="premium-card border-l-2 border-brass/40">
-                <h3 className="font-serif text-lg font-medium mb-2">Akutní situace?</h3>
+                <h3 className="font-serif text-lg font-medium mb-2">Urgentní situace?</h3>
                 <p className="body-sm text-muted-foreground mb-3">
-                  Zavolejte přímo. Pokud je jednání blízko nebo situace eskaluje, domluvíme se rychle.
+                  Pokud je jednání blízko nebo situace eskaluje, zavolejte přímo. Domluvíme se rychle.
                 </p>
                 <a href="tel:+420731407976" className="text-sm font-medium text-brass hover:underline">
                   +420 731 407 976 →
@@ -71,10 +70,10 @@ export default function Contact() {
             <AnimatedSection delay={0.15}>
               {submitted ? (
                 <div className="premium-card text-center py-16 border-t-2 border-brass/30">
-                  <span className="block font-serif text-4xl text-brass mb-4">✓</span>
+                  <span className="block font-serif text-4xl text-brass mb-4">{"\u2713"}</span>
                   <h3 className="heading-md mb-4">Děkuji za zprávu</h3>
                   <p className="body-md text-muted-foreground mb-2">
-                    Ozvu se vám do 24 hodin s návrhem dalšího kroku.
+                    Ozvu se do 24 hodin s návrhem dalšího kroku.
                   </p>
                   <p className="body-sm text-muted-foreground/60">
                     V případě urgentní situace volejte přímo.
@@ -89,7 +88,7 @@ export default function Contact() {
                         { v: "konzultace", l: "Konzultace" },
                         { v: "zastoupeni", l: "Zastoupení" },
                         { v: "priprava", l: "Příprava na jednání" },
-                        { v: "kurz", l: "Trénink / Kurz" },
+                        { v: "kurz", l: "Trénink" },
                       ].map((t) => (
                         <button
                           key={t.v}
@@ -160,7 +159,7 @@ export default function Contact() {
                   </div>
 
                   <Button variant="premium" size="xl" type="submit" className="w-full" disabled={submitting}>
-                    {submitting ? "Odesílám…" : "Odeslat zprávu"}
+                    {submitting ? "Odesílám\u2026" : "Odeslat zprávu"}
                   </Button>
                   <p className="text-xs text-muted-foreground text-center">
                     Vaše údaje zpracovávám v souladu s{" "}
