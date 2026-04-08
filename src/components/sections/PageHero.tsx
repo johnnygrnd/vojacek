@@ -8,6 +8,8 @@ interface PageHeroProps {
   intensity?: "high" | "medium" | "low";
   image?: string;
   imageAlt?: string;
+  /** CSS object-position value, e.g. "center 20%" or "right top" */
+  imagePosition?: string;
   label?: string;
   title: string;
   description?: string;
@@ -31,6 +33,7 @@ export default function PageHero({
   intensity = "high",
   image,
   imageAlt = "",
+  imagePosition = "center center",
   label,
   title,
   description,
@@ -45,7 +48,8 @@ export default function PageHero({
           <img
             src={image}
             alt={imageAlt}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: imagePosition }}
             width={1920}
             height={1080}
           />
@@ -75,7 +79,8 @@ export default function PageHero({
           <img
             src={image}
             alt={imageAlt}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: imagePosition }}
             width={1920}
             height={1080}
           />
