@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
+import PageHero from "@/components/sections/PageHero";
+import heroImg from "@/assets/hero-portrait.jpg";
 
 const outcomes = [
   { label: "Prodej podniku", main: "+120 %", context: "Navýšení ceny oproti první nabídce" },
@@ -67,20 +69,12 @@ const sectors = [
 export default function References() {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="py-16 md:py-24 lg:py-28 bg-foreground text-primary-foreground">
-        <div className="container-wide">
-          <AnimatedSection className="max-w-3xl">
-            <div className="w-10 h-px bg-brass mb-6" />
-            <h1 className="heading-xl text-primary-foreground mb-5">
-              Výsledky z praxe
-            </h1>
-            <p className="body-lg text-primary-foreground/60">
-              Vybrané dopady z reálných zakázek. Konkrétní detaily sdílím osobně, podle kontextu.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
+      <PageHero
+        image={heroImg}
+        imageAlt="Reference"
+        title="Výsledky z praxe"
+        description="Vybrané dopady z reálných zakázek. Konkrétní detaily sdílím osobně, podle kontextu."
+      />
 
       {/* Measurable outcomes */}
       <section className="py-20 md:py-28 lg:py-32">

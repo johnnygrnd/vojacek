@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
+import PageHero from "@/components/sections/PageHero";
 import trainingImg from "@/assets/training-photo.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight } from "lucide-react";
@@ -79,21 +80,12 @@ const faqs = [
 export default function Courses() {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative">
-        <img src={trainingImg} alt="Tréninky vyjednávání" className="w-full h-64 md:h-[400px] object-cover" width={1200} height={800} />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/70 to-foreground/40 flex items-end">
-          <div className="container-wide pb-10 md:pb-14">
-            <AnimatedSection>
-              <div className="w-10 h-px bg-brass mb-5" />
-              <h1 className="heading-xl text-primary-foreground mb-4">Tréninky vyjednávání</h1>
-              <p className="body-lg text-primary-foreground/60 max-w-2xl">
-                Neučím obecnou teorii. Trénink stavím na simulacích, rozborech a postupech, které sám používám při vyjednáváních pro klienty.
-              </p>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image={trainingImg}
+        imageAlt="Tréninky vyjednávání"
+        title="Tréninky vyjednávání"
+        description="Neučím obecnou teorii. Trénink stavím na simulacích, rozborech a postupech, které sám používám při vyjednáváních pro klienty."
+      />
 
       {/* Approach stats */}
       <section className="py-14 md:py-18 border-b border-border/40">
