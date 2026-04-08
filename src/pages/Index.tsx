@@ -9,17 +9,17 @@ import { ArrowRight } from "lucide-react";
 /* ─── DATA ─── */
 
 const results = [
-  { label: "Prodej podniku", main: "+120 %", context: "Navýšení prodejní ceny oproti původní nabídce" },
-  { label: "Nákup nemovitosti", main: "−40,5 mil. Kč", context: "Úspora při vyjednávání kupní ceny" },
-  { label: "Česká energetika", main: "14 mld. Kč", context: "Celková dosažená úspora v regulačním procesu" },
-  { label: "Mzdové vyjednávání", main: "−8,5 p.b.", context: "Snížení mzdových nákladů oproti požadavku odborů" },
+  { label: "Prodej podniku", main: "+120 %", context: "Navýšení ceny oproti první nabídce" },
+  { label: "Nákup nemovitosti", main: "−40,5 mil. Kč", context: "Úspora při akvizici" },
+  { label: "Regulace v energetice", main: "14 mld. Kč", context: "Dosažená úspora v regulačním procesu" },
+  { label: "Mzdové vyjednávání", main: "−8,5 p.b.", context: "Snížení nákladů oproti požadavku odborů" },
 ];
 
 const testimonials = [
-  { quote: "Ondřej nám pomohl vyjednat podmínky, které jsme považovali za nedosažitelné. Klid, příprava a přesnost.", author: "CEO, výrobní společnost" },
-  { quote: "Profesionální zastoupení při prodeji firmy. Výsledek překonal naše očekávání o desítky procent.", author: "Majitel, strojírenský podnik" },
-  { quote: "Kurz vyjednávání změnil přístup celého obchodního týmu. Praktické, tvrdé, použitelné hned.", author: "Obchodní ředitel, IT firma" },
-  { quote: "Ondřej přistupuje k věci systematicky a diskrétně. Přesně to, co jsme potřebovali.", author: "CFO, energetická společnost" },
+  { quote: "Pomohl nám dosáhnout podmínek, které jsme považovali za nereálné. Příprava, klid a přesná práce s argumenty.", author: "CEO, výrobní společnost" },
+  { quote: "Profesionální zastoupení při prodeji firmy. Výsledná cena překonala naše očekávání o desítky procent.", author: "Majitel, strojírenský podnik" },
+  { quote: "Trénink změnil přístup celého obchodního týmu. Simulace, rozbory, okamžitá použitelnost.", author: "Obchodní ředitel, IT firma" },
+  { quote: "Systematický a diskrétní přístup. Přesně to, co naše situace vyžadovala.", author: "CFO, energetická společnost" },
 ];
 
 /* ─── PAGE ─── */
@@ -40,10 +40,10 @@ export default function Index() {
             <AnimatedSection>
               <div className="w-10 h-px bg-brass mb-6" />
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.12] tracking-tight text-primary-foreground mb-6" style={{ fontFamily: "var(--font-serif)" }}>
-                V každém jednání je prostor na lepší výsledek. Najdu&nbsp;ho.
+                Vyjednávám tam, kde záleží na&nbsp;výsledku.
               </h1>
               <p className="body-md text-primary-foreground/55 mb-10 max-w-md">
-                Zastupuji firmy i jednotlivce v jednáních, kde jde o podstatné peníze, podmínky nebo vztahy. Připravuji strategie a učím vyjednávat.
+                Zastupuji firmy i jednotlivce v důležitých jednáních. Připravuji strategie, řídím proces a učím vyjednávat.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Button variant="premium" size="xl" asChild>
@@ -53,7 +53,7 @@ export default function Index() {
                   <Link to="/kurzy">Tréninky vyjednávání</Link>
                 </Button>
               </div>
-              <p className="text-xs text-primary-foreground/30">Úvodní konzultace zdarma · Diskrétnost je samozřejmost</p>
+              <p className="text-xs text-primary-foreground/30">Úvodní konzultace zdarma · Diskrétní přístup</p>
             </AnimatedSection>
           </div>
         </div>
@@ -64,10 +64,10 @@ export default function Index() {
         <div className="container-wide">
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-center">
             {[
-              { num: "15+", label: "let praxe" },
-              { num: "mld. Kč", label: "vyjednaná hodnota" },
+              { num: "15+", label: "let v praxi" },
+              { num: "mld. Kč", label: "v řešených zakázkách" },
               { num: "EU", label: "úroveň jednání" },
-              { num: "100+", label: "firemních tréninků" },
+              { num: "100+", label: "realizovaných tréninků" },
             ].map((s, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div className="min-w-[120px]">
@@ -84,29 +84,29 @@ export default function Index() {
       <section className="py-24 md:py-32 lg:py-36">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-14 md:mb-20">
-            <p className="micro-text text-brass mb-4">Jak vám mohu pomoci</p>
-            <h2 className="heading-lg text-balance">Co právě řešíte?</h2>
+            <p className="micro-text text-brass mb-4">Spolupráce</p>
+            <h2 className="heading-lg text-balance">Co řešíte?</h2>
           </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 num: "01",
-                title: "Potřebuji, aby za mě jednal profesionál",
-                desc: "Zastoupím vás u stolu. Převezmu jednání, připravím strategii a dotáhnu dohodu k nejlepšímu možnému výsledku.",
-                cta: "Zastupování ve vyjednávání",
+                title: "Potřebuji profesionála u stolu",
+                desc: "Převezmu jednání, připravím strategii a dotáhnu dohodu k nejlepšímu dosažitelnému výsledku. Vy rozhodujete, já vyjednávám.",
+                cta: "Zastoupení ve vyjednávání",
                 href: "/vyjednavani",
               },
               {
                 num: "02",
                 title: "Chci jít do jednání připravený",
-                desc: "Připravím vám scénáře, argumentaci a strategii. Vy jednáte sami — ale z pozice síly a s kontrolou nad průběhem.",
+                desc: "Připravím scénáře, argumentaci a plán. Jednáte sami — s jasnou strategií a kontrolou nad průběhem.",
                 cta: "Příprava na jednání",
                 href: "/vyjednavani",
               },
               {
                 num: "03",
-                title: "Chci naučit svůj tým vyjednávat",
-                desc: "Praktické tréninky postavené na simulacích. Žádná teorie — dovednost, kterou váš tým použije hned po kurzu.",
+                title: "Chci naučit tým vyjednávat",
+                desc: "Tréninky založené na simulacích a okamžitém rozboru. Dovednosti, které tým použije ihned po kurzu.",
                 cta: "Tréninky vyjednávání",
                 href: "/kurzy",
               },
@@ -132,8 +132,8 @@ export default function Index() {
       <section className="py-24 md:py-32 lg:py-36 bg-foreground text-primary-foreground">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-14 md:mb-20">
-            <p className="micro-text text-brass mb-4">Měřitelné výsledky</p>
-            <h2 className="heading-lg text-primary-foreground text-balance">Výsledek není náhoda. Je to příprava.</h2>
+            <p className="micro-text text-brass mb-4">Výsledky</p>
+            <h2 className="heading-lg text-primary-foreground text-balance">Dobrý výsledek není náhoda.</h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/10 rounded-sm overflow-hidden">
             {results.map((r, i) => (
@@ -147,9 +147,9 @@ export default function Index() {
             ))}
           </div>
           <AnimatedSection className="text-center mt-10">
-            <p className="text-xs text-primary-foreground/30 mb-5">Detaily sdílím diskrétně, podle kontextu zakázky.</p>
+            <p className="text-xs text-primary-foreground/30 mb-5">Konkrétní detaily sdílím osobně, podle kontextu zakázky.</p>
             <Button variant="premium-outline" size="lg" asChild className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
-              <Link to="/reference">Další výsledky a reference</Link>
+              <Link to="/reference">Reference a výsledky</Link>
             </Button>
           </AnimatedSection>
         </div>
@@ -164,12 +164,12 @@ export default function Index() {
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
               <div className="w-10 h-px bg-brass mb-6" />
-              <h2 className="heading-lg mb-6">Proč klienti svěřují důležitá jednání právě mně</h2>
+              <h2 className="heading-lg mb-6">Proč klienti svěřují důležitá jednání mně</h2>
               <div className="space-y-4 mb-8">
                 {[
-                  "Zkušenosti z jednání na evropské úrovni — regulace, dotace, strategické dohody v řádech miliard.",
-                  "Kombinuji akademické zázemí s tvrdou praxí. Dokázal jsem výsledky v korporátu i v osobních případech.",
-                  "Neprodávám motivaci. Dodávám přípravu, scénáře a strategii. Měřitelně.",
+                  "Vyjednávám od roku 2009 — na evropské úrovni, v korporátu i v osobních případech s vysokou hodnotou.",
+                  "Pracuji se strukturou, scénáři a daty. Klienti vědí, co se bude dít a proč.",
+                  "Učím jen to, co sám používám. Žádná teorie bez praxe.",
                 ].map((text, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="w-1 h-1 rounded-full bg-brass mt-2.5 shrink-0" />
@@ -178,10 +178,10 @@ export default function Index() {
                 ))}
               </div>
               <p className="font-serif text-lg md:text-xl font-medium text-foreground mb-8 leading-snug italic">
-                „Většina lidí přichází o peníze ne proto, že by měli slabou pozici — ale proto, že šli do jednání bez strategie."
+                „Většina lidí nepřichází o peníze kvůli slabé pozici — ale proto, že šli do jednání bez přípravy."
               </p>
               <Button variant="premium-outline" size="lg" asChild>
-                <Link to="/o-mne">Celý profil</Link>
+                <Link to="/o-mne">Více o mně</Link>
               </Button>
             </AnimatedSection>
           </div>
@@ -192,8 +192,8 @@ export default function Index() {
       <section className="py-24 md:py-32 lg:py-36 bg-secondary/30">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-14 md:mb-20">
-            <p className="micro-text text-brass mb-4">Klienti</p>
-            <h2 className="heading-lg">Co říkají ti, se kterými jsem jednal</h2>
+            <p className="micro-text text-brass mb-4">Reference</p>
+            <h2 className="heading-lg">Zpětná vazba z praxe</h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((t, i) => (
@@ -202,7 +202,7 @@ export default function Index() {
                   className="h-full rounded-sm border border-foreground/[0.06] p-8 md:p-10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
                   style={{ background: `linear-gradient(135deg, hsl(var(--foreground) / 0.95), hsl(var(--foreground) / 0.88))` }}
                 >
-                  <span className="block font-serif text-4xl text-brass/30 leading-none mb-3 select-none">„</span>
+                  <span className="block font-serif text-4xl text-brass/30 leading-none mb-3 select-none">{"\u201E"}</span>
                   <p className="font-serif text-lg md:text-xl text-primary-foreground/85 leading-[1.55] mb-6 flex-1">{t.quote}</p>
                   <div className="flex items-center gap-3">
                     <span className="w-8 h-px bg-brass/40" />
@@ -220,12 +220,12 @@ export default function Index() {
         <div className="container-narrow text-center">
           <AnimatedSection>
             <p className="text-xs uppercase tracking-[0.2em] text-foreground/50 mb-6">Další krok</p>
-            <h2 className="heading-lg text-foreground mb-4">Popište mi situaci. Navrhnu, jak ji vyřešit.</h2>
+            <h2 className="heading-lg text-foreground mb-4">Řekněte mi, co řešíte.</h2>
             <p className="body-lg text-foreground/70 mb-10 max-w-xl mx-auto">
-              Stačí krátký popis — co řešíte, s kým jednáte a co je v sázce. Ozvu se do 24 hodin s návrhem postupu.
+              Stačí krátký popis situace. Ozvu se do 24 hodin s návrhem, jak postupovat.
             </p>
             <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
-              <Link to="/kontakt">Popsat situaci</Link>
+              <Link to="/kontakt">Napsat zprávu</Link>
             </Button>
           </AnimatedSection>
         </div>

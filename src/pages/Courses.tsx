@@ -12,7 +12,7 @@ const courseGroups = [
     courses: [
       {
         title: "Veřejný trénink vyjednávání",
-        desc: "Třídenní intenzivní výcvik. Psychologie, strategie, simulace reálných situací. Nejkomplexnější otevřený trénink vyjednávání v ČR.",
+        desc: "Třídenní intenzivní výcvik. Strategie, psychologie, simulace reálných situací. Nejkomplexnější otevřený trénink vyjednávání v ČR.",
         audience: "Pro jednotlivce i zástupce firem",
         duration: "3 dny",
         price: "39 000 Kč",
@@ -26,7 +26,7 @@ const courseGroups = [
     courses: [
       {
         title: "Firemní trénink vyjednávání",
-        desc: "Trénink na míru pro obchodní, nákupní a manažerské týmy. Simulace z vašeho prostředí.",
+        desc: "Trénink na míru pro obchodní, nákupní a manažerské týmy. Simulace vycházejí z vašeho prostředí.",
         audience: "Pro firemní týmy 8–16 osob",
         duration: "2–3 dny",
         price: "od 132 000 Kč",
@@ -35,7 +35,7 @@ const courseGroups = [
       },
       {
         title: "Vyjednávání o cenách",
-        desc: "Specializovaný dvoudenní trénink zaměřený na cenová vyjednávání, kotvení a kontrolu ústupků.",
+        desc: "Dvoudenní trénink zaměřený na cenová vyjednávání, kotvení a kontrolu ústupků.",
         audience: "Pro nákupčí, obchodníky a management",
         duration: "2 dny",
         price: "od 126 000 Kč",
@@ -49,7 +49,7 @@ const courseGroups = [
     courses: [
       {
         title: "Individuální trénink",
-        desc: "Příprava na konkrétní jednání nebo rozvoj vyjednávací dovednosti. 100 % zaměřeno na vaši situaci.",
+        desc: "Příprava na konkrétní jednání nebo systematický rozvoj vyjednávací dovednosti. Plně zaměřeno na vaši situaci.",
         audience: "Pro manažery, jednatele a podnikatele",
         duration: "Dle potřeby",
         price: "Cena na dotaz",
@@ -61,11 +61,11 @@ const courseGroups = [
 ];
 
 const faqs = [
-  { q: "Pro koho jsou tréninky vhodné?", a: "Pro každého, kdo vyjednává — obchodníky, nákupčí, manažery, právníky, podnikatele i jednotlivce." },
-  { q: "Proč simulace místo teorie?", a: "Vyjednávání je dovednost, ne znalost. Dovednost se buduje praxí pod tlakem. Simulace jsou nejefektivnější cesta." },
-  { q: "Lze firemní trénink upravit na míru?", a: "Ano. Každý firemní trénink přizpůsobuji odvětví, rolím a reálným situacím klienta." },
+  { q: "Pro koho jsou tréninky určené?", a: "Pro každého, kdo vyjednává a chce lepší výsledky — obchodníky, nákupčí, manažery, právníky, podnikatele i jednotlivce." },
+  { q: "Proč simulace místo přednášek?", a: "Vyjednávání je dovednost, ne znalost. Buduje se opakovanou praxí pod tlakem. Simulace jsou nejúčinnější cesta k reálnému posunu." },
+  { q: "Lze firemní trénink přizpůsobit?", a: "Ano. Obsah, simulace i rozbory přizpůsobuji odvětví, rolím a typickým situacím klienta." },
   { q: "Kolik lidí může být na firemním tréninku?", a: "Optimální skupina je 8–16 účastníků. Simulace vyžadují aktivní zapojení každého." },
-  { q: "Jaký je rozdíl oproti běžným kurzům soft skills?", a: "Neučím obecnou komunikaci. Učím vyjednávání jako disciplínu — s jasnou strukturou, měřitelnými výsledky a důrazem na simulace reálných situací." },
+  { q: "Jaký je rozdíl oproti běžným kurzům?", a: "Neučím obecnou komunikaci. Učím vyjednávání jako disciplínu — s jasnou strukturou, důrazem na simulace a měřitelným posunem v dovednostech." },
 ];
 
 export default function Courses() {
@@ -80,7 +80,7 @@ export default function Courses() {
               <div className="w-10 h-px bg-brass mb-5" />
               <h1 className="heading-xl text-primary-foreground mb-4">Tréninky vyjednávání</h1>
               <p className="body-lg text-primary-foreground/60 max-w-2xl">
-                Vyjednávání se nedá naučit z knihy. Je to dovednost, která se buduje opakovanou praxí — pod tlakem, s omezenými informacemi, proti reálným scénářům.
+                Vyjednávání je praktická dovednost. Buduje se opakovanou praxí — pod tlakem, s omezenými informacemi, proti reálným scénářům.
               </p>
             </AnimatedSection>
           </div>
@@ -92,9 +92,9 @@ export default function Courses() {
         <div className="container-wide">
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {[
-              { num: "70 %", label: "praxe a simulací", desc: "Účastníci nevyplňují dotazníky — vyjednávají. Pod tlakem, s omezenými informacemi." },
-              { num: "100 %", label: "použitelnost", desc: "Každá technika je ověřená v praxi. Nic, co byste nemohli použít hned po kurzu." },
-              { num: "15+", label: "let zkušeností", desc: "Tréninky vedené člověkem, který sám vyjednává — ne lektorem z příručky." },
+              { num: "70 %", label: "praxe a simulací", desc: "Účastníci vyjednávají od prvního dne. Pod tlakem, s omezenými informacemi." },
+              { num: "100 %", label: "použitelnost", desc: "Každá technika je ověřená v reálných jednáních. Použijete ji ihned po kurzu." },
+              { num: "15+", label: "let zkušeností", desc: "Trénink vede člověk, který sám vyjednává — ne lektor z učebnice." },
             ].map((s, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <p className="font-serif text-3xl font-semibold text-foreground mb-1">{s.num}</p>
@@ -145,7 +145,7 @@ export default function Courses() {
       <section className="py-24 md:py-32 lg:py-36 bg-foreground text-primary-foreground">
         <div className="container-narrow">
           <AnimatedSection className="text-center mb-14">
-            <p className="micro-text text-brass mb-4">FAQ</p>
+            <p className="micro-text text-brass mb-4">Otázky</p>
             <h2 className="heading-lg text-primary-foreground">Časté dotazy</h2>
           </AnimatedSection>
           <Accordion type="single" collapsible className="space-y-2">
@@ -165,10 +165,10 @@ export default function Courses() {
       <section className="py-24 md:py-32 lg:py-36 bg-gradient-to-br from-brass/90 to-brass">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-lg text-foreground mb-4">Potřebujete trénink na míru?</h2>
-            <p className="body-lg text-foreground/70 mb-10">Popište mi situaci a připravím návrh tréninku přesně pro vaše potřeby.</p>
+            <h2 className="heading-lg text-foreground mb-4">Hledáte trénink na míru?</h2>
+            <p className="body-lg text-foreground/70 mb-10">Popište situaci a připravím návrh tréninku pro váš tým.</p>
             <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
-              <Link to="/kontakt">Poptat firemní trénink</Link>
+              <Link to="/kontakt">Poptat trénink</Link>
             </Button>
           </AnimatedSection>
         </div>

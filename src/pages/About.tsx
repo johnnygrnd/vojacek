@@ -25,10 +25,10 @@ export default function About() {
                 Vyjednavač, vysokoškolský pedagog a ekonom.
               </p>
               <p className="body-md text-muted-foreground mb-4">
-                Vyjednávám od roku 2009. Začínal jsem na evropské úrovni — v regulačních jednáních, kde šlo o miliardy a kde se rozhodovalo o celých odvětvích. Postupně jsem přenesl tyto principy do byznysové praxe.
+                Vyjednávám profesionálně od roku 2009. Začínal jsem na evropské úrovni — v regulačních jednáních, kde šlo o miliardy a kde se rozhodovalo o celých odvětvích. Postupně jsem tyto principy přenesl do byznysové praxe.
               </p>
               <p className="body-md text-muted-foreground">
-                Dnes pomáhám firmám i jednotlivcům vyjednat lepší podmínky — v kontraktech, sporech, cenách i strategických dohodách. A učím ostatní, jak vyjednávat sami.
+                Dnes pomáhám firmám i jednotlivcům vyjednat lepší podmínky — v kontraktech, sporech, cenách i strategických dohodách. A učím ostatní, jak vyjednávat systematicky.
               </p>
             </AnimatedSection>
           </div>
@@ -44,8 +44,8 @@ export default function About() {
           </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-px bg-primary-foreground/10 max-w-5xl mx-auto overflow-hidden rounded-sm">
             {[
-              { title: "Praxe, ne teorie", desc: "Nejsem motivační řečník. Neučím soft skills. Učím vyjednávání jako disciplínu — s jasnou strukturou a měřitelnými výsledky." },
-              { title: "Simulace, ne přednášky", desc: "Každý kurz je postaven na simulacích. Účastníci vyjednávají pod tlakem, s omezenými informacemi, proti reálným scénářům." },
+              { title: "Praxe, ne teorie", desc: "Nejsem motivační řečník. Učím vyjednávání jako disciplínu — s jasnou strukturou a měřitelnými výsledky." },
+              { title: "Simulace, ne přednášky", desc: "Každý trénink je postavený na simulacích. Účastníci vyjednávají pod tlakem, s omezenými informacemi, proti reálným scénářům." },
               { title: "Příprava, ne improvizace", desc: "Když zastupuji klienta, jdu ke stolu se scénáři, argumentací a plánem B. Profesionální vyjednávání je o přípravě." },
             ].map((item, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
@@ -73,7 +73,7 @@ export default function About() {
               "Vyjednávání výjimek z evropských regulací",
               "Strategie k udržení dotačních prostředků v ČR",
               "Cenová vyjednávání v řádech miliard i milionů",
-              "Firemní i individuální výcviky postavené na simulacích",
+              "Firemní i individuální výcviky založené na simulacích",
             ].map((item, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div className="flex items-start gap-4">
@@ -90,9 +90,9 @@ export default function About() {
       <section className="py-20 md:py-28 bg-secondary/30">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <span className="block font-serif text-5xl text-brass/30 leading-none mb-4 select-none">„</span>
+            <span className="block font-serif text-5xl text-brass/30 leading-none mb-4 select-none">{"\u201E"}</span>
             <p className="font-serif text-xl md:text-2xl lg:text-3xl text-foreground leading-relaxed mb-6 italic">
-              Většina lidí přichází o peníze ne proto, že by měli slabou pozici — ale proto, že šli do jednání bez strategie.
+              Většina lidí nepřichází o peníze kvůli slabé pozici — ale proto, že šli do jednání bez přípravy.
             </p>
             <p className="text-sm text-muted-foreground">— Ondřej Vojáček</p>
           </AnimatedSection>
@@ -103,12 +103,12 @@ export default function About() {
       <section className="py-24 md:py-32 lg:py-36 bg-gradient-to-br from-brass/90 to-brass">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-lg text-foreground mb-4">Kontaktujte mě</h2>
+            <h2 className="heading-lg text-foreground mb-4">Pojďme se spojit</h2>
             <p className="body-lg text-foreground/70 mb-10">
-              Ať už hledáte zastoupení, strategii nebo trénink.
+              Ať už hledáte zastoupení, přípravu na jednání nebo trénink.
             </p>
             <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
-              <Link to="/kontakt">Domluvit úvodní hovor</Link>
+              <Link to="/kontakt">Domluvit úvodní rozhovor</Link>
             </Button>
           </AnimatedSection>
         </div>

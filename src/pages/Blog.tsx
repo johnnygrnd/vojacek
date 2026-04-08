@@ -12,10 +12,10 @@ export default function Blog() {
       <section className="section-padding">
         <div className="container-wide">
           <AnimatedSection className="max-w-3xl mb-16">
-            <p className="micro-text mb-6">Články</p>
-            <h1 className="heading-xl mb-4">Myšlenky o vyjednávání</h1>
+            <p className="micro-text text-brass mb-6">Články</p>
+            <h1 className="heading-xl mb-4">Z praxe vyjednavače</h1>
             <p className="body-lg text-muted-foreground">
-              Principy, přístupy a zkušenosti z praxe vyjednavače.
+              Postřehy, principy a zkušenosti z reálných jednání.
             </p>
           </AnimatedSection>
 
@@ -33,7 +33,7 @@ export default function Blog() {
                       <p className="text-xs text-muted-foreground">
                         {new Date(article.publishedAt).toLocaleDateString("cs-CZ")}
                       </p>
-                      <span className="text-xs font-medium text-primary">Číst →</span>
+                      <span className="text-xs font-medium text-primary">{"\u010C\u00EDst \u2192"}</span>
                     </div>
                   </div>
                 </Link>
@@ -51,13 +51,13 @@ export default function Blog() {
       <section className="section-padding bg-secondary/50">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-lg mb-6">Chcete lepší výsledky u stolu?</h2>
+            <h2 className="heading-lg mb-6">Řešíte důležité jednání?</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="premium" size="xl" asChild>
-                <Link to="/kontakt">Domluvit úvodní hovor</Link>
+                <Link to="/kontakt">Popsat situaci</Link>
               </Button>
               <Button variant="premium-outline" size="xl" asChild>
-                <Link to="/kurzy">Zobrazit kurzy</Link>
+                <Link to="/kurzy">Tréninky vyjednávání</Link>
               </Button>
             </div>
           </AnimatedSection>

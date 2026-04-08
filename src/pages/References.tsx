@@ -4,30 +4,30 @@ import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 
 const outcomes = [
-  { label: "Prodej podniku", main: "+120 %", context: "Navýšení prodejní ceny oproti původní nabídce" },
-  { label: "Nákup nemovitosti", main: "−40,5 mil. Kč", context: "Úspora při vyjednávání kupní ceny" },
-  { label: "Česká energetika", main: "14 mld. Kč", context: "Celková dosažená úspora" },
-  { label: "Dotace", main: "10 mld. Kč", context: "Udrženo v ČR" },
-  { label: "Mzdové vyjednávání", main: "−8,5 p.b.", context: "Snížení mzdových nákladů" },
-  { label: "Nákup technologie", main: "−1,1 mil. Kč", context: "Úspora při nákupu" },
+  { label: "Prodej podniku", main: "+120 %", context: "Navýšení ceny oproti první nabídce" },
+  { label: "Nákup nemovitosti", main: "\u221240,5 mil. Kč", context: "Úspora při akvizici" },
+  { label: "Regulace v energetice", main: "14 mld. Kč", context: "Dosažená úspora v regulačním procesu" },
+  { label: "Dotační prostředky", main: "10 mld. Kč", context: "Udrženo v ČR" },
+  { label: "Mzdové vyjednávání", main: "\u22128,5 p.b.", context: "Snížení nákladů oproti požadavku odborů" },
+  { label: "Nákup technologie", main: "\u22121,1 mil. Kč", context: "Úspora při nákupu" },
 ];
 
 const caseTypes = [
-  { title: "Obchodní smlouvy a kontrakty", desc: "Vyjednávání podmínek, sankcí, cen a termínů od prvního návrhu po finální podpis." },
+  { title: "Obchodní smlouvy a kontrakty", desc: "Vyjednávání podmínek, cen, sankcí a termínů od prvního návrhu po uzavření dohody." },
   { title: "Prodej a nákup firem", desc: "Fúze, akvizice, vstup investora. Jednání s vysokou hodnotou a nízkou tolerancí chyb." },
   { title: "Cenová a nákupní vyjednávání", desc: "Dodavatelé, nájmy, energie. Měřitelné úspory v řádech milionů." },
-  { title: "Spory a obtížné situace", desc: "Konflikty, kde je potřeba řešení bez soudu — nebo s tím počítat." },
+  { title: "Spory a obtížné situace", desc: "Případy, kde je potřeba řešení mimo soud — nebo se na soud připravit." },
   { title: "Regulace a veřejná sféra", desc: "Evropská komise, ministerstva, regulační orgány. Jednání na úrovni miliard." },
   { title: "Osobní vyjednávání", desc: "Nemovitosti, majetkové spory, dohody s vysokou osobní hodnotou." },
 ];
 
 const testimonials = [
-  { quote: "Ondřej nám pomohl vyjednat podmínky, které jsme považovali za nedosažitelné. Klid, příprava a přesnost.", author: "CEO, výrobní společnost" },
-  { quote: "Profesionální zastoupení při prodeji firmy. Výsledek překonal naše očekávání o desítky procent.", author: "Majitel, strojírenský podnik" },
-  { quote: "Kurz vyjednávání změnil přístup celého obchodního týmu. Praktické, tvrdé, použitelné hned.", author: "Obchodní ředitel, IT firma" },
-  { quote: "Ondřej přistupuje k věci systematicky a diskrétně. Přesně to, co jsme potřebovali.", author: "CFO, energetická společnost" },
+  { quote: "Pomohl nám dosáhnout podmínek, které jsme považovali za nereálné. Příprava, klid a přesná práce s argumenty.", author: "CEO, výrobní společnost" },
+  { quote: "Profesionální zastoupení při prodeji firmy. Výsledná cena překonala naše očekávání o desítky procent.", author: "Majitel, strojírenský podnik" },
+  { quote: "Trénink změnil přístup celého obchodního týmu. Simulace, rozbory, okamžitá použitelnost.", author: "Obchodní ředitel, IT firma" },
+  { quote: "Systematický a diskrétní přístup. Přesně to, co naše situace vyžadovala.", author: "CFO, energetická společnost" },
   { quote: "Trénink na míru pro nákupní tým. Měřitelný posun v dohodách s dodavateli.", author: "Ředitel nákupu, FMCG" },
-  { quote: "Pomohl nám udržet klíčového klienta. Bez emocí, s výsledkem.", author: "Country Manager, technologická firma" },
+  { quote: "Pomohl nám udržet klíčového klienta. Bez emocí, s jasným výsledkem.", author: "Country Manager, technologická firma" },
 ];
 
 const sectors = [
@@ -49,10 +49,10 @@ export default function References() {
           <AnimatedSection className="max-w-3xl">
             <div className="w-10 h-px bg-brass mb-6" />
             <h1 className="heading-xl text-primary-foreground mb-6">
-              Výsledky, které mluví za sebe
+              Výsledky z praxe
             </h1>
             <p className="body-lg text-primary-foreground/60">
-              Vybrané dopady z reálných zakázek. Detaily sdílím diskrétně a podle kontextu.
+              Vybrané dopady z reálných zakázek. Konkrétní detaily sdílím osobně, podle kontextu.
             </p>
           </AnimatedSection>
         </div>
@@ -103,8 +103,8 @@ export default function References() {
       <section className="py-24 md:py-32 lg:py-36">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-14 md:mb-20">
-            <p className="micro-text text-brass mb-4">Klienti</p>
-            <h2 className="heading-lg">Co říkají ti, se kterými jsem jednal</h2>
+            <p className="micro-text text-brass mb-4">Reference</p>
+            <h2 className="heading-lg">Zpětná vazba z praxe</h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((t, i) => (
@@ -113,7 +113,7 @@ export default function References() {
                   className="h-full rounded-sm border border-foreground/[0.06] p-8 md:p-10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
                   style={{ background: `linear-gradient(135deg, hsl(var(--foreground) / 0.95), hsl(var(--foreground) / 0.88))` }}
                 >
-                  <span className="block font-serif text-4xl text-brass/30 leading-none mb-3 select-none">„</span>
+                  <span className="block font-serif text-4xl text-brass/30 leading-none mb-3 select-none">{"\u201E"}</span>
                   <p className="font-serif text-lg md:text-xl text-primary-foreground/85 leading-[1.55] mb-6 flex-1">{t.quote}</p>
                   <div className="flex items-center gap-3">
                     <span className="w-8 h-px bg-brass/40" />
@@ -150,8 +150,8 @@ export default function References() {
       <section className="py-24 md:py-32 lg:py-36 bg-gradient-to-br from-brass/90 to-brass">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-lg text-foreground mb-4">Chcete podobné výsledky?</h2>
-            <p className="body-lg text-foreground/70 mb-10">Popište mi situaci. Navrhnu, jak k nim dojít.</p>
+            <h2 className="heading-lg text-foreground mb-4">Řešíte podobnou situaci?</h2>
+            <p className="body-lg text-foreground/70 mb-10">Popište mi ji. Navrhnu, jak postupovat.</p>
             <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
               <Link to="/kontakt">Popsat situaci</Link>
             </Button>

@@ -11,46 +11,46 @@ const serviceModes = [
     num: "01",
     title: "Vyjednám za vás",
     subtitle: "Zastoupení ve vyjednávání",
-    desc: "Převezmu jednání s protistranou. Připravím strategii, argumentaci a scénáře. Řídím celý proces od analýzy po finální dohodu. Vy se soustředíte na rozhodování.",
-    situations: ["Obchodní smlouvy a kontrakty", "Prodej nebo nákup firmy", "Spory, kde je potřeba výsledek bez soudu", "Vyjednávání s investory, partnery, dodavateli"],
+    desc: "Převezmu jednání s protistranou. Připravím strategii, scénáře a argumentaci. Řídím proces od analýzy po uzavření dohody. Vy se soustředíte na rozhodování.",
+    situations: ["Obchodní smlouvy a kontrakty", "Prodej nebo nákup firmy", "Spory, kde je potřeba výsledek mimo soud", "Jednání s investory, partnery nebo dodavateli"],
   },
   {
     icon: Target,
     num: "02",
     title: "Připravím vás na jednání",
     subtitle: "Strategie a příprava",
-    desc: "Dodám vám plán, rozbor protistrany, scénáře a argumentaci. Natrénujeme klíčové momenty. Jednáte vy — ale s kontrolou nad výsledkem.",
-    situations: ["Důležité jednání, kde nechcete improvizovat", "Cenová vyjednávání s klíčovým partnerem", "Situace, kde potřebujete jasnou strategii", "Opakující se vyjednávání se špatným výsledkem"],
+    desc: "Dodám rozbor situace, profil protistrany, scénáře a argumentaci. Natrénujeme klíčové momenty. Jednáte vy — ale s jasným plánem a kontrolou nad průběhem.",
+    situations: ["Důležité jednání, kde nechcete improvizovat", "Cenové vyjednávání s klíčovým partnerem", "Situace, která vyžaduje jasnou strategii", "Opakující se jednání s nedostatečným výsledkem"],
   },
   {
     icon: Zap,
     num: "03",
-    title: "Pomohu v kritické situaci",
-    subtitle: "Krizové a obtížné vyjednávání",
-    desc: "Eskalace, patové situace, emocionální konflikty. Vstoupím rychle, stabilizuji situaci a hledám cestu k řešení i tam, kde se zdá, že žádná není.",
-    situations: ["Vyjednávání, které se zaseklo", "Situace pod časovým tlakem", "Konflikt, který hrozí eskalací", "Případ, kde běžný přístup selhal"],
+    title: "Pomohu v obtížné situaci",
+    subtitle: "Podpora v náročných jednáních",
+    desc: "Patové situace, eskalace, časový tlak. Vstoupím rychle, stabilizuji situaci a najdu cestu k řešení i tam, kde se zdá být uzavřená.",
+    situations: ["Jednání, které se zaseklo", "Situace pod časovým tlakem", "Konflikt s rizikem eskalace", "Případ, kde běžný postup nefunguje"],
   },
 ];
 
 const process = [
-  { step: "01", title: "Úvodní konzultace", desc: "Zmapuji situaci, definujeme cíle a posoudíme nejlepší přístup. Zdarma a nezávazně." },
-  { step: "02", title: "Analýza a strategie", desc: "Zmapuji protistranu, připravím scénáře, argumentaci a detailní plán jednání." },
-  { step: "03", title: "Vyjednávání", desc: "Jednám za vás — nebo vás vedu. S cílem dosáhnout nejlepšího možného výsledku." },
-  { step: "04", title: "Výsledek", desc: "Vyhodnocení dohody, doporučení dalších kroků, podpora při implementaci." },
+  { step: "01", title: "Úvodní rozhovor", desc: "Zmapuji situaci, definujeme cíle a zvolíme nejlepší formát spolupráce." },
+  { step: "02", title: "Analýza a strategie", desc: "Rozeberu protistranu, připravím scénáře, argumentaci a plán jednání." },
+  { step: "03", title: "Vyjednávání", desc: "Jednám za vás, nebo vás vedu. S cílem dosáhnout nejlepšího dosažitelného výsledku." },
+  { step: "04", title: "Výsledek a vyhodnocení", desc: "Posoudíme dohodu, doporučím další kroky, případně podpořím implementaci." },
 ];
 
 const gains = [
-  { title: "Lepší podmínky", desc: "Zkušenost, techniky a příprava vedou k měřitelně lepším dohodám — v cenách, termínech i podmínkách." },
-  { title: "Kontrola nad průběhem", desc: "Pracuji se scénáři a alternativami. Vím, co dělat, když protistrana řekne ne." },
-  { title: "Oddělení emocí", desc: "Profesionální vyjednavač jedná racionálně i pod tlakem. Zachováte vztah s protistranou." },
-  { title: "Ušetřený čas", desc: "Vyjednavač řeší jednání, vy se věnujete svému byznysu. Bez zbytečných kol a zdržení." },
+  { title: "Lepší podmínky", desc: "Příprava, zkušenost a struktura vedou k měřitelně lepším dohodám — v cenách, termínech i smluvních podmínkách." },
+  { title: "Kontrola nad jednáním", desc: "Pracuji se scénáři a alternativami. Každý krok je promyšlený, ne reaktivní." },
+  { title: "Oddělení emocí od procesu", desc: "Profesionální vyjednavač jedná racionálně i pod tlakem. Vy zůstáváte v roli partnera." },
+  { title: "Úspora času", desc: "Vyjednavač řeší jednání, vy se věnujete svému byznysu. Bez zbytečných kol a zdržení." },
 ];
 
 const caseStudies = [
-  { label: "Prodej podniku", result: "+120 % oproti první nabídce", desc: "Strategie postavená na hodnotové argumentaci, trpělivosti a alternativách." },
-  { label: "Nákup nemovitosti", result: "−40,5 mil. Kč", desc: "Kombinace cenové analýzy, timingu a vyjednávací taktiky." },
-  { label: "Mzdové vyjednávání", result: "7,5 % místo 16 %", desc: "Řízené vyjednávání s odbory, kontrola eskalace, udržení vztahů." },
-  { label: "Česká energetika", result: "14 mld. Kč úspora", desc: "Detailní příprava scénářů a práce s regulačním prostředím na evropské úrovni." },
+  { label: "Prodej podniku", result: "+120 % oproti první nabídce", desc: "Hodnotová argumentace, trpělivost a práce s alternativami." },
+  { label: "Nákup nemovitosti", result: "−40,5 mil. Kč", desc: "Cenová analýza, timing a vyjednávací strategie." },
+  { label: "Mzdové vyjednávání", result: "7,5 % místo 16 %", desc: "Řízené jednání s odbory, kontrola eskalace, zachování vztahů." },
+  { label: "Regulace v energetice", result: "14 mld. Kč úspora", desc: "Příprava scénářů a práce s regulačním prostředím na evropské úrovni." },
 ];
 
 export default function Negotiation() {
@@ -66,10 +66,10 @@ export default function Negotiation() {
           <AnimatedSection className="max-w-2xl">
             <div className="w-10 h-px bg-brass mb-6" />
             <h1 className="heading-xl text-primary-foreground mb-6">
-              Vyjednám vám podmínky, na&nbsp;které sami nedosáhnete.
+              Vyjednám podmínky, na&nbsp;které sami nedosáhnete.
             </h1>
             <p className="body-lg text-primary-foreground/60 mb-8 max-w-lg">
-              Smlouvy, ceny, spory, fúze, akvizice. V ČR i v zahraničí. Každé jednání má prostor na lepší výsledek — pomůžu ho najít.
+              Smlouvy, ceny, spory, akvizice. Každé jednání má prostor na lepší výsledek — pomůžu ho najít a využít.
             </p>
             <div className="flex gap-4">
               <Button variant="premium" size="xl" asChild>
@@ -87,8 +87,8 @@ export default function Negotiation() {
       <section className="py-24 md:py-32 lg:py-36">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-14 md:mb-20">
-            <p className="micro-text text-brass mb-4">Tři způsoby spolupráce</p>
-            <h2 className="heading-lg text-balance">Jak vám mohu pomoci</h2>
+            <p className="micro-text text-brass mb-4">Formy spolupráce</p>
+            <h2 className="heading-lg text-balance">Tři způsoby, jak vám mohu pomoci</h2>
           </AnimatedSection>
           <div className="space-y-8">
             {serviceModes.map((mode, i) => (
@@ -121,7 +121,7 @@ export default function Negotiation() {
       <section className="py-24 md:py-32 lg:py-36 bg-secondary/30">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-14 md:mb-20">
-            <p className="micro-text text-brass mb-4">Proces</p>
+            <p className="micro-text text-brass mb-4">Průběh</p>
             <h2 className="heading-lg text-balance">Jak spolupráce probíhá</h2>
           </AnimatedSection>
           <div className="relative grid md:grid-cols-4 gap-8 md:gap-10">
@@ -146,7 +146,7 @@ export default function Negotiation() {
         <div className="container-wide">
           <AnimatedSection className="text-center mb-14 md:mb-20">
             <p className="micro-text text-brass mb-4">Přínos</p>
-            <h2 className="heading-lg text-primary-foreground text-balance">Co získáte spoluprací</h2>
+            <h2 className="heading-lg text-primary-foreground text-balance">Co přináší profesionální vyjednávání</h2>
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-px bg-primary-foreground/10 max-w-4xl mx-auto overflow-hidden rounded-sm">
             {gains.map((item, i) => (
@@ -165,8 +165,8 @@ export default function Negotiation() {
       <section className="py-24 md:py-32 lg:py-36">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-14 md:mb-20">
-            <p className="micro-text text-brass mb-4">Výsledky</p>
-            <h2 className="heading-lg text-balance">Vybrané anonymizované zakázky</h2>
+            <p className="micro-text text-brass mb-4">Z praxe</p>
+            <h2 className="heading-lg text-balance">Vybrané zakázky</h2>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {caseStudies.map((cs, i) => (
@@ -191,14 +191,14 @@ export default function Negotiation() {
       <section className="py-24 md:py-32 lg:py-36 bg-secondary/30">
         <div className="container-narrow">
           <AnimatedSection className="text-center mb-14">
-            <h2 className="heading-lg text-balance">Proč právě tento vyjednavač</h2>
+            <h2 className="heading-lg text-balance">Proč spolupracovat se mnou</h2>
           </AnimatedSection>
           <div className="space-y-6">
             {[
-              "Vyjednávám od roku 2009. Na evropské i byznysové úrovni. S výsledky v řádech miliard i milionů.",
-              "Oddělím emoce od procesu. Profesionální vyjednavač jedná racionálně i pod tlakem.",
-              "Zachovám vztah s protistranou. Tvrdé požadavky vznáší někdo jiný — vy zůstáváte v roli partnera.",
-              "Pracuji diskrétně. Ne všechny zakázky lze publikovat. A přesně tak to má být.",
+              "Vyjednávám od roku 2009. Na evropské i byznysové úrovni, s výsledky v řádech miliard i milionů.",
+              "Oddělím emoce od procesu. Profesionální vyjednavač jedná racionálně i tam, kde je osobní tlak.",
+              "Zachovám vztah s protistranou. Tvrdé požadavky vznáší vyjednavač — vy zůstáváte v roli partnera.",
+              "Pracuji diskrétně. Ne každou zakázku lze zveřejnit. A přesně tak to má být.",
             ].map((text, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div className="flex items-start gap-4">
