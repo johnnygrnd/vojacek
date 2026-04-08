@@ -71,6 +71,7 @@ export default function References() {
     <Layout>
       <PageHero
         variant="editorial"
+        intensity="medium"
         image={referenceHero}
         imageAlt="Reference"
         label="Reference"

@@ -11,6 +11,7 @@ export default function About() {
     <Layout>
       <PageHero
         variant="editorial"
+        intensity="medium"
         image={aboutHero}
         imageAlt="Ondřej Vojáček"
         label="O mně"

@@ -23,6 +23,7 @@ export default function Contact() {
     <Layout>
       <PageHero
         variant="editorial"
+        intensity="low"
         image={contactHero}
         imageAlt="Kontakt"
         label="Kontakt"
