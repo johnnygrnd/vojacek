@@ -83,7 +83,7 @@ export default function Courses() {
       <PageHero
         image={trainingImg}
         imageAlt="Tréninky vyjednávání"
-        imagePosition="center 40%"
+        imagePosition="center 65%"
         intensity="medium"
         title="Tréninky vyjednávání"
         description="Neučím obecnou teorii. Trénink stavím na simulacích, rozborech a postupech, které sám používám při vyjednáváních pro klienty."
