@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
+import PageHero from "@/components/sections/PageHero";
+import heroImg from "@/assets/hero-portrait.jpg";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", type: "konzultace" });
@@ -18,19 +21,18 @@ export default function Contact() {
 
   return (
     <Layout>
-      <section className="py-16 md:py-24 lg:py-28">
+      <PageHero
+        image={heroImg}
+        imageAlt="Kontakt"
+        label="Kontakt"
+        title="Popište situaci. Navrhnu další krok."
+        description="Ať hledáte zastoupení, přípravu na jednání nebo trénink — začneme krátkým rozhovorem. Společně určíme, jaký formát spolupráce dává smysl."
+      />
+
+      <section className="py-20 md:py-28 lg:py-32">
         <div className="container-wide">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
             <AnimatedSection>
-              <div className="w-10 h-px bg-brass mb-6" />
-              <p className="micro-text text-brass mb-4">Kontakt</p>
-              <h1 className="heading-xl mb-5">
-                Popište situaci. Navrhnu další krok.
-              </h1>
-              <p className="body-lg text-muted-foreground mb-8">
-                Ať hledáte zastoupení, přípravu na jednání nebo trénink — začneme krátkým rozhovorem. Společně určíme, jaký formát spolupráce dává smysl.
-              </p>
-
               <div className="space-y-5 mb-8">
                 <div>
                   <p className="micro-text mb-2">Telefon</p>

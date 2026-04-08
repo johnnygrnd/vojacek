@@ -2,24 +2,25 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
+import PageHero from "@/components/sections/PageHero";
 import { getPublishedArticles } from "@/lib/blog-store";
+import heroImg from "@/assets/hero-portrait.jpg";
 
 export default function Blog() {
   const articles = getPublishedArticles();
 
   return (
     <Layout>
-      <section className="py-16 md:py-24 lg:py-28">
-        <div className="container-wide">
-          <AnimatedSection className="max-w-3xl mb-14">
-            <div className="w-10 h-px bg-brass mb-6" />
-            <p className="micro-text text-brass mb-4">Články</p>
-            <h1 className="heading-xl mb-4">Z praxe vyjednavače</h1>
-            <p className="body-lg text-muted-foreground">
-              Postřehy, principy a zkušenosti z reálných jednání.
-            </p>
-          </AnimatedSection>
+      <PageHero
+        image={heroImg}
+        imageAlt="Články"
+        label="Články"
+        title="Z praxe vyjednavače"
+        description="Postřehy, principy a zkušenosti z reálných jednání."
+      />
 
+      <section className="py-20 md:py-28 lg:py-32">
+        <div className="container-wide">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {articles.map((article, i) => (
               <AnimatedSection key={article.id} delay={i * 0.08}>

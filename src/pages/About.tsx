@@ -2,13 +2,23 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
+import PageHero from "@/components/sections/PageHero";
 import aboutImg from "@/assets/about-portrait.jpg";
+import heroImg from "@/assets/hero-portrait.jpg";
 
 export default function About() {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="py-16 md:py-24 lg:py-28">
+      <PageHero
+        image={heroImg}
+        imageAlt="Ondřej Vojáček"
+        label="O mně"
+        title="Ondřej Vojáček"
+        description="Profesionální vyjednavač, vysokoškolský pedagog a ekonom. Spojuji tvrdou praxi s porozuměním psychologii jednání."
+      />
+
+      {/* Bio */}
+      <section className="py-20 md:py-28 lg:py-32">
         <div className="container-wide">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <AnimatedSection>
@@ -16,16 +26,11 @@ export default function About() {
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
               <div className="w-10 h-px bg-brass mb-6" />
-              <p className="micro-text text-brass mb-4">O mně</p>
-              <h1 className="heading-xl mb-4">Ondřej Vojáček</h1>
               <p className="body-lg text-muted-foreground mb-2">
                 doc. Ing. Ondřej Vojáček, Ph.D.
               </p>
-              <p className="body-md text-muted-foreground mb-6">
-                Profesionální vyjednavač, vysokoškolský pedagog a ekonom.
-              </p>
               <p className="body-md text-muted-foreground mb-4">
-                Spojuji tvrdou praxi s porozuměním psychologii jednání. Jsem najímán pro důležitá obchodní vyjednávání, cenová jednání, akvizice i sporné situace.
+                Jsem najímán pro důležitá obchodní vyjednávání, cenová jednání, akvizice i sporné situace.
               </p>
               <p className="body-md text-muted-foreground">
                 Vedle zastupování klientů vedu firemní tréninky a individuální přípravu na míru. Učím jen to, co sám používám při vyjednáváních.
