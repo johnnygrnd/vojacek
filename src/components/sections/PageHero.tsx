@@ -10,6 +10,8 @@ interface PageHeroProps {
   imageAlt?: string;
   /** CSS object-position value, e.g. "center 20%" or "right top" */
   imagePosition?: string;
+  /** Custom background class when no image is used */
+  bgClass?: string;
   label?: string;
   title: string;
   description?: string;
