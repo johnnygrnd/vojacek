@@ -16,7 +16,7 @@ export default function Blog() {
         intensity="low"
         image={blogHero}
         imageAlt="Články"
-        imagePosition="center 25%"
+        imagePosition="center 35%"
         label="Články"
         title="Z praxe vyjednavače"
         description="Postřehy, principy a zkušenosti z reálných jednání."
