@@ -4,7 +4,6 @@ import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import PageHero from "@/components/sections/PageHero";
 import { getPublishedArticles } from "@/lib/blog-store";
-import heroImg from "@/assets/hero-portrait.jpg";
 
 export default function Blog() {
   const articles = getPublishedArticles();
@@ -12,8 +11,7 @@ export default function Blog() {
   return (
     <Layout>
       <PageHero
-        image={heroImg}
-        imageAlt="Články"
+        variant="editorial"
         label="Články"
         title="Z praxe vyjednavače"
         description="Postřehy, principy a zkušenosti z reálných jednání."

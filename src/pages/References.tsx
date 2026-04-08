@@ -69,8 +69,8 @@ export default function References() {
   return (
     <Layout>
       <PageHero
-        image={heroImg}
-        imageAlt="Reference"
+        variant="editorial"
+        label="Reference"
         title="Výsledky z praxe"
         description="Vybrané dopady z reálných zakázek. Konkrétní detaily sdílím osobně, podle kontextu."
       />
