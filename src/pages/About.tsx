@@ -4,14 +4,12 @@ import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import PageHero from "@/components/sections/PageHero";
 import aboutImg from "@/assets/about-portrait.jpg";
-import heroImg from "@/assets/hero-portrait.jpg";
 
 export default function About() {
   return (
     <Layout>
       <PageHero
-        image={heroImg}
-        imageAlt="Ondřej Vojáček"
+        variant="editorial"
         label="O mně"
         title="Ondřej Vojáček"
         description="Profesionální vyjednavač, vysokoškolský pedagog a ekonom. Spojuji tvrdou praxi s porozuměním psychologii jednání."
