@@ -24,6 +24,7 @@ export default function Contact() {
       <PageHero
         variant="editorial"
         intensity="low"
+        bgClass="bg-gradient-to-br from-[hsl(215,35%,18%)] via-[hsl(215,30%,14%)] to-[hsl(220,25%,10%)]"
         label="Kontakt"
         title="Popište situaci. Navrhnu další krok."
         description="Ať hledáte zastoupení, přípravu na jednání nebo trénink — začneme krátkým rozhovorem. Společně určíme, jaký formát spolupráce dává smysl."
