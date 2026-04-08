@@ -26,6 +26,7 @@ export default function Contact() {
         intensity="low"
         image={contactHero}
         imageAlt="Kontakt"
+        imagePosition="center 30%"
         label="Kontakt"
         title="Popište situaci. Navrhnu další krok."
         description="Ať hledáte zastoupení, přípravu na jednání nebo trénink — začneme krátkým rozhovorem. Společně určíme, jaký formát spolupráce dává smysl."

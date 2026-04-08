@@ -60,6 +60,7 @@ export default function Negotiation() {
       <PageHero
         image={heroImg}
         imageAlt="Vyjednávání"
+        imagePosition="center 30%"
         title={"Když je jednání příliš důležité na\u00A0improvizaci."}
         intensity="high"
         description="Zastupuji klienty v obchodních, cenových a strategických jednáních. Připravuji strategii a vedu jednání tak, aby výsledek odpovídal skutečné síle vaší pozice."

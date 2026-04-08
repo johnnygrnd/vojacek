@@ -14,6 +14,7 @@ export default function About() {
         intensity="medium"
         image={aboutHero}
         imageAlt="Ondřej Vojáček"
+        imagePosition="center 20%"
         label="O mně"
         title="Ondřej Vojáček"
         description="Profesionální vyjednavač, vysokoškolský pedagog a ekonom. Spojuji tvrdou praxi s porozuměním psychologii jednání."
