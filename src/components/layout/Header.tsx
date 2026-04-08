@@ -25,13 +25,13 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-7">
           {navItems.map((item) => (
             <Link
               key={item.href}
               to={item.href}
               className={`text-sm font-medium transition-colors duration-200 ${
-                location.pathname === item.href
+                location.pathname === item.href || location.pathname.startsWith(item.href + "/")
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}
@@ -43,7 +43,7 @@ export default function Header() {
 
         <div className="hidden lg:block">
           <Button variant="premium" size="lg" asChild>
-            <Link to="/kontakt">Domluvit úvodní hovor</Link>
+            <Link to="/kontakt">Domluvit hovor</Link>
           </Button>
         </div>
 
@@ -60,7 +60,7 @@ export default function Header() {
       {/* Mobile menu */}
       {open && (
         <div className="lg:hidden bg-background border-t border-border/40">
-          <nav className="container-wide py-6 flex flex-col gap-4">
+          <nav className="container-wide py-6 flex flex-col gap-3">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -77,7 +77,7 @@ export default function Header() {
             ))}
             <Button variant="premium" size="lg" asChild className="mt-4">
               <Link to="/kontakt" onClick={() => setOpen(false)}>
-                Domluvit úvodní hovor
+                Domluvit hovor
               </Link>
             </Button>
           </nav>
