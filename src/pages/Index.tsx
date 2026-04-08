@@ -10,16 +10,28 @@ import { ArrowRight } from "lucide-react";
 
 const results = [
   { label: "Prodej podniku", main: "+120 %", context: "Navýšení ceny oproti první nabídce" },
-  { label: "Nákup nemovitosti", main: "−40,5 mil. Kč", context: "Úspora při akvizici" },
+  { label: "Nákup nemovitosti", main: "\u221240,5 mil. Kč", context: "Úspora při akvizici" },
   { label: "Regulace v energetice", main: "14 mld. Kč", context: "Dosažená úspora v regulačním procesu" },
-  { label: "Mzdové vyjednávání", main: "−8,5 p.b.", context: "Snížení nákladů oproti požadavku odborů" },
+  { label: "Mzdové vyjednávání", main: "\u22128,5 p.b.", context: "Snížení nákladů oproti požadavku odborů" },
 ];
 
 const testimonials = [
-  { quote: "Pomohl nám dosáhnout podmínek, které jsme považovali za nereálné. Příprava, klid a přesná práce s argumenty.", author: "CEO, výrobní společnost" },
-  { quote: "Profesionální zastoupení při prodeji firmy. Výsledná cena překonala naše očekávání o desítky procent.", author: "Majitel, strojírenský podnik" },
-  { quote: "Trénink změnil přístup celého obchodního týmu. Simulace, rozbory, okamžitá použitelnost.", author: "Obchodní ředitel, IT firma" },
-  { quote: "Systematický a diskrétní přístup. Přesně to, co naše situace vyžadovala.", author: "CFO, energetická společnost" },
+  {
+    quote: "Neuvěřil bych, jak se mi za pouhé 2 dny může změnit představa o tom, co a jak příště při jednání dělat.",
+    author: "Patrik Nový, ředitel akvizičního týmu Komerční banky",
+  },
+  {
+    quote: "Profesionální zastoupení při prodeji firmy. Výsledná cena překonala naše očekávání o desítky procent.",
+    author: "Majitel, strojírenský podnik",
+  },
+  {
+    quote: "Trénink změnil přístup celého obchodního týmu. Simulace, rozbory, okamžitá použitelnost.",
+    author: "Obchodní ředitel, IT firma",
+  },
+  {
+    quote: "Systematický a diskrétní přístup. Přesně to, co naše situace vyžadovala.",
+    author: "CFO, energetická společnost",
+  },
 ];
 
 /* ─── PAGE ─── */
@@ -40,39 +52,38 @@ export default function Index() {
             <AnimatedSection>
               <div className="w-10 h-px bg-brass mb-6" />
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.12] tracking-tight text-primary-foreground mb-6" style={{ fontFamily: "var(--font-serif)" }}>
-                Vyjednávám tam, kde záleží na&nbsp;výsledku.
+                Vyjednávání, ve kterém jde o&nbsp;výsledek, nenechávejte náhodě.
               </h1>
               <p className="body-md text-primary-foreground/55 mb-10 max-w-md">
-                Zastupuji firmy i jednotlivce v důležitých jednáních. Připravuji strategie, řídím proces a učím vyjednávat.
+                Zastupuji firmy i jednotlivce v důležitých jednáních, připravuji strategii a učím vyjednávat tak, aby se lepší výsledek nestal výjimkou, ale standardem.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Button variant="premium" size="xl" asChild>
                   <Link to="/kontakt">Popsat situaci</Link>
                 </Button>
                 <Button variant="premium-outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
-                  <Link to="/kurzy">Tréninky vyjednávání</Link>
+                  <Link to="/kurzy">Prohlédnout tréninky</Link>
                 </Button>
               </div>
-              <p className="text-xs text-primary-foreground/30">Úvodní konzultace zdarma · Diskrétní přístup</p>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* ═══════ AUTHORITY BAR ═══════ */}
+      {/* ═══════ PROOF BLOCK ═══════ */}
       <section className="py-12 md:py-16 border-b border-border/40">
         <div className="container-wide">
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-center">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
-              { num: "15+", label: "let v praxi" },
-              { num: "mld. Kč", label: "v řešených zakázkách" },
-              { num: "EU", label: "úroveň jednání" },
-              { num: "100+", label: "realizovaných tréninků" },
-            ].map((s, i) => (
+              "Praxe od roku 2009.",
+              "Důležitá obchodní, strategická i cenová jednání.",
+              "Tréninky postavené na simulacích a okamžité zpětné vazbě.",
+              "Diskrétní přístup pro firmy, management i jednotlivce.",
+            ].map((text, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="min-w-[120px]">
-                  <p className="font-serif text-2xl md:text-3xl font-semibold text-foreground">{s.num}</p>
-                  <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mt-1">{s.label}</p>
+                <div className="flex items-start gap-3">
+                  <span className="w-1 h-1 rounded-full bg-brass mt-2 shrink-0" />
+                  <p className="text-sm text-muted-foreground leading-relaxed">{text}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -91,23 +102,23 @@ export default function Index() {
             {[
               {
                 num: "01",
-                title: "Potřebuji profesionála u stolu",
-                desc: "Převezmu jednání, připravím strategii a dotáhnu dohodu k nejlepšímu dosažitelnému výsledku. Vy rozhodujete, já vyjednávám.",
-                cta: "Zastoupení ve vyjednávání",
+                title: "Zastoupení ve vyjednávání",
+                desc: "Když je ve hře hodně, vstupuji do jednání za vás nebo po vašem boku. Připravuji strategii, vedu jednání a hlídám, aby výsledek odpovídal tomu, co je skutečně možné vyjednat.",
+                cta: "Více o zastoupení",
                 href: "/vyjednavani",
               },
               {
                 num: "02",
-                title: "Chci jít do jednání připravený",
-                desc: "Připravím scénáře, argumentaci a plán. Jednáte sami — s jasnou strategií a kontrolou nad průběhem.",
-                cta: "Příprava na jednání",
+                title: "Příprava na důležité jednání",
+                desc: "Pomohu vám připravit argumentaci, scénáře, ústupky i reakce na tlak protistrany. Do jednání pak jdete s větší jistotou, kontrolou a silnější pozicí.",
+                cta: "Více o přípravě",
                 href: "/vyjednavani",
               },
               {
                 num: "03",
-                title: "Chci naučit tým vyjednávat",
-                desc: "Tréninky založené na simulacích a okamžitém rozboru. Dovednosti, které tým použije ihned po kurzu.",
-                cta: "Tréninky vyjednávání",
+                title: "Tréninky vyjednávání",
+                desc: "Praktické tréninky pro firmy i jednotlivce. Minimum teorie, maximum simulací, rozborů a technik, které využijete při nejbližším jednání.",
+                cta: "Prohlédnout tréninky",
                 href: "/kurzy",
               },
             ].map((item, i) => (
@@ -164,19 +175,11 @@ export default function Index() {
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
               <div className="w-10 h-px bg-brass mb-6" />
+              <p className="micro-text text-brass mb-4">O mně</p>
               <h2 className="heading-lg mb-6">Proč klienti svěřují důležitá jednání mně</h2>
-              <div className="space-y-4 mb-8">
-                {[
-                  "Vyjednávám od roku 2009 — na evropské úrovni, v korporátu i v osobních případech s vysokou hodnotou.",
-                  "Pracuji se strukturou, scénáři a daty. Klienti vědí, co se bude dít a proč.",
-                  "Učím jen to, co sám používám. Žádná teorie bez praxe.",
-                ].map((text, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <span className="w-1 h-1 rounded-full bg-brass mt-2.5 shrink-0" />
-                    <p className="body-md text-muted-foreground">{text}</p>
-                  </div>
-                ))}
-              </div>
+              <p className="body-md text-muted-foreground mb-8">
+                Ondřej Vojáček je profesionální vyjednavač, který spojuje tvrdou praxi s hlubokým porozuměním psychologii jednání. Je najímán pro důležitá obchodní vyjednávání, cenová jednání, akvizice i sporné situace. Vedle zastupování klientů vede firemní tréninky a individuální přípravu na míru.
+              </p>
               <p className="font-serif text-lg md:text-xl font-medium text-foreground mb-8 leading-snug italic">
                 „Většina lidí nepřichází o peníze kvůli slabé pozici — ale proto, že šli do jednání bez přípravy."
               </p>
@@ -220,9 +223,9 @@ export default function Index() {
         <div className="container-narrow text-center">
           <AnimatedSection>
             <p className="text-xs uppercase tracking-[0.2em] text-foreground/50 mb-6">Další krok</p>
-            <h2 className="heading-lg text-foreground mb-4">Řekněte mi, co řešíte.</h2>
+            <h2 className="heading-lg text-foreground mb-4">Řešíte důležité jednání, nebo chcete posunout svůj tým?</h2>
             <p className="body-lg text-foreground/70 mb-10 max-w-xl mx-auto">
-              Stačí krátký popis situace. Ozvu se do 24 hodin s návrhem, jak postupovat.
+              Ozvěte se. Navrhnu, zda je pro vás vhodnější zastoupení, strategická příprava, nebo trénink na míru.
             </p>
             <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
               <Link to="/kontakt">Napsat zprávu</Link>

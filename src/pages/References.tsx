@@ -22,12 +22,30 @@ const caseTypes = [
 ];
 
 const testimonials = [
-  { quote: "Pomohl nám dosáhnout podmínek, které jsme považovali za nereálné. Příprava, klid a přesná práce s argumenty.", author: "CEO, výrobní společnost" },
-  { quote: "Profesionální zastoupení při prodeji firmy. Výsledná cena překonala naše očekávání o desítky procent.", author: "Majitel, strojírenský podnik" },
-  { quote: "Trénink změnil přístup celého obchodního týmu. Simulace, rozbory, okamžitá použitelnost.", author: "Obchodní ředitel, IT firma" },
-  { quote: "Systematický a diskrétní přístup. Přesně to, co naše situace vyžadovala.", author: "CFO, energetická společnost" },
-  { quote: "Trénink na míru pro nákupní tým. Měřitelný posun v dohodách s dodavateli.", author: "Ředitel nákupu, FMCG" },
-  { quote: "Pomohl nám udržet klíčového klienta. Bez emocí, s jasným výsledkem.", author: "Country Manager, technologická firma" },
+  {
+    quote: "Neuvěřil bych, jak se mi za pouhé 2 dny může změnit představa o tom, co a jak příště při jednání dělat.",
+    author: "Patrik Nový, ředitel akvizičního týmu Komerční banky",
+  },
+  {
+    quote: "Profesionální zastoupení při prodeji firmy. Výsledná cena překonala naše očekávání o desítky procent.",
+    author: "Majitel, strojírenský podnik",
+  },
+  {
+    quote: "Trénink změnil přístup celého obchodního týmu. Simulace, rozbory, okamžitá použitelnost.",
+    author: "Obchodní ředitel, IT firma",
+  },
+  {
+    quote: "Systematický a diskrétní přístup. Přesně to, co naše situace vyžadovala.",
+    author: "CFO, energetická společnost",
+  },
+  {
+    quote: "Trénink na míru pro nákupní tým. Měřitelný posun v dohodách s dodavateli.",
+    author: "Ředitel nákupu, FMCG",
+  },
+  {
+    quote: "Pomohl nám udržet klíčového klienta. Bez emocí, s jasným výsledkem.",
+    author: "Country Manager, technologická firma",
+  },
 ];
 
 const sectors = [

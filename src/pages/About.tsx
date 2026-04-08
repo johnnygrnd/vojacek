@@ -22,13 +22,13 @@ export default function About() {
                 doc. Ing. Ondřej Vojáček, Ph.D.
               </p>
               <p className="body-md text-muted-foreground mb-8">
-                Vyjednavač, vysokoškolský pedagog a ekonom.
+                Profesionální vyjednavač, vysokoškolský pedagog a ekonom.
               </p>
               <p className="body-md text-muted-foreground mb-4">
-                Vyjednávám profesionálně od roku 2009. Začínal jsem na evropské úrovni — v regulačních jednáních, kde šlo o miliardy a kde se rozhodovalo o celých odvětvích. Postupně jsem tyto principy přenesl do byznysové praxe.
+                Spojuji tvrdou praxi s hlubokým porozuměním psychologii jednání. Jsem najímán pro důležitá obchodní vyjednávání, cenová jednání, akvizice i sporné situace.
               </p>
               <p className="body-md text-muted-foreground">
-                Dnes pomáhám firmám i jednotlivcům vyjednat lepší podmínky — v kontraktech, sporech, cenách i strategických dohodách. A učím ostatní, jak vyjednávat systematicky.
+                Vedle zastupování klientů vedu firemní tréninky a individuální přípravu na míru. Učím jen to, co sám používám při vyjednáváních pro klienty.
               </p>
             </AnimatedSection>
           </div>
@@ -103,9 +103,9 @@ export default function About() {
       <section className="py-24 md:py-32 lg:py-36 bg-gradient-to-br from-brass/90 to-brass">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-lg text-foreground mb-4">Pojďme se spojit</h2>
+            <h2 className="heading-lg text-foreground mb-4">Řešíte důležité jednání, nebo chcete posunout svůj tým?</h2>
             <p className="body-lg text-foreground/70 mb-10">
-              Ať už hledáte zastoupení, přípravu na jednání nebo trénink.
+              Ozvěte se. Navrhnu, zda je pro vás vhodnější zastoupení, strategická příprava, nebo trénink na míru.
             </p>
             <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
               <Link to="/kontakt">Domluvit úvodní rozhovor</Link>
