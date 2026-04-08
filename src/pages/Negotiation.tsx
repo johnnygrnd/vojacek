@@ -32,11 +32,11 @@ const serviceModes = [
   },
 ];
 
-const process = [
-  { step: "01", title: "Úvodní rozhovor", desc: "Zmapuji situaci, definujeme cíle a zvolíme nejlepší formát spolupráce." },
-  { step: "02", title: "Analýza a strategie", desc: "Rozeberu protistranu, připravím scénáře, argumentaci a plán jednání." },
-  { step: "03", title: "Vyjednávání", desc: "Jednám za vás, nebo vás vedu. S cílem dosáhnout nejlepšího dosažitelného výsledku." },
-  { step: "04", title: "Výsledek a vyhodnocení", desc: "Posoudíme dohodu, doporučím další kroky, případně podpořím implementaci." },
+const processSteps = [
+  { step: "01", title: "Pochopení situace", desc: "Zmapuji situaci, cíle a prostor pro dohodu." },
+  { step: "02", title: "Strategie a příprava", desc: "Připravím scénáře a doporučení pro klíčové momenty jednání." },
+  { step: "03", title: "Vyjednávání", desc: "Podle potřeby vás na jednání připravím, vstoupím do něj po vašem boku, nebo vás přímo zastoupím." },
+  { step: "04", title: "Výsledek", desc: "Cílem není vést hezčí rozhovor, ale dosáhnout lepšího výsledku bez zbytečných chyb a ztrát." },
 ];
 
 const gains = [
@@ -48,7 +48,7 @@ const gains = [
 
 const caseStudies = [
   { label: "Prodej podniku", result: "+120 % oproti první nabídce", desc: "Hodnotová argumentace, trpělivost a práce s alternativami." },
-  { label: "Nákup nemovitosti", result: "−40,5 mil. Kč", desc: "Cenová analýza, timing a vyjednávací strategie." },
+  { label: "Nákup nemovitosti", result: "\u221240,5 mil. Kč", desc: "Cenová analýza, timing a vyjednávací strategie." },
   { label: "Mzdové vyjednávání", result: "7,5 % místo 16 %", desc: "Řízené jednání s odbory, kontrola eskalace, zachování vztahů." },
   { label: "Regulace v energetice", result: "14 mld. Kč úspora", desc: "Příprava scénářů a práce s regulačním prostředím na evropské úrovni." },
 ];
@@ -66,10 +66,10 @@ export default function Negotiation() {
           <AnimatedSection className="max-w-2xl">
             <div className="w-10 h-px bg-brass mb-6" />
             <h1 className="heading-xl text-primary-foreground mb-6">
-              Vyjednám podmínky, na&nbsp;které sami nedosáhnete.
+              Když je jednání příliš důležité na&nbsp;improvizaci.
             </h1>
             <p className="body-lg text-primary-foreground/60 mb-8 max-w-lg">
-              Smlouvy, ceny, spory, akvizice. Každé jednání má prostor na lepší výsledek — pomůžu ho najít a využít.
+              Zastupuji klienty v obchodních, cenových a strategických jednáních. Připravuji vyjednávací strategii, pomáhám zvládat tlak protistrany a vedu jednání tak, aby výsledek odpovídal skutečné síle vaší pozice.
             </p>
             <div className="flex gap-4">
               <Button variant="premium" size="xl" asChild>
@@ -121,12 +121,12 @@ export default function Negotiation() {
       <section className="py-24 md:py-32 lg:py-36 bg-secondary/30">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-14 md:mb-20">
-            <p className="micro-text text-brass mb-4">Průběh</p>
-            <h2 className="heading-lg text-balance">Jak spolupráce probíhá</h2>
+            <p className="micro-text text-brass mb-4">Jak pracuji</p>
+            <h2 className="heading-lg text-balance">Průběh spolupráce</h2>
           </AnimatedSection>
           <div className="relative grid md:grid-cols-4 gap-8 md:gap-10">
             <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-border" />
-            {process.map((s, i) => (
+            {processSteps.map((s, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="relative">
                   <div className="w-10 h-10 rounded-full bg-foreground text-primary-foreground flex items-center justify-center font-serif text-sm font-semibold mb-6 relative z-10">
@@ -215,9 +215,9 @@ export default function Negotiation() {
       <section className="py-24 md:py-32 lg:py-36 bg-gradient-to-br from-brass/90 to-brass">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-lg text-foreground mb-4">Máte jednání, kde záleží na výsledku?</h2>
+            <h2 className="heading-lg text-foreground mb-4">Řešíte důležité jednání, nebo chcete posunout svůj tým?</h2>
             <p className="body-lg text-foreground/70 mb-10 max-w-xl mx-auto">
-              Popište situaci. Navrhnu postup a odhadnu, co je realisticky dosažitelné.
+              Ozvěte se. Navrhnu, zda je pro vás vhodnější zastoupení, strategická příprava, nebo trénink na míru.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
