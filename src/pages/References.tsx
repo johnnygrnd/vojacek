@@ -74,7 +74,7 @@ export default function References() {
         intensity="medium"
         image={referenceHero}
         imageAlt="Reference"
-        imagePosition="center 15%"
+        imagePosition="center 25%"
         label="Reference"
         title="Výsledky z praxe"
         description="Vybrané dopady z reálných zakázek. Konkrétní detaily sdílím osobně, podle kontextu."
