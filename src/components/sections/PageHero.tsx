@@ -10,6 +10,8 @@ interface PageHeroProps {
   imageAlt?: string;
   /** CSS object-position value, e.g. "center 20%" or "right top" */
   imagePosition?: string;
+  /** Custom background class when no image is used */
+  bgClass?: string;
   label?: string;
   title: string;
   description?: string;
@@ -34,6 +36,7 @@ export default function PageHero({
   image,
   imageAlt = "",
   imagePosition = "center center",
+  bgClass,
   label,
   title,
   description,
@@ -87,7 +90,7 @@ export default function PageHero({
           <div className={`absolute inset-0 bg-gradient-to-t ${cfg.overlay}`} />
         </div>
       ) : (
-        <div className="absolute inset-0 bg-foreground" />
+        <div className={`absolute inset-0 ${bgClass || "bg-foreground"}`} />
       )}
       <div className="relative w-full container-wide pb-10 md:pb-14 pt-28">
         <AnimatedSection className="max-w-3xl">
