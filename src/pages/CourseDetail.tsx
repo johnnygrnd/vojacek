@@ -41,10 +41,10 @@ const courseData: Record<string, {
       "Získáte systematický přístup, který funguje opakovaně",
     ],
     modules: [
-      { title: "Příprava a strategie", desc: "Vyjednávací prostor, profil protistrany, scénáře. Základ každého úspěšného jednání." },
+      { title: "Příprava a strategie", desc: "Vyjednávací prostor, profil protistrany, scénáře. Základ každého jednání." },
       { title: "Psychologie vyjednávání", desc: "Čtení signálů, práce s emocemi, rozpoznání manipulace." },
       { title: "Techniky a taktiky", desc: "Kotvení, framing, řízení ústupků, práce s časem a tlakem." },
-      { title: "Simulace a rozbory", desc: "Reálné vyjednávací situace pod tlakem. Rozbor, zpětná vazba, iterace." },
+      { title: "Simulace a rozbory", desc: "Reálné vyjednávací situace pod tlakem. Rozbor a zpětná vazba." },
     ],
     format: [
       "3 dny prezenčně (Praha)",
@@ -93,7 +93,7 @@ const courseData: Record<string, {
       { title: "Vyjednávací strategie", desc: "Přizpůsobená vašemu odvětví a typickým situacím." },
       { title: "Práce s cenou a ústupky", desc: "Kotvení, protihodnoty, kontrola cenového prostoru." },
       { title: "Psychologie a taktiky", desc: "Rozpoznání taktik protistrany, práce s tlakem a emocemi." },
-      { title: "Týmové simulace", desc: "Scénáře vycházející z vašeho reálného byznysového prostředí." },
+      { title: "Týmové simulace", desc: "Scénáře vycházející z vašeho reálného prostředí." },
     ],
     format: [
       "2–3 dny dle rozsahu",
@@ -233,13 +233,13 @@ export default function CourseDetail() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-20 md:py-28 lg:py-32 bg-foreground text-primary-foreground">
+      <section className="py-16 md:py-24 lg:py-28 bg-foreground text-primary-foreground">
         <div className="container-wide">
           <AnimatedSection className="max-w-3xl">
             <div className="w-10 h-px bg-brass mb-6" />
-            <h1 className="heading-xl text-primary-foreground mb-6">{course.title}</h1>
-            <p className="body-lg text-primary-foreground/60 mb-8">{course.outcome}</p>
-            <p className="body-md text-primary-foreground/40 mb-8">{course.targetAudience}</p>
+            <h1 className="heading-xl text-primary-foreground mb-5">{course.title}</h1>
+            <p className="body-lg text-primary-foreground/60 mb-6">{course.outcome}</p>
+            <p className="body-md text-primary-foreground/40 mb-6">{course.targetAudience}</p>
             <div className="flex flex-wrap gap-6 text-sm text-primary-foreground/40">
               <span>Délka: <strong className="text-primary-foreground/70">{course.duration}</strong></span>
               <span>Cena: <strong className="text-primary-foreground/70">{course.price}</strong></span>
@@ -249,15 +249,15 @@ export default function CourseDetail() {
       </section>
 
       {/* For whom / Not for */}
-      <section className="py-20 md:py-24">
+      <section className="py-16 md:py-22">
         <div className="container-wide">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
             <AnimatedSection>
               <p className="micro-text text-brass mb-4">Pro koho je trénink</p>
-              <ul className="space-y-4">
+              <ul className="space-y-3.5">
                 {course.forWhom.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <Check size={16} className="text-brass mt-1 shrink-0" />
+                    <Check size={16} className="text-brass mt-0.5 shrink-0" />
                     <span className="body-md text-muted-foreground">{item}</span>
                   </li>
                 ))}
@@ -265,10 +265,10 @@ export default function CourseDetail() {
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
               <p className="micro-text text-muted-foreground mb-4">Pro koho naopak ne</p>
-              <ul className="space-y-4">
+              <ul className="space-y-3.5">
                 {course.notFor.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <X size={16} className="text-muted-foreground/40 mt-1 shrink-0" />
+                    <X size={16} className="text-muted-foreground/40 mt-0.5 shrink-0" />
                     <span className="body-md text-muted-foreground/60">{item}</span>
                   </li>
                 ))}
@@ -279,13 +279,13 @@ export default function CourseDetail() {
       </section>
 
       {/* What changes */}
-      <section className="py-20 md:py-24 bg-secondary/30">
+      <section className="py-16 md:py-22 bg-secondary/30">
         <div className="container-wide">
-          <AnimatedSection className="mb-12">
+          <AnimatedSection className="mb-10">
             <p className="micro-text text-brass mb-4">Po absolvování</p>
             <h2 className="heading-md">Co se změní</h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl">
+          <div className="grid sm:grid-cols-2 gap-5 max-w-4xl">
             {course.whatChanges.map((item, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div className="flex items-start gap-4">
@@ -299,20 +299,20 @@ export default function CourseDetail() {
       </section>
 
       {/* Modules */}
-      <section className="py-20 md:py-24">
+      <section className="py-16 md:py-22">
         <div className="container-wide">
-          <AnimatedSection className="mb-12">
+          <AnimatedSection className="mb-10">
             <p className="micro-text text-brass mb-4">Obsah tréninku</p>
             <h2 className="heading-md">Hlavní moduly</h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 gap-6 max-w-5xl">
+          <div className="grid sm:grid-cols-2 gap-5 max-w-5xl">
             {course.modules.map((m, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="premium-card h-full border-l-2 border-brass/30">
-                  <p className="text-xs font-semibold text-brass tracking-[0.15em] uppercase mb-3">
+                  <p className="text-xs font-semibold text-brass tracking-[0.15em] uppercase mb-2">
                     {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="heading-sm mb-3">{m.title}</h3>
+                  <h3 className="heading-sm mb-2">{m.title}</h3>
                   <p className="body-sm text-muted-foreground">{m.desc}</p>
                 </div>
               </AnimatedSection>
@@ -322,16 +322,16 @@ export default function CourseDetail() {
       </section>
 
       {/* Format & Benefits */}
-      <section className="py-20 md:py-24 bg-foreground text-primary-foreground">
+      <section className="py-16 md:py-22 bg-foreground text-primary-foreground">
         <div className="container-wide">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
             <AnimatedSection>
               <p className="micro-text text-brass mb-4">Forma</p>
-              <h2 className="heading-md text-primary-foreground mb-6">Praktické informace</h2>
-              <ul className="space-y-4">
+              <h2 className="heading-md text-primary-foreground mb-5">Praktické informace</h2>
+              <ul className="space-y-3.5">
                 {course.format.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="w-1 h-1 rounded-full bg-brass mt-2.5 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-brass mt-2 shrink-0" />
                     <span className="body-md text-primary-foreground/60">{item}</span>
                   </li>
                 ))}
@@ -339,11 +339,11 @@ export default function CourseDetail() {
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
               <p className="micro-text text-brass mb-4">Přínosy</p>
-              <h2 className="heading-md text-primary-foreground mb-6">Co získáte</h2>
-              <ul className="space-y-4">
+              <h2 className="heading-md text-primary-foreground mb-5">Co získáte</h2>
+              <ul className="space-y-3.5">
                 {course.benefits.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <Check size={16} className="text-brass mt-1 shrink-0" />
+                    <Check size={16} className="text-brass mt-0.5 shrink-0" />
                     <span className="body-md text-primary-foreground/60">{item}</span>
                   </li>
                 ))}
@@ -354,9 +354,9 @@ export default function CourseDetail() {
       </section>
 
       {/* Trust indicators */}
-      <section className="py-16 md:py-20 border-b border-border/40">
+      <section className="py-12 md:py-16 border-b border-border/40">
         <div className="container-wide">
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 text-center">
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-3 text-center">
             {course.trustIndicators.map((t, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
                 <p className="body-sm text-muted-foreground">{t}</p>
@@ -367,11 +367,11 @@ export default function CourseDetail() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-32 lg:py-36 bg-gradient-to-br from-brass/90 to-brass">
+      <section className="py-20 md:py-28 lg:py-32 bg-gradient-to-br from-brass/90 to-brass">
         <div className="container-narrow text-center">
           <AnimatedSection>
             <p className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-3">{course.price}</p>
-            <p className="body-lg text-foreground/70 mb-10">{course.outcome}</p>
+            <p className="body-lg text-foreground/70 mb-8">{course.outcome}</p>
             <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
               <Link to="/kontakt">{course.ctaText}</Link>
             </Button>

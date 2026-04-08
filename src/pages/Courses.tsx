@@ -65,15 +65,15 @@ const takeaways = [
   "Lepší práci s tlakem a námitkami",
   "Silnější přípravu na cenové i obtížné situace",
   "Schopnost rozpoznat zájmy protistrany",
-  "Techniky, které lze použít hned při dalším jednání",
+  "Techniky použitelné hned při dalším jednání",
 ];
 
 const faqs = [
   { q: "Pro koho jsou tréninky určené?", a: "Pro každého, kdo vyjednává a chce lepší výsledky — obchodníky, nákupčí, manažery, právníky, podnikatele i jednotlivce." },
-  { q: "Proč simulace místo přednášek?", a: "Vyjednávání je dovednost, ne znalost. Buduje se opakovanou praxí pod tlakem. Simulace jsou nejúčinnější cesta k reálnému posunu." },
+  { q: "Proč simulace místo přednášek?", a: "Vyjednávání je dovednost. Buduje se opakovanou praxí pod tlakem. Simulace jsou nejúčinnější cesta k reálnému posunu." },
   { q: "Lze firemní trénink přizpůsobit?", a: "Ano. Obsah, simulace i rozbory přizpůsobuji odvětví, rolím a typickým situacím klienta." },
   { q: "Kolik lidí může být na firemním tréninku?", a: "Optimální skupina je 8–16 účastníků. Simulace vyžadují aktivní zapojení každého." },
-  { q: "Jaký je rozdíl oproti běžným kurzům?", a: "Neučím obecnou komunikaci. Učím vyjednávání jako disciplínu — s jasnou strukturou, důrazem na simulace a měřitelným posunem v dovednostech." },
+  { q: "Jaký je rozdíl oproti běžným kurzům?", a: "Učím vyjednávání jako disciplínu — s jasnou strukturou, důrazem na simulace a měřitelným posunem v dovednostech." },
 ];
 
 export default function Courses() {
@@ -81,32 +81,32 @@ export default function Courses() {
     <Layout>
       {/* Hero */}
       <section className="relative">
-        <img src={trainingImg} alt="Tréninky vyjednávání" className="w-full h-72 md:h-[420px] object-cover" width={1200} height={800} />
+        <img src={trainingImg} alt="Tréninky vyjednávání" className="w-full h-64 md:h-[400px] object-cover" width={1200} height={800} />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/70 to-foreground/40 flex items-end">
-          <div className="container-wide pb-12 md:pb-16">
+          <div className="container-wide pb-10 md:pb-14">
             <AnimatedSection>
               <div className="w-10 h-px bg-brass mb-5" />
               <h1 className="heading-xl text-primary-foreground mb-4">Tréninky vyjednávání</h1>
               <p className="body-lg text-primary-foreground/60 max-w-2xl">
-                Trénink vyjednávání pro ty, kteří chtějí skutečně vyjednávat lépe. Neučím obecnou teorii. Trénink stavím na simulacích, rozborech a postupech, které sám používám při vyjednáváních pro klienty. Po tréninku budete vědět, co děláte, proč to děláte a jak příště dojít k lepšímu výsledku.
+                Neučím obecnou teorii. Trénink stavím na simulacích, rozborech a postupech, které sám používám při vyjednáváních pro klienty.
               </p>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Approach */}
-      <section className="py-16 md:py-20 border-b border-border/40">
+      {/* Approach stats */}
+      <section className="py-14 md:py-18 border-b border-border/40">
         <div className="container-wide">
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {[
               { num: "70 %", label: "praxe a simulací", desc: "Účastníci vyjednávají od prvního dne. Pod tlakem, s omezenými informacemi." },
-              { num: "100 %", label: "použitelnost", desc: "Každá technika je ověřená v reálných jednáních. Použijete ji ihned po kurzu." },
+              { num: "100 %", label: "použitelnost", desc: "Každá technika je ověřená v reálných jednáních. Použijete ji ihned." },
               { num: "15+", label: "let zkušeností", desc: "Trénink vede člověk, který sám vyjednává — ne lektor z učebnice." },
             ].map((s, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <p className="font-serif text-3xl font-semibold text-foreground mb-1">{s.num}</p>
-                <p className="text-xs uppercase tracking-[0.15em] text-brass mb-3">{s.label}</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-brass mb-2">{s.label}</p>
                 <p className="body-sm text-muted-foreground">{s.desc}</p>
               </AnimatedSection>
             ))}
@@ -115,16 +115,16 @@ export default function Courses() {
       </section>
 
       {/* What participants take away */}
-      <section className="py-20 md:py-24 bg-secondary/30">
+      <section className="py-16 md:py-20 bg-secondary/30">
         <div className="container-wide">
-          <AnimatedSection className="mb-10">
-            <p className="micro-text text-brass mb-4">Co si účastníci odnášejí</p>
+          <AnimatedSection className="mb-8">
+            <p className="micro-text text-brass mb-3">Co si účastníci odnášejí</p>
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl">
             {takeaways.map((item, i) => (
               <AnimatedSection key={i} delay={i * 0.06}>
                 <div className="flex items-start gap-3">
-                  <span className="w-1 h-1 rounded-full bg-brass mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-brass mt-1.5 shrink-0" />
                   <p className="body-md text-foreground">{item}</p>
                 </div>
               </AnimatedSection>
@@ -135,20 +135,20 @@ export default function Courses() {
 
       {/* Course groups */}
       {courseGroups.map((group, gi) => (
-        <section key={gi} className={`py-20 md:py-24 ${gi % 2 === 0 ? "" : "bg-secondary/30"}`}>
+        <section key={gi} className={`py-16 md:py-22 ${gi % 2 === 0 ? "" : "bg-secondary/30"}`}>
           <div className="container-wide">
-            <AnimatedSection className="mb-10">
+            <AnimatedSection className="mb-8">
               <p className="micro-text text-brass mb-2">{group.groupLabel}</p>
               <div className="w-10 h-px bg-brass" />
             </AnimatedSection>
-            <div className={`grid ${group.courses.length > 1 ? "sm:grid-cols-2" : ""} gap-6`}>
+            <div className={`grid ${group.courses.length > 1 ? "sm:grid-cols-2" : "max-w-2xl"} gap-5`}>
               {group.courses.map((c, i) => (
                 <AnimatedSection key={i} delay={i * 0.1}>
                   <div className={`premium-card flex flex-col h-full ${c.featured ? "border-brass/30 border-t-2" : ""}`}>
-                    {c.featured && <p className="text-xs font-semibold text-brass tracking-[0.15em] uppercase mb-4">Nejoblíbenější</p>}
-                    <h3 className="heading-sm mb-3">{c.title}</h3>
-                    <p className="body-md text-muted-foreground mb-5">{c.desc}</p>
-                    <div className="space-y-2 mb-6 flex-1">
+                    {c.featured && <p className="text-xs font-semibold text-brass tracking-[0.15em] uppercase mb-3">Nejoblíbenější</p>}
+                    <h3 className="heading-sm mb-2">{c.title}</h3>
+                    <p className="body-md text-muted-foreground mb-4">{c.desc}</p>
+                    <div className="space-y-1.5 mb-5 flex-1">
                       <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Pro koho:</span> {c.audience}</p>
                       <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Délka:</span> {c.duration}</p>
                     </div>
@@ -156,7 +156,7 @@ export default function Courses() {
                       <p className="font-serif text-2xl font-semibold text-foreground">{c.price}</p>
                       <Button variant="premium" size="lg" asChild>
                         <Link to={c.href}>
-                          Detail <ArrowRight size={14} />
+                          Detail <ArrowRight size={14} className="ml-1" />
                         </Link>
                       </Button>
                     </div>
@@ -169,9 +169,9 @@ export default function Courses() {
       ))}
 
       {/* FAQ */}
-      <section className="py-24 md:py-32 lg:py-36 bg-foreground text-primary-foreground">
+      <section className="py-20 md:py-28 lg:py-32 bg-foreground text-primary-foreground">
         <div className="container-narrow">
-          <AnimatedSection className="text-center mb-14">
+          <AnimatedSection className="text-center mb-12">
             <p className="micro-text text-brass mb-4">Otázky</p>
             <h2 className="heading-lg text-primary-foreground">Časté dotazy</h2>
           </AnimatedSection>
@@ -189,11 +189,11 @@ export default function Courses() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-32 lg:py-36 bg-gradient-to-br from-brass/90 to-brass">
+      <section className="py-20 md:py-28 lg:py-32 bg-gradient-to-br from-brass/90 to-brass">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-lg text-foreground mb-4">Řešíte důležité jednání, nebo chcete posunout svůj tým?</h2>
-            <p className="body-lg text-foreground/70 mb-10">Ozvěte se. Navrhnu, zda je pro vás vhodnější zastoupení, strategická příprava, nebo trénink na míru.</p>
+            <h2 className="heading-lg text-foreground mb-4">Chcete posunout svůj tým?</h2>
+            <p className="body-lg text-foreground/70 mb-8">Ozvěte se. Navrhnu formát tréninku, který dává smysl pro vaši situaci.</p>
             <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
               <Link to="/kontakt">Poptat trénink</Link>
             </Button>

@@ -10,27 +10,31 @@ import { ArrowRight } from "lucide-react";
 
 const results = [
   { label: "Prodej podniku", main: "+120 %", context: "Navýšení ceny oproti první nabídce" },
-  { label: "Nákup nemovitosti", main: "\u221240,5 mil. Kč", context: "Úspora při akvizici" },
+  { label: "Nákup nemovitosti", main: "−40,5 mil. Kč", context: "Úspora při akvizici" },
   { label: "Regulace v energetice", main: "14 mld. Kč", context: "Dosažená úspora v regulačním procesu" },
-  { label: "Mzdové vyjednávání", main: "\u22128,5 p.b.", context: "Snížení nákladů oproti požadavku odborů" },
+  { label: "Mzdové vyjednávání", main: "−8,5 p.b.", context: "Snížení nákladů oproti požadavku odborů" },
 ];
 
 const testimonials = [
   {
     quote: "Neuvěřil bych, jak se mi za pouhé 2 dny může změnit představa o tom, co a jak příště při jednání dělat.",
-    author: "Patrik Nový, ředitel akvizičního týmu Komerční banky",
+    author: "Patrik Nový",
+    role: "ředitel akvizičního týmu, Komerční banka",
   },
   {
     quote: "Profesionální zastoupení při prodeji firmy. Výsledná cena překonala naše očekávání o desítky procent.",
-    author: "Majitel, strojírenský podnik",
+    author: "Majitel",
+    role: "strojírenský podnik",
   },
   {
     quote: "Trénink změnil přístup celého obchodního týmu. Simulace, rozbory, okamžitá použitelnost.",
-    author: "Obchodní ředitel, IT firma",
+    author: "Obchodní ředitel",
+    role: "IT firma",
   },
   {
     quote: "Systematický a diskrétní přístup. Přesně to, co naše situace vyžadovala.",
-    author: "CFO, energetická společnost",
+    author: "CFO",
+    role: "energetická společnost",
   },
 ];
 
@@ -50,14 +54,14 @@ export default function Index() {
         <div className="relative w-full container-wide">
           <div className="md:ml-auto md:max-w-[520px] mt-[55vh] md:mt-0 px-6 md:px-0 pb-16 md:pb-0">
             <AnimatedSection>
-              <div className="w-10 h-px bg-brass mb-6" />
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.12] tracking-tight text-primary-foreground mb-6" style={{ fontFamily: "var(--font-serif)" }}>
+              <div className="w-10 h-px bg-brass mb-8" />
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.12] tracking-tight text-primary-foreground mb-5" style={{ fontFamily: "var(--font-serif)" }}>
                 Vyjednávání, ve kterém jde o&nbsp;výsledek, nenechávejte náhodě.
               </h1>
-              <p className="body-md text-primary-foreground/55 mb-10 max-w-md">
+              <p className="body-md text-primary-foreground/55 mb-8 max-w-md leading-relaxed">
                 Zastupuji firmy i jednotlivce v důležitých jednáních, připravuji strategii a učím vyjednávat tak, aby se lepší výsledek nestal výjimkou, ale standardem.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Button variant="premium" size="xl" asChild>
                   <Link to="/kontakt">Popsat situaci</Link>
                 </Button>
@@ -71,9 +75,9 @@ export default function Index() {
       </section>
 
       {/* ═══════ PROOF BLOCK ═══════ */}
-      <section className="py-12 md:py-16 border-b border-border/40">
+      <section className="py-10 md:py-14 border-b border-border/40">
         <div className="container-wide">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               "Praxe od roku 2009.",
               "Důležitá obchodní, strategická i cenová jednání.",
@@ -82,7 +86,7 @@ export default function Index() {
             ].map((text, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div className="flex items-start gap-3">
-                  <span className="w-1 h-1 rounded-full bg-brass mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-brass mt-1.5 shrink-0" />
                   <p className="text-sm text-muted-foreground leading-relaxed">{text}</p>
                 </div>
               </AnimatedSection>
@@ -92,13 +96,13 @@ export default function Index() {
       </section>
 
       {/* ═══════ SIGNPOST — 3 BRANCHES ═══════ */}
-      <section className="py-24 md:py-32 lg:py-36">
+      <section className="py-20 md:py-28 lg:py-32">
         <div className="container-wide">
-          <AnimatedSection className="text-center mb-14 md:mb-20">
+          <AnimatedSection className="text-center mb-12 md:mb-16">
             <p className="micro-text text-brass mb-4">Spolupráce</p>
             <h2 className="heading-lg text-balance">Co řešíte?</h2>
           </AnimatedSection>
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 num: "01",
@@ -125,8 +129,8 @@ export default function Index() {
               <AnimatedSection key={i} delay={i * 0.1}>
                 <Link to={item.href} className="group block h-full">
                   <div className="premium-card flex flex-col h-full border-t-2 border-transparent group-hover:border-brass/40 group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-300">
-                    <p className="text-xs font-semibold text-brass tracking-[0.2em] uppercase mb-5">{item.num}</p>
-                    <h3 className="heading-sm mb-4">{item.title}</h3>
+                    <p className="text-xs font-semibold text-brass tracking-[0.2em] uppercase mb-4">{item.num}</p>
+                    <h3 className="heading-sm mb-3">{item.title}</h3>
                     <p className="body-md text-muted-foreground mb-8 flex-1">{item.desc}</p>
                     <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-foreground group-hover:text-brass transition-colors">
                       {item.cta} <ArrowRight size={14} />
@@ -140,25 +144,25 @@ export default function Index() {
       </section>
 
       {/* ═══════ PROOF / RESULTS ═══════ */}
-      <section className="py-24 md:py-32 lg:py-36 bg-foreground text-primary-foreground">
+      <section className="py-20 md:py-28 lg:py-32 bg-foreground text-primary-foreground">
         <div className="container-wide">
-          <AnimatedSection className="text-center mb-14 md:mb-20">
+          <AnimatedSection className="text-center mb-12 md:mb-16">
             <p className="micro-text text-brass mb-4">Výsledky</p>
             <h2 className="heading-lg text-primary-foreground text-balance">Dobrý výsledek není náhoda.</h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/10 rounded-sm overflow-hidden">
             {results.map((r, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="bg-foreground p-8 md:p-10 text-center h-full flex flex-col justify-center">
-                  <p className="text-xs uppercase tracking-[0.15em] text-brass mb-4">{r.label}</p>
-                  <p className="font-serif text-3xl md:text-4xl font-semibold text-primary-foreground mb-3">{r.main}</p>
+                <div className="bg-foreground p-8 md:p-10 text-center h-full flex flex-col justify-center min-h-[180px]">
+                  <p className="text-xs uppercase tracking-[0.15em] text-brass mb-3">{r.label}</p>
+                  <p className="font-serif text-3xl md:text-4xl font-semibold text-primary-foreground mb-2">{r.main}</p>
                   <p className="text-sm text-primary-foreground/40 leading-relaxed">{r.context}</p>
                 </div>
               </AnimatedSection>
             ))}
           </div>
-          <AnimatedSection className="text-center mt-10">
-            <p className="text-xs text-primary-foreground/30 mb-5">Konkrétní detaily sdílím osobně, podle kontextu zakázky.</p>
+          <AnimatedSection className="text-center mt-8">
+            <p className="text-xs text-primary-foreground/30 mb-4">Konkrétní detaily sdílím osobně, podle kontextu zakázky.</p>
             <Button variant="premium-outline" size="lg" asChild className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
               <Link to="/reference">Reference a výsledky</Link>
             </Button>
@@ -167,18 +171,18 @@ export default function Index() {
       </section>
 
       {/* ═══════ POSITIONING / ABOUT ═══════ */}
-      <section className="py-24 md:py-32 lg:py-36">
+      <section className="py-20 md:py-28 lg:py-32">
         <div className="container-wide">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <AnimatedSection>
               <img src={aboutImg} alt="Ondřej Vojáček" className="w-full max-w-md mx-auto" loading="lazy" width={800} height={1000} />
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
               <div className="w-10 h-px bg-brass mb-6" />
               <p className="micro-text text-brass mb-4">O mně</p>
-              <h2 className="heading-lg mb-6">Proč klienti svěřují důležitá jednání mně</h2>
-              <p className="body-md text-muted-foreground mb-8">
-                Ondřej Vojáček je profesionální vyjednavač, který spojuje tvrdou praxi s hlubokým porozuměním psychologii jednání. Je najímán pro důležitá obchodní vyjednávání, cenová jednání, akvizice i sporné situace. Vedle zastupování klientů vede firemní tréninky a individuální přípravu na míru.
+              <h2 className="heading-lg mb-5">Proč klienti svěřují důležitá jednání mně</h2>
+              <p className="body-md text-muted-foreground mb-6 leading-relaxed">
+                Spojuji tvrdou praxi s porozuměním psychologii jednání. Jsem najímán pro důležitá obchodní vyjednávání, cenová jednání, akvizice i sporné situace. Vedle zastupování klientů vedu firemní tréninky a individuální přípravu na míru.
               </p>
               <p className="font-serif text-lg md:text-xl font-medium text-foreground mb-8 leading-snug italic">
                 „Většina lidí nepřichází o peníze kvůli slabé pozici — ale proto, že šli do jednání bez přípravy."
@@ -192,24 +196,27 @@ export default function Index() {
       </section>
 
       {/* ═══════ TESTIMONIALS ═══════ */}
-      <section className="py-24 md:py-32 lg:py-36 bg-secondary/30">
+      <section className="py-20 md:py-28 lg:py-32 bg-secondary/30">
         <div className="container-wide">
-          <AnimatedSection className="text-center mb-14 md:mb-20">
+          <AnimatedSection className="text-center mb-12 md:mb-16">
             <p className="micro-text text-brass mb-4">Reference</p>
             <h2 className="heading-lg">Zpětná vazba z praxe</h2>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {testimonials.map((t, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div
                   className="h-full rounded-sm border border-foreground/[0.06] p-8 md:p-10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
                   style={{ background: `linear-gradient(135deg, hsl(var(--foreground) / 0.95), hsl(var(--foreground) / 0.88))` }}
                 >
-                  <span className="block font-serif text-4xl text-brass/30 leading-none mb-3 select-none">{"\u201E"}</span>
-                  <p className="font-serif text-lg md:text-xl text-primary-foreground/85 leading-[1.55] mb-6 flex-1">{t.quote}</p>
+                  <span className="block font-serif text-4xl text-brass/30 leading-none mb-3 select-none">„</span>
+                  <p className="font-serif text-lg text-primary-foreground/85 leading-[1.6] mb-6 flex-1">{t.quote}</p>
                   <div className="flex items-center gap-3">
                     <span className="w-8 h-px bg-brass/40" />
-                    <p className="text-sm text-primary-foreground/35">{t.author}</p>
+                    <div>
+                      <p className="text-sm text-primary-foreground/50 font-medium">{t.author}</p>
+                      <p className="text-xs text-primary-foreground/30">{t.role}</p>
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -219,12 +226,12 @@ export default function Index() {
       </section>
 
       {/* ═══════ FINAL CTA ═══════ */}
-      <section className="py-24 md:py-32 lg:py-36 bg-gradient-to-br from-brass/90 to-brass">
+      <section className="py-20 md:py-28 lg:py-32 bg-gradient-to-br from-brass/90 to-brass">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="text-xs uppercase tracking-[0.2em] text-foreground/50 mb-6">Další krok</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-foreground/50 mb-5">Další krok</p>
             <h2 className="heading-lg text-foreground mb-4">Řešíte důležité jednání, nebo chcete posunout svůj tým?</h2>
-            <p className="body-lg text-foreground/70 mb-10 max-w-xl mx-auto">
+            <p className="body-lg text-foreground/70 mb-8 max-w-xl mx-auto">
               Ozvěte se. Navrhnu, zda je pro vás vhodnější zastoupení, strategická příprava, nebo trénink na míru.
             </p>
             <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">

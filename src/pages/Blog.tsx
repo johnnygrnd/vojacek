@@ -9,23 +9,24 @@ export default function Blog() {
 
   return (
     <Layout>
-      <section className="section-padding">
+      <section className="py-16 md:py-24 lg:py-28">
         <div className="container-wide">
-          <AnimatedSection className="max-w-3xl mb-16">
-            <p className="micro-text text-brass mb-6">Články</p>
+          <AnimatedSection className="max-w-3xl mb-14">
+            <div className="w-10 h-px bg-brass mb-6" />
+            <p className="micro-text text-brass mb-4">Články</p>
             <h1 className="heading-xl mb-4">Z praxe vyjednavače</h1>
             <p className="body-lg text-muted-foreground">
               Postřehy, principy a zkušenosti z reálných jednání.
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {articles.map((article, i) => (
               <AnimatedSection key={article.id} delay={i * 0.08}>
-                <Link to={`/clanky/${article.slug}`} className="group block">
+                <Link to={`/clanky/${article.slug}`} className="group block h-full">
                   <div className="premium-card h-full flex flex-col">
-                    <p className="micro-text text-accent mb-4">{article.category}</p>
-                    <h2 className="font-serif text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                    <p className="micro-text text-brass mb-3">{article.category}</p>
+                    <h2 className="font-serif text-xl font-semibold mb-2 group-hover:text-brass transition-colors">
                       {article.title}
                     </h2>
                     <p className="body-sm text-muted-foreground mb-4 flex-1">{article.perex}</p>
@@ -33,7 +34,7 @@ export default function Blog() {
                       <p className="text-xs text-muted-foreground">
                         {new Date(article.publishedAt).toLocaleDateString("cs-CZ")}
                       </p>
-                      <span className="text-xs font-medium text-primary">{"\u010C\u00EDst \u2192"}</span>
+                      <span className="text-xs font-medium text-brass">Číst →</span>
                     </div>
                   </div>
                 </Link>
@@ -48,11 +49,11 @@ export default function Blog() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-secondary/50">
+      <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <h2 className="heading-lg mb-6">Řešíte důležité jednání?</h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <h2 className="heading-lg mb-5">Řešíte důležité jednání?</h2>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="premium" size="xl" asChild>
                 <Link to="/kontakt">Popsat situaci</Link>
               </Button>
