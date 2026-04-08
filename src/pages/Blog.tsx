@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import PageHero from "@/components/sections/PageHero";
+import blogHero from "@/assets/clanky-hero.jpg";
 import { getPublishedArticles } from "@/lib/blog-store";
 
 export default function Blog() {
@@ -12,6 +13,8 @@ export default function Blog() {
     <Layout>
       <PageHero
         variant="editorial"
+        image={blogHero}
+        imageAlt="Články"
         label="Články"
         title="Z praxe vyjednavače"
         description="Postřehy, principy a zkušenosti z reálných jednání."

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import PageHero from "@/components/sections/PageHero";
+import referenceHero from "@/assets/reference-hero.jpg";
 
 const outcomes = [
   { label: "Prodej podniku", main: "+120 %", context: "Navýšení ceny oproti první nabídce" },
@@ -70,6 +71,8 @@ export default function References() {
     <Layout>
       <PageHero
         variant="editorial"
+        image={referenceHero}
+        imageAlt="Reference"
         label="Reference"
         title="Výsledky z praxe"
         description="Vybrané dopady z reálných zakázek. Konkrétní detaily sdílím osobně, podle kontextu."
