@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
+import PageHero from "@/components/sections/PageHero";
 import heroImg from "@/assets/hero-portrait.jpg";
 import { Shield, Target, Zap, ArrowRight } from "lucide-react";
 
@@ -56,32 +57,19 @@ const caseStudies = [
 export default function Negotiation() {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative min-h-[55vh] flex items-center">
-        <div className="absolute inset-0">
-          <img src={heroImg} alt="Vyjednávání" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/50" />
-        </div>
-        <div className="relative container-wide py-16 md:py-20">
-          <AnimatedSection className="max-w-2xl">
-            <div className="w-10 h-px bg-brass mb-6" />
-            <h1 className="heading-xl text-primary-foreground mb-5">
-              Když je jednání příliš důležité na&nbsp;improvizaci.
-            </h1>
-            <p className="body-lg text-primary-foreground/60 mb-8 max-w-lg">
-              Zastupuji klienty v obchodních, cenových a strategických jednáních. Připravuji strategii a vedu jednání tak, aby výsledek odpovídal skutečné síle vaší pozice.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button variant="premium" size="xl" asChild>
-                <Link to="/kontakt">Popsat situaci</Link>
-              </Button>
-              <Button variant="premium-outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
-                <a href="tel:+420731407976">+420 731 407 976</a>
-              </Button>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <PageHero
+        image={heroImg}
+        imageAlt="Vyjednávání"
+        title="Když je jednání příliš důležité na\u00A0improvizaci."
+        description="Zastupuji klienty v obchodních, cenových a strategických jednáních. Připravuji strategii a vedu jednání tak, aby výsledek odpovídal skutečné síle vaší pozice."
+      >
+        <Button variant="premium" size="xl" asChild>
+          <Link to="/kontakt">Popsat situaci</Link>
+        </Button>
+        <Button variant="premium-outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
+          <a href="tel:+420731407976">+420 731 407 976</a>
+        </Button>
+      </PageHero>
 
       {/* 3 Service Modes */}
       <section className="py-20 md:py-28 lg:py-32">
