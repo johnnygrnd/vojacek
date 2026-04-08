@@ -44,28 +44,28 @@ export default function Index() {
   return (
     <Layout>
       {/* ═══════ HERO ═══════ */}
-      <section className="relative bg-foreground min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 md:right-[35%]">
+      <section className="relative bg-foreground min-h-[78vh] flex items-end overflow-hidden">
+        <div className="absolute inset-0 md:right-[38%]">
           <img src={heroImg} alt="Ondřej Vojáček" className="w-full h-full object-cover object-[35%_15%]" width={1920} height={1080} />
         </div>
-        <div className="absolute inset-0 hidden md:block pointer-events-none" style={{ background: `linear-gradient(to right, hsl(var(--foreground) / 0) 0%, hsl(var(--foreground) / 0.15) 30%, hsl(var(--foreground) / 0.6) 50%, hsl(var(--foreground) / 0.92) 65%, hsl(var(--foreground)) 75%)` }} />
-        <div className="absolute inset-0 md:hidden pointer-events-none" style={{ background: `linear-gradient(to bottom, hsl(var(--foreground) / 0) 30%, hsl(var(--foreground) / 0.5) 60%, hsl(var(--foreground)) 85%)` }} />
+        <div className="absolute inset-0 hidden md:block pointer-events-none" style={{ background: `linear-gradient(to right, hsl(var(--foreground) / 0) 0%, hsl(var(--foreground) / 0.12) 28%, hsl(var(--foreground) / 0.55) 48%, hsl(var(--foreground) / 0.9) 62%, hsl(var(--foreground)) 72%)` }} />
+        <div className="absolute inset-0 md:hidden pointer-events-none" style={{ background: `linear-gradient(to bottom, hsl(var(--foreground) / 0) 25%, hsl(var(--foreground) / 0.5) 55%, hsl(var(--foreground)) 80%)` }} />
 
-        <div className="relative w-full container-wide">
-          <div className="md:ml-auto md:max-w-[520px] mt-[55vh] md:mt-0 px-6 md:px-0 pb-16 md:pb-0">
+        <div className="relative w-full container-wide pb-14 md:pb-16 lg:pb-20">
+          <div className="md:ml-auto md:max-w-[480px] mt-[50vh] md:mt-0">
             <AnimatedSection>
-              <div className="w-10 h-px bg-brass mb-8" />
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.12] tracking-tight text-primary-foreground mb-5" style={{ fontFamily: "var(--font-serif)" }}>
+              <div className="w-10 h-px bg-brass mb-6" />
+              <h1 className="text-3xl md:text-[2.5rem] lg:text-[2.75rem] font-semibold leading-[1.12] tracking-tight text-primary-foreground mb-4" style={{ fontFamily: "var(--font-serif)" }}>
                 Vyjednávání, ve kterém jde o&nbsp;výsledek, nenechávejte náhodě.
               </h1>
-              <p className="body-md text-primary-foreground/55 mb-8 max-w-md leading-relaxed">
+              <p className="body-md text-primary-foreground/50 mb-6 max-w-[26rem] leading-relaxed">
                 Zastupuji firmy i jednotlivce v důležitých jednáních, připravuji strategii a učím vyjednávat tak, aby se lepší výsledek nestal výjimkou, ale standardem.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button variant="premium" size="xl" asChild>
+                <Button variant="premium" size="lg" asChild>
                   <Link to="/kontakt">Popsat situaci</Link>
                 </Button>
-                <Button variant="premium-outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
+                <Button variant="premium-outline" size="lg" asChild className="border-primary-foreground/25 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
                   <Link to="/kurzy">Prohlédnout tréninky</Link>
                 </Button>
               </div>
@@ -74,20 +74,20 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ═══════ PROOF BLOCK ═══════ */}
-      <section className="py-10 md:py-14 border-b border-border/40">
+      {/* ═══════ PROOF STRIP ═══════ */}
+      <section className="py-8 md:py-10 border-b border-border/40">
         <div className="container-wide">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
             {[
               "Praxe od roku 2009.",
               "Důležitá obchodní, strategická i cenová jednání.",
               "Tréninky postavené na simulacích a okamžité zpětné vazbě.",
               "Diskrétní přístup pro firmy, management i jednotlivce.",
             ].map((text, i) => (
-              <AnimatedSection key={i} delay={i * 0.08}>
+              <AnimatedSection key={i} delay={i * 0.06}>
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brass mt-1.5 shrink-0" />
-                  <p className="text-sm text-muted-foreground leading-relaxed">{text}</p>
+                  <span className="w-1.5 h-1.5 rounded-full bg-brass mt-[7px] shrink-0" />
+                  <p className="text-[13px] text-muted-foreground leading-[1.6]">{text}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -96,13 +96,13 @@ export default function Index() {
       </section>
 
       {/* ═══════ SIGNPOST — 3 BRANCHES ═══════ */}
-      <section className="py-20 md:py-28 lg:py-32">
+      <section className="py-16 md:py-20 lg:py-24">
         <div className="container-wide">
-          <AnimatedSection className="text-center mb-12 md:mb-16">
-            <p className="micro-text text-brass mb-4">Spolupráce</p>
+          <AnimatedSection className="text-center mb-10 md:mb-12">
+            <p className="micro-text text-brass mb-3">Spolupráce</p>
             <h2 className="heading-lg text-balance">Co řešíte?</h2>
           </AnimatedSection>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-5">
             {[
               {
                 num: "01",
@@ -129,9 +129,9 @@ export default function Index() {
               <AnimatedSection key={i} delay={i * 0.1}>
                 <Link to={item.href} className="group block h-full">
                   <div className="premium-card flex flex-col h-full border-t-2 border-transparent group-hover:border-brass/40 group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-300">
-                    <p className="text-xs font-semibold text-brass tracking-[0.2em] uppercase mb-4">{item.num}</p>
-                    <h3 className="heading-sm mb-3">{item.title}</h3>
-                    <p className="body-md text-muted-foreground mb-8 flex-1">{item.desc}</p>
+                    <p className="text-xs font-semibold text-brass tracking-[0.2em] uppercase mb-3">{item.num}</p>
+                    <h3 className="heading-sm mb-2">{item.title}</h3>
+                    <p className="body-md text-muted-foreground mb-6 flex-1">{item.desc}</p>
                     <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-foreground group-hover:text-brass transition-colors">
                       {item.cta} <ArrowRight size={14} />
                     </span>
@@ -144,26 +144,26 @@ export default function Index() {
       </section>
 
       {/* ═══════ PROOF / RESULTS ═══════ */}
-      <section className="py-20 md:py-28 lg:py-32 bg-foreground text-primary-foreground">
+      <section className="py-16 md:py-20 lg:py-24 bg-foreground text-primary-foreground">
         <div className="container-wide">
-          <AnimatedSection className="text-center mb-12 md:mb-16">
-            <p className="micro-text text-brass mb-4">Výsledky</p>
-            <h2 className="heading-lg text-primary-foreground text-balance">Dobrý výsledek není náhoda.</h2>
+          <AnimatedSection className="text-center mb-10 md:mb-12">
+            <p className="micro-text text-brass mb-3">Výsledky</p>
+            <h2 className="heading-md text-primary-foreground text-balance">Dobrý výsledek není náhoda.</h2>
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/10 rounded-sm overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/8 rounded-sm overflow-hidden">
             {results.map((r, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="bg-foreground p-8 md:p-10 text-center h-full flex flex-col justify-center min-h-[180px]">
-                  <p className="text-xs uppercase tracking-[0.15em] text-brass mb-3">{r.label}</p>
-                  <p className="font-serif text-3xl md:text-4xl font-semibold text-primary-foreground mb-2">{r.main}</p>
-                  <p className="text-sm text-primary-foreground/40 leading-relaxed">{r.context}</p>
+                <div className="bg-foreground p-6 md:p-8 text-center h-full flex flex-col justify-center min-h-[160px]">
+                  <p className="text-[11px] uppercase tracking-[0.15em] text-brass mb-2">{r.label}</p>
+                  <p className="font-serif text-2xl md:text-3xl font-semibold text-primary-foreground mb-1.5">{r.main}</p>
+                  <p className="text-xs text-primary-foreground/35 leading-relaxed">{r.context}</p>
                 </div>
               </AnimatedSection>
             ))}
           </div>
-          <AnimatedSection className="text-center mt-8">
-            <p className="text-xs text-primary-foreground/30 mb-4">Konkrétní detaily sdílím osobně, podle kontextu zakázky.</p>
-            <Button variant="premium-outline" size="lg" asChild className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
+          <AnimatedSection className="text-center mt-6">
+            <p className="text-xs text-primary-foreground/25 mb-3">Konkrétní detaily sdílím osobně, podle kontextu zakázky.</p>
+            <Button variant="premium-outline" size="default" asChild className="border-primary-foreground/15 text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
               <Link to="/reference">Reference a výsledky</Link>
             </Button>
           </AnimatedSection>
@@ -171,23 +171,25 @@ export default function Index() {
       </section>
 
       {/* ═══════ POSITIONING / ABOUT ═══════ */}
-      <section className="py-20 md:py-28 lg:py-32">
+      <section className="py-16 md:py-20 lg:py-24">
         <div className="container-wide">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
             <AnimatedSection>
-              <img src={aboutImg} alt="Ondřej Vojáček" className="w-full max-w-md mx-auto" loading="lazy" width={800} height={1000} />
+              <div className="overflow-hidden rounded-sm">
+                <img src={aboutImg} alt="Ondřej Vojáček" className="w-full max-w-md mx-auto object-cover" loading="lazy" width={800} height={1000} />
+              </div>
             </AnimatedSection>
             <AnimatedSection delay={0.15}>
-              <div className="w-10 h-px bg-brass mb-6" />
-              <p className="micro-text text-brass mb-4">O mně</p>
-              <h2 className="heading-lg mb-5">Proč klienti svěřují důležitá jednání mně</h2>
-              <p className="body-md text-muted-foreground mb-6 leading-relaxed">
+              <div className="w-10 h-px bg-brass mb-5" />
+              <p className="micro-text text-brass mb-3">O mně</p>
+              <h2 className="heading-md mb-4">Proč klienti svěřují důležitá jednání mně</h2>
+              <p className="body-md text-muted-foreground mb-5 leading-relaxed">
                 Spojuji tvrdou praxi s porozuměním psychologii jednání. Jsem najímán pro důležitá obchodní vyjednávání, cenová jednání, akvizice i sporné situace. Vedle zastupování klientů vedu firemní tréninky a individuální přípravu na míru.
               </p>
-              <p className="font-serif text-lg md:text-xl font-medium text-foreground mb-8 leading-snug italic">
+              <p className="font-serif text-lg font-medium text-foreground mb-6 leading-snug italic">
                 „Většina lidí nepřichází o peníze kvůli slabé pozici — ale proto, že šli do jednání bez přípravy."
               </p>
-              <Button variant="premium-outline" size="lg" asChild>
+              <Button variant="premium-outline" size="default" asChild>
                 <Link to="/o-mne">Více o mně</Link>
               </Button>
             </AnimatedSection>
@@ -196,26 +198,26 @@ export default function Index() {
       </section>
 
       {/* ═══════ TESTIMONIALS ═══════ */}
-      <section className="py-20 md:py-28 lg:py-32 bg-secondary/30">
+      <section className="py-16 md:py-20 lg:py-24 bg-secondary/30">
         <div className="container-wide">
-          <AnimatedSection className="text-center mb-12 md:mb-16">
-            <p className="micro-text text-brass mb-4">Reference</p>
-            <h2 className="heading-lg">Zpětná vazba z praxe</h2>
+          <AnimatedSection className="text-center mb-10 md:mb-12">
+            <p className="micro-text text-brass mb-3">Reference</p>
+            <h2 className="heading-md">Zpětná vazba z praxe</h2>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {testimonials.map((t, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
+              <AnimatedSection key={i} delay={i * 0.08}>
                 <div
-                  className="h-full rounded-sm border border-foreground/[0.06] p-8 md:p-10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 flex flex-col"
-                  style={{ background: `linear-gradient(135deg, hsl(var(--foreground) / 0.95), hsl(var(--foreground) / 0.88))` }}
+                  className="h-full rounded-sm border border-primary-foreground/[0.04] p-7 md:p-8 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 flex flex-col"
+                  style={{ background: `linear-gradient(145deg, hsl(var(--foreground) / 0.94), hsl(var(--foreground) / 0.87))` }}
                 >
-                  <span className="block font-serif text-4xl text-brass/30 leading-none mb-3 select-none">„</span>
-                  <p className="font-serif text-lg text-primary-foreground/85 leading-[1.6] mb-6 flex-1">{t.quote}</p>
+                  <span className="block font-serif text-3xl text-brass/25 leading-none mb-2 select-none">„</span>
+                  <p className="font-serif text-[17px] text-primary-foreground/80 leading-[1.6] mb-5 flex-1">{t.quote}</p>
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-px bg-brass/40" />
+                    <span className="w-6 h-px bg-brass/30" />
                     <div>
-                      <p className="text-sm text-primary-foreground/50 font-medium">{t.author}</p>
-                      <p className="text-xs text-primary-foreground/30">{t.role}</p>
+                      <p className="text-sm text-primary-foreground/45 font-medium">{t.author}</p>
+                      <p className="text-xs text-primary-foreground/25">{t.role}</p>
                     </div>
                   </div>
                 </div>
@@ -226,15 +228,15 @@ export default function Index() {
       </section>
 
       {/* ═══════ FINAL CTA ═══════ */}
-      <section className="py-20 md:py-28 lg:py-32 bg-gradient-to-br from-brass/90 to-brass">
+      <section className="py-14 md:py-18 lg:py-20" style={{ background: `linear-gradient(135deg, hsl(var(--brass) / 0.92), hsl(var(--brass)))` }}>
         <div className="container-narrow text-center">
           <AnimatedSection>
-            <p className="text-xs uppercase tracking-[0.2em] text-foreground/50 mb-5">Další krok</p>
-            <h2 className="heading-lg text-foreground mb-4">Řešíte důležité jednání, nebo chcete posunout svůj tým?</h2>
-            <p className="body-lg text-foreground/70 mb-8 max-w-xl mx-auto">
+            <p className="text-[11px] uppercase tracking-[0.2em] text-foreground/40 mb-4">Další krok</p>
+            <h2 className="heading-md text-foreground mb-3">Řešíte důležité jednání, nebo chcete posunout svůj tým?</h2>
+            <p className="body-md text-foreground/60 mb-6 max-w-lg mx-auto">
               Ozvěte se. Navrhnu, zda je pro vás vhodnější zastoupení, strategická příprava, nebo trénink na míru.
             </p>
-            <Button variant="premium" size="xl" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
+            <Button variant="premium" size="lg" asChild className="bg-foreground text-primary-foreground hover:bg-foreground/90">
               <Link to="/kontakt">Napsat zprávu</Link>
             </Button>
           </AnimatedSection>
