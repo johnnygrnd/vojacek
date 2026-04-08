@@ -13,6 +13,7 @@ export default function Blog() {
     <Layout>
       <PageHero
         variant="editorial"
+        intensity="low"
         image={blogHero}
         imageAlt="Články"
         label="Články"
