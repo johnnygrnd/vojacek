@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import PageHero from "@/components/sections/PageHero";
-import contactHero from "@/assets/kontakt-hero.jpg";
+
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", type: "konzultace" });
@@ -24,9 +24,6 @@ export default function Contact() {
       <PageHero
         variant="editorial"
         intensity="low"
-        image={contactHero}
-        imageAlt="Kontakt"
-        imagePosition="center 30%"
         label="Kontakt"
         title="Popište situaci. Navrhnu další krok."
         description="Ať hledáte zastoupení, přípravu na jednání nebo trénink — začneme krátkým rozhovorem. Společně určíme, jaký formát spolupráce dává smysl."
