@@ -50,10 +50,24 @@ export default function PageHero({
     );
   }
 
-  /* ── EDITORIAL HERO ── clean, calm, dark block — no photo, more breathing room */
+  /* ── EDITORIAL HERO ── calmer, content-led hero with optional subtle photo */
   return (
-    <section className="bg-foreground text-primary-foreground">
-      <div className="container-wide py-16 md:py-24 lg:py-28">
+    <section className="relative min-h-[40vh] flex items-end overflow-hidden">
+      {image ? (
+        <div className="absolute inset-0">
+          <img
+            src={image}
+            alt={imageAlt}
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/85 to-foreground/60" />
+        </div>
+      ) : (
+        <div className="absolute inset-0 bg-foreground" />
+      )}
+      <div className="relative w-full container-wide pb-12 md:pb-16 pt-28">
         <AnimatedSection className="max-w-3xl">
           <div className="w-10 h-px bg-brass mb-6" />
           {label && <p className="micro-text text-brass mb-4">{label}</p>}
