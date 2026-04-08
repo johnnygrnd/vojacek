@@ -170,11 +170,11 @@ export default function Negotiation() {
           </AnimatedSection>
           <div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {caseStudies.map((cs, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="premium-card border-t-2 border-brass/30">
+              <AnimatedSection key={i} delay={i * 0.1} className="h-full">
+                <div className="premium-card border-t-2 border-brass/30 h-full flex flex-col">
                   <p className="micro-text text-brass mb-3">{cs.label}</p>
                   <p className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">{cs.result}</p>
-                  <p className="body-md text-muted-foreground">{cs.desc}</p>
+                  <p className="body-md text-muted-foreground mt-auto">{cs.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
