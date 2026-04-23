@@ -113,6 +113,28 @@ export default function Courses() {
         </div>
       </section>
 
+      {/* COMPANY LOGOS — placeholder */}
+      <section className="py-14 md:py-16 bg-secondary/30 border-b border-border/40">
+        <div className="container-wide">
+          <AnimatedSection className="text-center mb-8">
+            <p className="micro-text text-brass mb-2">Školil jsem pro</p>
+            <h3 className="font-serif text-xl md:text-2xl font-medium text-foreground">Vybrané firmy a instituce</h3>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <AnimatedSection key={i} delay={i * 0.04}>
+                <div className="aspect-[3/2] rounded-sm bg-background border border-border/60 flex items-center justify-center text-[11px] uppercase tracking-[0.15em] text-muted-foreground/60">
+                  Logo {i + 1}
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+          <AnimatedSection>
+            <p className="text-xs text-muted-foreground/60 text-center mt-6 italic">Loga firem doplníme — toto je placeholder.</p>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* SIGNPOST — 3 training types */}
       <section className="py-20 md:py-24 lg:py-28">
         <div className="container-wide">
