@@ -4,7 +4,7 @@ import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import heroImg from "@/assets/hero-portrait.jpg";
 import aboutImg from "@/assets/about-portrait.jpg";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Award, Brain, Target } from "lucide-react";
 
 /* ─── DATA ─── */
 
@@ -18,23 +18,23 @@ const results = [
 const testimonials = [
   {
     quote: "Neuvěřil bych, jak se mi za pouhé 2 dny může změnit představa o tom, co a jak příště při jednání dělat.",
-    author: "Patrik Nový",
-    role: "ředitel akvizičního týmu, Komerční banka",
+    author: "[Jméno Příjmení]",
+    role: "[pozice], [název firmy]",
   },
   {
     quote: "Profesionální zastoupení při prodeji firmy. Výsledná cena překonala naše očekávání o desítky procent.",
-    author: "Majitel",
-    role: "strojírenský podnik",
+    author: "[Jméno Příjmení]",
+    role: "[pozice], [název firmy]",
   },
   {
     quote: "Trénink změnil přístup celého obchodního týmu. Simulace, rozbory, okamžitá použitelnost.",
-    author: "Obchodní ředitel",
-    role: "IT firma",
+    author: "[Jméno Příjmení]",
+    role: "[pozice], [název firmy]",
   },
   {
     quote: "Systematický a diskrétní přístup. Přesně to, co naše situace vyžadovala.",
-    author: "CFO",
-    role: "energetická společnost",
+    author: "[Jméno Příjmení]",
+    role: "[pozice], [název firmy]",
   },
 ];
 
@@ -45,20 +45,20 @@ export default function Index() {
     <Layout>
       {/* ═══════ HERO ═══════ */}
       <section className="relative bg-foreground min-h-[78vh] flex items-end overflow-hidden">
-        <div className="absolute inset-0 md:right-[38%]">
+        <div className="absolute inset-0 md:right-[46%]">
           <img src={heroImg} alt="Ondřej Vojáček" className="w-full h-full object-cover object-[35%_15%]" width={1920} height={1080} />
         </div>
-        <div className="absolute inset-0 hidden md:block pointer-events-none" style={{ background: `linear-gradient(to right, hsl(var(--foreground) / 0) 0%, hsl(var(--foreground) / 0.12) 28%, hsl(var(--foreground) / 0.55) 48%, hsl(var(--foreground) / 0.9) 62%, hsl(var(--foreground)) 72%)` }} />
+        <div className="absolute inset-0 hidden md:block pointer-events-none" style={{ background: `linear-gradient(to right, hsl(var(--foreground) / 0) 0%, hsl(var(--foreground) / 0.15) 36%, hsl(var(--foreground) / 0.65) 50%, hsl(var(--foreground) / 0.95) 60%, hsl(var(--foreground)) 70%)` }} />
         <div className="absolute inset-0 md:hidden pointer-events-none" style={{ background: `linear-gradient(to bottom, hsl(var(--foreground) / 0) 25%, hsl(var(--foreground) / 0.5) 55%, hsl(var(--foreground)) 80%)` }} />
 
-        <div className="relative w-full container-wide pb-14 md:pb-16 lg:pb-20">
-          <div className="md:ml-auto md:max-w-[480px] mt-[50vh] md:mt-0">
+        <div className="relative w-full container-wide pb-14 md:pb-20 lg:pb-24">
+          <div className="md:ml-auto md:max-w-[540px] md:pl-4 mt-[50vh] md:mt-0">
             <AnimatedSection>
-              <div className="w-10 h-px bg-brass mb-6" />
-              <h1 className="text-3xl md:text-[2.5rem] lg:text-[2.75rem] font-semibold leading-[1.12] tracking-tight text-primary-foreground mb-4" style={{ fontFamily: "var(--font-serif)" }}>
+              <div className="w-10 h-px bg-brass mb-7" />
+              <h1 className="text-3xl md:text-[2.5rem] lg:text-[2.75rem] font-semibold leading-[1.18] tracking-tight text-primary-foreground mb-6" style={{ fontFamily: "var(--font-serif)" }}>
                 Vyjednávání, ve kterém jde o&nbsp;výsledek, nenechávejte náhodě.
               </h1>
-              <p className="body-md text-primary-foreground/50 mb-6 max-w-[26rem] leading-relaxed">
+              <p className="body-md text-primary-foreground/55 mb-8 max-w-[28rem] leading-[1.75]">
                 Zastupuji firmy i jednotlivce v důležitých jednáních, připravuji strategii a učím vyjednávat tak, aby se lepší výsledek nestal výjimkou, ale standardem.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -74,23 +74,44 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ═══════ PROOF STRIP ═══════ */}
-      <section className="py-8 md:py-10 border-b border-border/40">
+      {/* ═══════ PROČ PRÁVĚ JÁ ═══════ */}
+      <section className="py-14 md:py-18 border-b border-border/40 bg-secondary/30">
         <div className="container-wide">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
+          <AnimatedSection className="mb-10 text-center">
+            <p className="micro-text text-brass mb-3">Proč právě já</p>
+            <h2 className="heading-md text-balance">Tři důvody, proč klienti volí mě</h2>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-10">
             {[
-              "Praxe od roku 2009.",
-              "Důležitá obchodní, strategická i cenová jednání.",
-              "Tréninky postavené na simulacích a okamžité zpětné vazbě.",
-              "Diskrétní přístup pro firmy, management i jednotlivce.",
-            ].map((text, i) => (
-              <AnimatedSection key={i} delay={i * 0.06}>
-                <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brass mt-[7px] shrink-0" />
-                  <p className="text-[13px] text-muted-foreground leading-[1.6]">{text}</p>
-                </div>
-              </AnimatedSection>
-            ))}
+              {
+                icon: Award,
+                title: "15 let praxe od roku 2009",
+                desc: "Reálná jednání s výsledky v řádech miliard i milionů korun. Žádná teorie z učebnice.",
+              },
+              {
+                icon: Brain,
+                title: "Metody Harvardu, FBI a Yale",
+                desc: "Strategie ověřené v nejnáročnějším prostředí — propojené s psychologií ovlivňování.",
+              },
+              {
+                icon: Target,
+                title: "Diskrétní a chladná hlava",
+                desc: "Oddělím emoce od procesu. Vy zůstáváte v roli partnera, tvrdé požadavky vznáším já.",
+              },
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <AnimatedSection key={i} delay={i * 0.08}>
+                  <div className="flex flex-col items-start">
+                    <div className="w-11 h-11 rounded-sm bg-brass/15 flex items-center justify-center mb-4">
+                      <Icon size={20} className="text-brass" strokeWidth={1.75} />
+                    </div>
+                    <h3 className="font-serif text-lg font-medium text-foreground mb-2 leading-snug">{item.title}</h3>
+                    <p className="body-sm text-muted-foreground leading-[1.65]">{item.desc}</p>
+                  </div>
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -120,7 +141,7 @@ export default function Index() {
               },
               {
                 num: "03",
-                title: "Trénink vyjednávání",
+                title: "Trénink ve vyjednávání",
                 desc: "Praktické tréninky pro firmy i jednotlivce. Minimum teorie, maximum simulací, rozborů a technik, které využijete při nejbližším jednání.",
                 cta: "Prohlédnout tréninky",
                 href: "/kurzy",

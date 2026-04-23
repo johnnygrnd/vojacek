@@ -26,33 +26,33 @@ const caseTypes = [
 const testimonials = [
   {
     quote: "Neuvěřil bych, jak se mi za pouhé 2 dny může změnit představa o tom, co a jak příště při jednání dělat.",
-    author: "Patrik Nový",
-    role: "ředitel akvizičního týmu, Komerční banka",
+    author: "[Jméno Příjmení]",
+    role: "[pozice], [název firmy]",
   },
   {
     quote: "Profesionální zastoupení při prodeji firmy. Výsledná cena překonala naše očekávání o desítky procent.",
-    author: "Majitel",
-    role: "strojírenský podnik",
+    author: "[Jméno Příjmení]",
+    role: "[pozice], [název firmy]",
   },
   {
     quote: "Trénink změnil přístup celého obchodního týmu. Simulace, rozbory, okamžitá použitelnost.",
-    author: "Obchodní ředitel",
-    role: "IT firma",
+    author: "[Jméno Příjmení]",
+    role: "[pozice], [název firmy]",
   },
   {
     quote: "Systematický a diskrétní přístup. Přesně to, co naše situace vyžadovala.",
-    author: "CFO",
-    role: "energetická společnost",
+    author: "[Jméno Příjmení]",
+    role: "[pozice], [název firmy]",
   },
   {
     quote: "Trénink na míru pro nákupní tým. Měřitelný posun v dohodách s dodavateli.",
-    author: "Ředitel nákupu",
-    role: "FMCG",
+    author: "[Jméno Příjmení]",
+    role: "[pozice], [název firmy]",
   },
   {
     quote: "Pomohl nám udržet klíčového klienta. Bez emocí, s jasným výsledkem.",
-    author: "Country Manager",
-    role: "technologická firma",
+    author: "[Jméno Příjmení]",
+    role: "[pozice], [název firmy]",
   },
 ];
 
