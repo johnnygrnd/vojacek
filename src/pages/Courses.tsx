@@ -5,77 +5,74 @@ import AnimatedSection from "@/components/sections/AnimatedSection";
 import PageHero from "@/components/sections/PageHero";
 import trainingImg from "@/assets/treninky-hero.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users, Building2, User } from "lucide-react";
 
-const courseGroups = [
+const trainingTypes = [
   {
-    groupLabel: "Otevřené tréninky",
-    courses: [
-      {
-        title: "Veřejný trénink vyjednávání",
-        desc: "Třídenní intenzivní výcvik. Strategie, psychologie, simulace reálných situací. Nejkomplexnější otevřený trénink vyjednávání v ČR.",
-        audience: "Pro jednotlivce i zástupce firem",
-        duration: "3 dny",
-        price: "39 000 Kč",
-        href: "/kurzy/verejny-trenink",
-        featured: true,
-      },
-    ],
+    icon: Users,
+    num: "01",
+    title: "Veřejný trénink vyjednávání",
+    desc: "Třídenní intenzivní trénink, který z vás udělá mistry za jednacím stolem. Komplexní trénink postavený na metodách Harvardu, FBI a Yale University. Strategie, psychologie a simulace reálných situací.",
+    audience: "Pro jednotlivce i zástupce firem",
+    targetId: "verejny-trenink",
   },
   {
-    groupLabel: "Firemní tréninky",
-    courses: [
-      {
-        title: "Firemní trénink vyjednávání",
-        desc: "Trénink na míru pro obchodní, nákupní a manažerské týmy. Simulace vycházejí z vašeho prostředí.",
-        audience: "Pro firemní týmy 8–16 osob",
-        duration: "2–3 dny",
-        price: "od 132 000 Kč",
-        href: "/kurzy/firemni-trenink",
-        featured: false,
-      },
-      {
-        title: "Vyjednávání o cenách",
-        desc: "Dvoudenní trénink zaměřený na cenová vyjednávání, kotvení a kontrolu ústupků.",
-        audience: "Pro nákupčí, obchodníky a management",
-        duration: "2 dny",
-        price: "od 126 000 Kč",
-        href: "/kurzy/vyjednavani-o-cenach",
-        featured: false,
-      },
-    ],
+    icon: Building2,
+    num: "02",
+    title: "Firemní tréninky vyjednávání",
+    desc: "Trénink na míru přímo pro váš tým. Obsah, simulace i strategie jsou přizpůsobeny na míru vašemu oboru, pozici na trhu a situacím, které řešíte. Po tréninku nebudete zbytečně ustupovat a odnesete si víc z každého jednání.",
+    audience: "Pro firemní týmy 5–10 osob",
+    targetId: "firemni-treninky",
   },
   {
-    groupLabel: "Individuální příprava",
-    courses: [
-      {
-        title: "Individuální trénink",
-        desc: "Příprava na konkrétní jednání nebo systematický rozvoj vyjednávací dovednosti. Plně zaměřeno na vaši situaci.",
-        audience: "Pro manažery, jednatele a podnikatele",
-        duration: "Dle potřeby",
-        price: "Cena na dotaz",
-        href: "/kurzy/individualni-trenink",
-        featured: false,
-      },
-    ],
+    icon: User,
+    num: "03",
+    title: "Individuální trénink vyjednávání",
+    desc: "Systematický rozvoj vašich vyjednávacích dovedností nebo příprava na konkrétní jednání. Trénink je plně zaměřen na vaši specifickou situaci. Po tréninku budete usedat k jednacímu stolu s jistotou a jasnou strategií.",
+    audience: "Podnikatelé, manažeři, soukromé osoby",
+    targetId: "individualni-trenink",
   },
 ];
 
-const takeaways = [
-  "Větší jistotu u stolu",
-  "Lepší práci s tlakem a námitkami",
-  "Silnější přípravu na cenové i obtížné situace",
-  "Schopnost rozpoznat zájmy protistrany",
-  "Techniky použitelné hned při dalším jednání",
+const corporateTrainings = [
+  {
+    title: "Strategie a psychologie vyjednávání",
+    desc: "Komplexní trénink, který spojuje tvrdou praxi s metodami vyjednávání dle Harvardu, FBI a psychologií ovlivňování. Vyjednávání není o improvizaci, ale o systému. Naučíte se, jak číst protistranu, odhalit její skutečné zájmy a řídit proces jednání až k dosažení vašich cílů.",
+    href: "/kurzy/firemni-trenink",
+  },
+  {
+    title: "Cenová jednání a obrana proti tlaku",
+    desc: "Trénink zaměřený na ochranu marže a vyjednávání o penězích. Váš tým nechává peníze na stole, protože neumí čelit tlaku na slevy nebo maximalizuje obrat na úkor marží? Trénink je zaměřen na to, jak obstát v napjatém cenovém vyjednávání, jak prosadit svou cenu, a přitom udržet dlouhodobé vztahy se zákazníky a dodavateli.",
+    href: "/kurzy/vyjednavani-o-cenach",
+  },
+  {
+    title: "Strategické a krizové vyjednávání pro management",
+    desc: "Trénink zaměřený na vyjednávání pod tlakem, pokročilejší metody psychologie ovlivňování a deeskalaci konfliktů. Trénink vás provede od základních postupů psychologie ovlivňování po vyjednávání ve vyhrocených situacích. Je postaven na principech Harvardského a FBI vyjednávání a systemického psychoterapeutického výcviku, abyste si udrželi nadhled.",
+    href: "/kurzy/firemni-trenink",
+  },
+];
+
+const learnings = [
+  "Efektivně jednat s obtížnými lidmi",
+  "Čelit tlaku, manipulaci a námitkám",
+  "Dosáhnout lepší ceny jako kupující i prodávající",
+  "Jednat efektivně pod tlakem",
+  "Zbytečně neustupovat a odnést si maximum",
+  "Vyjednávat dle zásad Harvardu, FBI a Yale University",
 ];
 
 const faqs = [
   { q: "Pro koho jsou tréninky určené?", a: "Pro každého, kdo vyjednává a chce lepší výsledky — obchodníky, nákupčí, manažery, právníky, podnikatele i jednotlivce." },
   { q: "Proč simulace místo přednášek?", a: "Vyjednávání je dovednost. Buduje se opakovanou praxí pod tlakem. Simulace jsou nejúčinnější cesta k reálnému posunu." },
   { q: "Lze firemní trénink přizpůsobit?", a: "Ano. Obsah, simulace i rozbory přizpůsobuji odvětví, rolím a typickým situacím klienta." },
-  { q: "Kolik lidí může být na firemním tréninku?", a: "Optimální skupina je 8–16 účastníků. Simulace vyžadují aktivní zapojení každého." },
+  { q: "Kolik lidí může být na firemním tréninku?", a: "Optimální skupina je 5–10 účastníků. Simulace vyžadují aktivní zapojení každého." },
   { q: "Jaký je rozdíl oproti běžným kurzům?", a: "Učím vyjednávání jako disciplínu — s jasnou strukturou, důrazem na simulace a měřitelným posunem v dovednostech." },
 ];
+
+const scrollToId = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 
 export default function Courses() {
   return (
@@ -96,7 +93,15 @@ export default function Courses() {
             {[
               { num: "70 %", label: "praxe a simulací", desc: "Účastníci vyjednávají od prvního dne. Pod tlakem, s omezenými informacemi." },
               { num: "100 %", label: "použitelnost", desc: "Každá technika je ověřená v reálných jednáních. Použijete ji ihned." },
-              { num: "15+", label: "let zkušeností", desc: "Trénink vede člověk, který sám vyjednává — ne lektor z učebnice." },
+              {
+                num: "15+",
+                label: "let zkušeností",
+                desc: (
+                  <>
+                    Trénink vede člověk, který sám <span className="underline decoration-brass decoration-2 underline-offset-4">denně vyjednává</span> — ne lektor z učebnice.
+                  </>
+                ),
+              },
             ].map((s, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <p className="font-serif text-3xl font-semibold text-foreground mb-1">{s.num}</p>
@@ -108,17 +113,54 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* What participants take away */}
+      {/* SIGNPOST — 3 training types */}
+      <section className="py-20 md:py-24 lg:py-28">
+        <div className="container-wide">
+          <AnimatedSection className="text-center mb-12 md:mb-16">
+            <p className="micro-text text-brass mb-3">Tři typy tréninků</p>
+            <h2 className="heading-lg text-balance">Jakou formu vzdělávání hledáte?</h2>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-3 gap-5">
+            {trainingTypes.map((t, i) => {
+              const Icon = t.icon;
+              return (
+                <AnimatedSection key={i} delay={i * 0.1}>
+                  <button
+                    onClick={() => scrollToId(t.targetId)}
+                    className="group block h-full text-left w-full"
+                  >
+                    <div className="premium-card flex flex-col h-full border-t-2 border-brass/30 group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-300">
+                      <Icon size={28} className="text-brass mb-4" strokeWidth={1.5} />
+                      <p className="text-xs font-semibold text-brass tracking-[0.2em] uppercase mb-3">{t.num}</p>
+                      <h3 className="heading-sm mb-3">{t.title}</h3>
+                      <p className="body-md text-muted-foreground mb-5 flex-1">{t.desc}</p>
+                      <div className="border-t border-border/60 pt-4">
+                        <p className="text-xs text-foreground/70 mb-3"><span className="font-semibold">Pro koho:</span> {t.audience}</p>
+                        <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-foreground group-hover:text-brass transition-colors">
+                          Více informací <ArrowRight size={14} />
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                </AnimatedSection>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* What you will learn */}
       <section className="py-16 md:py-20 bg-secondary/30">
         <div className="container-wide">
           <AnimatedSection className="mb-8">
-            <p className="micro-text text-brass mb-3">Co si účastníci odnášejí</p>
+            <p className="micro-text text-brass mb-3">Naučíte se</p>
+            <h2 className="heading-md">Co si z tréninku odnesete</h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl">
-            {takeaways.map((item, i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl">
+            {learnings.map((item, i) => (
               <AnimatedSection key={i} delay={i * 0.06}>
                 <div className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brass mt-1.5 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-brass mt-[10px] shrink-0" />
                   <p className="body-md text-foreground">{item}</p>
                 </div>
               </AnimatedSection>
@@ -127,40 +169,102 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* Course groups */}
-      {courseGroups.map((group, gi) => (
-        <section key={gi} className={`py-16 md:py-22 ${gi % 2 === 0 ? "" : "bg-secondary/30"}`}>
-          <div className="container-wide">
-            <AnimatedSection className="mb-8">
-              <p className="micro-text text-brass mb-2">{group.groupLabel}</p>
-              <div className="w-10 h-px bg-brass" />
+      {/* DETAIL: Veřejný trénink */}
+      <section id="verejny-trenink" className="py-20 md:py-24 scroll-mt-20">
+        <div className="container-wide">
+          <AnimatedSection className="mb-8">
+            <p className="micro-text text-brass mb-2">Otevřený trénink</p>
+            <div className="w-10 h-px bg-brass mb-4" />
+            <h2 className="heading-lg">Veřejný trénink vyjednávání</h2>
+          </AnimatedSection>
+          <div className="max-w-2xl">
+            <AnimatedSection delay={0.1}>
+              <div className="premium-card flex flex-col border-brass/30 border-t-2">
+                <p className="text-xs font-semibold text-brass tracking-[0.15em] uppercase mb-3">Nejoblíbenější</p>
+                <h3 className="heading-sm mb-2">Veřejný trénink vyjednávání</h3>
+                <p className="body-md text-muted-foreground mb-4">
+                  Třídenní intenzivní výcvik. Strategie, psychologie, simulace reálných situací. Nejkomplexnější otevřený trénink vyjednávání v ČR.
+                </p>
+                <div className="space-y-1.5 mb-5 flex-1">
+                  <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Pro koho:</span> Pro jednotlivce i zástupce firem</p>
+                  <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Délka:</span> 3 dny</p>
+                </div>
+                <div className="flex items-end justify-between gap-4">
+                  <p className="font-serif text-2xl font-semibold text-foreground">39 000 Kč</p>
+                  <Button variant="premium" size="lg" asChild>
+                    <Link to="/kurzy/verejny-trenink">
+                      Detail <ArrowRight size={14} className="ml-1" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
             </AnimatedSection>
-            <div className={`grid ${group.courses.length > 1 ? "sm:grid-cols-2" : "max-w-2xl"} gap-5`}>
-              {group.courses.map((c, i) => (
-                <AnimatedSection key={i} delay={i * 0.1}>
-                  <div className={`premium-card flex flex-col h-full ${c.featured ? "border-brass/30 border-t-2" : ""}`}>
-                    {c.featured && <p className="text-xs font-semibold text-brass tracking-[0.15em] uppercase mb-3">Nejoblíbenější</p>}
-                    <h3 className="heading-sm mb-2">{c.title}</h3>
-                    <p className="body-md text-muted-foreground mb-4">{c.desc}</p>
-                    <div className="space-y-1.5 mb-5 flex-1">
-                      <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Pro koho:</span> {c.audience}</p>
-                      <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Délka:</span> {c.duration}</p>
-                    </div>
-                    <div className="flex items-end justify-between gap-4">
-                      <p className="font-serif text-2xl font-semibold text-foreground">{c.price}</p>
-                      <Button variant="premium" size="lg" asChild>
-                        <Link to={c.href}>
-                          Detail <ArrowRight size={14} className="ml-1" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
+
+      {/* DETAIL: Firemní tréninky — 3 boxes */}
+      <section id="firemni-treninky" className="py-20 md:py-24 bg-secondary/30 scroll-mt-20">
+        <div className="container-wide">
+          <AnimatedSection className="mb-10">
+            <p className="micro-text text-brass mb-2">Firemní tréninky</p>
+            <div className="w-10 h-px bg-brass mb-4" />
+            <h2 className="heading-lg mb-3">Tři zaměření firemních tréninků</h2>
+            <p className="body-md text-muted-foreground max-w-2xl">
+              Vyberte si konkrétní téma, které chcete s vaším týmem řešit. Obsah a simulace přizpůsobím vašemu oboru a situaci.
+            </p>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-3 gap-5">
+            {corporateTrainings.map((t, i) => (
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <div className="premium-card flex flex-col h-full bg-card">
+                  <p className="text-xs font-semibold text-brass tracking-[0.2em] uppercase mb-3">Box {i + 1}</p>
+                  <h3 className="heading-sm mb-3">{t.title}</h3>
+                  <p className="body-sm text-muted-foreground mb-5 flex-1">{t.desc}</p>
+                  <Button variant="premium-outline" size="default" asChild className="self-start">
+                    <Link to={t.href}>
+                      Detail kurzu <ArrowRight size={14} className="ml-1" />
+                    </Link>
+                  </Button>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DETAIL: Individuální trénink */}
+      <section id="individualni-trenink" className="py-20 md:py-24 scroll-mt-20">
+        <div className="container-wide">
+          <AnimatedSection className="mb-8">
+            <p className="micro-text text-brass mb-2">Individuální příprava</p>
+            <div className="w-10 h-px bg-brass mb-4" />
+            <h2 className="heading-lg">Individuální trénink vyjednávání</h2>
+          </AnimatedSection>
+          <div className="max-w-2xl">
+            <AnimatedSection delay={0.1}>
+              <div className="premium-card flex flex-col">
+                <h3 className="heading-sm mb-2">Individuální trénink</h3>
+                <p className="body-md text-muted-foreground mb-4">
+                  Příprava na konkrétní jednání nebo systematický rozvoj vyjednávací dovednosti. Plně zaměřeno na vaši situaci.
+                </p>
+                <div className="space-y-1.5 mb-5 flex-1">
+                  <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Pro koho:</span> Pro manažery, jednatele a podnikatele</p>
+                  <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Délka:</span> Dle potřeby</p>
+                </div>
+                <div className="flex items-end justify-between gap-4">
+                  <p className="font-serif text-2xl font-semibold text-foreground">Cena na dotaz</p>
+                  <Button variant="premium" size="lg" asChild>
+                    <Link to="/kurzy/individualni-trenink">
+                      Detail <ArrowRight size={14} className="ml-1" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <section className="py-20 md:py-28 lg:py-32 bg-foreground text-primary-foreground">

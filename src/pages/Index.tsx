@@ -11,8 +11,8 @@ import { ArrowRight } from "lucide-react";
 const results = [
   { label: "Prodej podniku", main: "+120 %", context: "Navýšení ceny oproti první nabídce" },
   { label: "Nákup nemovitosti", main: "−40,5 mil. Kč", context: "Úspora při akvizici" },
-  { label: "Regulace v energetice", main: "14 mld. Kč", context: "Dosažená úspora v regulačním procesu" },
-  { label: "Mzdové vyjednávání", main: "−8,5 p.b.", context: "Snížení nákladů oproti požadavku odborů" },
+  { label: "Regulace v energetice", main: "14 mld. Kč", context: "Úspory dosažené pro českou elektroenergetiku" },
+  { label: "Pronájem průmyslových objektů", main: "−19,5 %", context: "Úprava 10letých pronájmů průmyslových objektů" },
 ];
 
 const testimonials = [
@@ -100,27 +100,27 @@ export default function Index() {
         <div className="container-wide">
           <AnimatedSection className="text-center mb-10 md:mb-12">
             <p className="micro-text text-brass mb-3">Spolupráce</p>
-            <h2 className="heading-lg text-balance">Co řešíte?</h2>
+            <h2 className="heading-lg text-balance">S čím vám mohu pomoci</h2>
           </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-5">
             {[
               {
                 num: "01",
-                title: "Zastoupení ve vyjednávání",
-                desc: "Když je ve hře hodně, vstupuji do jednání za vás nebo po vašem boku. Připravuji strategii, vedu jednání a hlídám, aby výsledek odpovídal tomu, co je skutečně možné vyjednat.",
+                title: "Vyjednám vám to",
+                desc: "Když je ve hře hodně, vstupuji do jednání přímo za vás. Připravuji strategii, vedu jednání a hlídám, aby výsledek odpovídal tomu, co je skutečně možné vyjednat.",
                 cta: "Více o zastoupení",
                 href: "/vyjednavani",
               },
               {
                 num: "02",
-                title: "Příprava na důležité jednání",
-                desc: "Pomohu vám připravit argumentaci, scénáře, ústupky i reakce na tlak protistrany. Do jednání pak jdete s větší jistotou, kontrolou a silnější pozicí.",
+                title: "Zastoupím vás u jednání",
+                desc: "Pomohu vám připravit argumentaci, scénáře, ústupky i reakce na tlak protistrany. Po vašem boku převezmu iniciativu v klíčových momentech jednání.",
                 cta: "Více o přípravě",
                 href: "/vyjednavani",
               },
               {
                 num: "03",
-                title: "Tréninky vyjednávání",
+                title: "Trénink vyjednávání",
                 desc: "Praktické tréninky pro firmy i jednotlivce. Minimum teorie, maximum simulací, rozborů a technik, které využijete při nejbližším jednání.",
                 cta: "Prohlédnout tréninky",
                 href: "/kurzy",
@@ -182,12 +182,12 @@ export default function Index() {
             <AnimatedSection delay={0.15}>
               <div className="w-10 h-px bg-brass mb-5" />
               <p className="micro-text text-brass mb-3">O mně</p>
-              <h2 className="heading-md mb-4">Proč klienti svěřují důležitá jednání mně</h2>
+              <h2 className="heading-md mb-4">Proč klienti svěřují klíčová jednání mně</h2>
               <p className="body-md text-muted-foreground mb-5 leading-relaxed">
-                Spojuji tvrdou praxi s porozuměním psychologii jednání. Jsem najímán pro důležitá obchodní vyjednávání, cenová jednání, akvizice i sporné situace. Vedle zastupování klientů vedu firemní tréninky a individuální přípravu na míru.
+                Spojuji 15 let tvrdé praxe s metodami Harvardu a FBI. Jako profesionální vyjednavač zastupuji klienty od složitých obchodních kontraktů po řešení krizových sporů, kde rozhoduje know-how, strategie a chladná hlava. Pokud nevyjednávám přímo za vás, připravím vás nebo váš tým tak, abyste už nikdy nenechali peníze na stole zbytečně.
               </p>
               <p className="font-serif text-lg font-medium text-foreground mb-6 leading-snug italic">
-                „Většina lidí nepřichází o peníze kvůli slabé pozici — ale proto, že šli do jednání bez přípravy."
+                „Většina lidí nepřichází o peníze kvůli slabé pozici, ale proto, že podcenili přípravu a neznají hru, kterou protistrana hraje."
               </p>
               <Button variant="premium-outline" size="default" asChild>
                 <Link to="/o-mne">Více o mně</Link>

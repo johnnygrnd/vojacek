@@ -30,7 +30,7 @@ export default function Header() {
             <Link
               key={item.href}
               to={item.href}
-              className={`text-[13px] font-medium transition-colors duration-200 ${
+              className={`text-[15px] font-medium transition-colors duration-200 ${
                 location.pathname === item.href || location.pathname.startsWith(item.href + "/")
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"
