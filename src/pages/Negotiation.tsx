@@ -4,32 +4,66 @@ import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/sections/AnimatedSection";
 import PageHero from "@/components/sections/PageHero";
 import heroImg from "@/assets/vyjednavani-hero.jpg";
-import { Shield, Target, Zap, ArrowRight } from "lucide-react";
+import { Shield, Users, Handshake, Briefcase, TrendingDown, AlertTriangle, ArrowRight } from "lucide-react";
 
-const serviceModes = [
+const cooperationModes = [
   {
     icon: Shield,
     num: "01",
-    title: "Vyjednám za vás",
-    subtitle: "Zastoupení ve vyjednávání",
-    desc: "Převezmu jednání s protistranou. Připravím strategii, scénáře a argumentaci. Řídím proces od analýzy po uzavření dohody. Vy se soustředíte na rozhodování.",
-    situations: ["Obchodní smlouvy a kontrakty", "Prodej nebo nákup firmy", "Spory, kde je potřeba výsledek mimo soud", "Jednání s investory, partnery nebo dodavateli"],
+    title: "Zastupování ve vyjednávání",
+    desc: "Převezmu plnou zodpovědnost za proces a vyjednávám přímo za vás. Ideální volba, když potřebujete odclonit emoce, vytvořit taktický odstup od protistrany nebo naplno využít sílu profesionálního vyjednavače.",
   },
   {
-    icon: Target,
+    icon: Users,
     num: "02",
-    title: "Připravím vás na jednání",
-    subtitle: "Strategie a příprava",
-    desc: "Dodám rozbor situace, profil protistrany, scénáře a argumentaci. Natrénujeme klíčové momenty. Jednáte vy — ale s jasným plánem a kontrolou nad průběhem.",
-    situations: ["Důležité jednání, kde nechcete improvizovat", "Cenové vyjednávání s klíčovým partnerem", "Situace, která vyžaduje jasnou strategii", "Opakující se jednání s nedostatečným výsledkem"],
+    title: "Připravím vás na vyjednávání",
+    desc: "Zanalyzujeme vaši situaci, vytvoříme neprůstřelnou strategii (vč. BATNA) a natrénujeme argumentaci. K jednacímu stolu si sice sednete sami, ale s know-how a taktikou, kterou používají profesionálové.",
   },
   {
-    icon: Zap,
+    icon: Handshake,
     num: "03",
-    title: "Pomohu v obtížné situaci",
-    subtitle: "Podpora v náročných jednáních",
-    desc: "Patové situace, eskalace, časový tlak. Vstoupím rychle, stabilizuji situaci a najdu cestu k řešení i tam, kde se zdá být uzavřená.",
-    situations: ["Jednání, které se zaseklo", "Situace pod časovým tlakem", "Konflikt s rizikem eskalace", "Případ, kde běžný postup nefunguje"],
+    title: "Vyjednávám po vašem boku",
+    desc: "Sedím u jednacího stolu s vámi jako podpora a taktický poradce. Kombinujeme vaši perfektní znalost produktu nebo oboru s mou vyjednávací strategií, a v klíčových momentech mohu převzít iniciativu.",
+  },
+];
+
+const serviceTypes = [
+  {
+    icon: Briefcase,
+    title: "Obchodní vyjednávání a kontrakty",
+    desc: "Vedu a strategicky připravuji klíčová obchodní jednání s důrazem na maximální výsledek a nastavení dlouhodobě fungujících vztahů. Od klíčových kontraktů s dodavateli a zákazníky až po prodeje firem a vstup investorů.",
+    situations: [
+      "Vyjednání klíčových smluv s partnery, dodavateli a zákazníky",
+      "Vstup investora, nastavování ceny a dalších podmínek",
+      "Vyjednávání o prodeji nebo nákupu firmy",
+      "Expanze na zahraniční trhy",
+    ],
+    forWhom: "CEO, majitelé firem, obchodní ředitelé, soukromé osoby",
+  },
+  {
+    icon: TrendingDown,
+    title: "Vyjednávání o ceně a ochrana marže",
+    desc: "Když čelíte tlaku na snížení cen od protistrany nebo potřebujete zdražit vlastní služby, vyjednávám tak, abych ochránil vaše zájmy. Připravíme strategii a dosáhneme požadovaného výsledku. Ochráníme přitom i obchodní vztahy. Pomohu vám také dosáhnout lepší ceny při nákupu nebo prodeji nemovitosti.",
+    situations: [
+      "Zaměstnanci a management podléhají tlaku na slevy a přichází o část marže",
+      "Potřeba prosadit vyšší ceny u stálých klientů",
+      "Chcete ušetřit na klíčových kontraktech u svých hlavních dodavatelů",
+      "Když potřebujete lepší cenu při nákupu nebo prodeji nemovitosti",
+    ],
+    forWhom: "Majitelé, obchodní týmy, CEO, CFO, management, soukromé osoby",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Řešení sporů a krizové vyjednávání",
+    desc: "Když komunikace uvízne na mrtvém bodě, hrozí eskalace k soudu nebo nemáte čas věc efektivně řešit. Vstoupím do vyjednávání, zklidním emoce, změním dynamiku sporu a najdu řešení, které ušetří čas i peníze.",
+    situations: [
+      "Spory se zákazníky a dodavateli",
+      "Získání souhlasů a odblokování projektů",
+      "Rozchod společníků ve firmě",
+      "Udržení projektů při ohrožení financování",
+      "Krizová jednání pod extrémním časovým tlakem",
+    ],
+    forWhom: "Firmy i jednotlivci v obtížné obchodní nebo životní situaci, management, právní oddělení",
   },
 ];
 
@@ -50,8 +84,8 @@ const gains = [
 const caseStudies = [
   { label: "Prodej podniku", result: "+120 %", desc: "Navýšení ceny oproti první nabídce díky hodnotové argumentaci a trpělivosti." },
   { label: "Nákup nemovitosti", result: "−40,5 mil. Kč", desc: "Úspora při akvizici na základě cenové analýzy a vyjednávací strategie." },
-  { label: "Mzdové vyjednávání", result: "7,5 % místo 16 %", desc: "Řízené jednání s odbory, kontrola eskalace, zachování vztahů." },
-  { label: "Regulace v energetice", result: "14 mld. Kč", desc: "Dosažená úspora díky přípravě scénářů na evropské regulační úrovni." },
+  { label: "Pronájem průmyslových objektů", result: "−19,5 %", desc: "Úprava 10letých pronájmů průmyslových objektů." },
+  { label: "Regulace v energetice", result: "14 mld. Kč", desc: "Úspory dosažené pro českou elektroenergetiku." },
 ];
 
 export default function Negotiation() {
@@ -73,42 +107,72 @@ export default function Negotiation() {
         </Button>
       </PageHero>
 
-      {/* 3 Service Modes */}
+      {/* 1. Cooperation modes — 3 boxes */}
       <section className="py-20 md:py-28 lg:py-32">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-12 md:mb-16">
             <p className="micro-text text-brass mb-4">Formy spolupráce</p>
-            <h2 className="heading-lg text-balance">Tři způsoby, jak vám mohu pomoci</h2>
+            <h2 className="heading-lg text-balance">Jak vám pomohu</h2>
           </AnimatedSection>
-          <div className="space-y-6">
-            {serviceModes.map((mode, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="premium-card grid md:grid-cols-[1fr_1.2fr] gap-8 md:gap-12 items-start border-l-2 border-brass/40">
-                  <div>
-                    <p className="text-xs font-semibold text-brass tracking-[0.2em] uppercase mb-3">{mode.num} — {mode.subtitle}</p>
-                    <h3 className="heading-md mb-3">{mode.title}</h3>
+          <div className="grid md:grid-cols-3 gap-5">
+            {cooperationModes.map((mode, i) => {
+              const Icon = mode.icon;
+              return (
+                <AnimatedSection key={i} delay={i * 0.1}>
+                  <div className="premium-card flex flex-col h-full border-t-2 border-brass/30">
+                    <Icon size={28} className="text-brass mb-4" strokeWidth={1.5} />
+                    <p className="text-xs font-semibold text-brass tracking-[0.2em] uppercase mb-3">{mode.num}</p>
+                    <h3 className="heading-sm mb-3">{mode.title}</h3>
                     <p className="body-md text-muted-foreground">{mode.desc}</p>
                   </div>
-                  <div>
-                    <p className="micro-text mb-4">Typické situace</p>
-                    <ul className="space-y-3">
-                      {mode.situations.map((s, j) => (
-                        <li key={j} className="flex items-start gap-3">
-                          <span className="w-1.5 h-1.5 rounded-full bg-brass mt-2 shrink-0" />
-                          <span className="body-sm text-muted-foreground">{s}</span>
-                        </li>
-                      ))}
-                    </ul>
+                </AnimatedSection>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Service types — Co pro vás řeším */}
+      <section className="py-20 md:py-28 lg:py-32 bg-secondary/30">
+        <div className="container-wide">
+          <AnimatedSection className="text-center mb-12 md:mb-16">
+            <p className="micro-text text-brass mb-4">Typy služeb</p>
+            <h2 className="heading-lg text-balance">Co pro vás řeším</h2>
+            <p className="body-md text-muted-foreground mt-4 max-w-2xl mx-auto">
+              Tři oblasti, ve kterých klienti nejčastěji potřebují profesionálního vyjednavače.
+            </p>
+          </AnimatedSection>
+          <div className="grid md:grid-cols-3 gap-5">
+            {serviceTypes.map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <AnimatedSection key={i} delay={i * 0.1}>
+                  <div className="premium-card flex flex-col h-full bg-card">
+                    <Icon size={28} className="text-brass mb-4" strokeWidth={1.5} />
+                    <h3 className="heading-sm mb-3">{s.title}</h3>
+                    <p className="body-sm text-muted-foreground mb-5">{s.desc}</p>
+                    <div className="border-t border-border/60 pt-5 mt-auto">
+                      <p className="micro-text mb-3">Typické situace</p>
+                      <ul className="space-y-2.5 mb-5">
+                        {s.situations.map((sit, j) => (
+                          <li key={j} className="flex items-start gap-2.5">
+                            <span className="w-1 h-1 rounded-full bg-brass mt-[9px] shrink-0" />
+                            <span className="body-sm text-muted-foreground">{sit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="text-xs text-foreground/70"><span className="font-semibold">Pro koho:</span> {s.forWhom}</p>
+                    </div>
                   </div>
-                </div>
-              </AnimatedSection>
-            ))}
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Process */}
-      <section className="py-20 md:py-28 lg:py-32 bg-secondary/30">
+      <section className="py-20 md:py-28 lg:py-32">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-12 md:mb-16">
             <p className="micro-text text-brass mb-4">Jak pracuji</p>
@@ -152,7 +216,7 @@ export default function Negotiation() {
       </section>
 
       {/* Case studies */}
-      <section className="py-20 md:py-28 lg:py-32">
+      <section className="py-20 md:py-28 lg:py-32 bg-secondary/30">
         <div className="container-wide">
           <AnimatedSection className="text-center mb-12 md:mb-16">
             <p className="micro-text text-brass mb-4">Z praxe</p>
@@ -178,7 +242,7 @@ export default function Negotiation() {
       </section>
 
       {/* Why me */}
-      <section className="py-20 md:py-28 lg:py-32 bg-secondary/30">
+      <section className="py-20 md:py-28 lg:py-32">
         <div className="container-narrow">
           <AnimatedSection className="text-center mb-12">
             <h2 className="heading-lg text-balance">Proč spolupracovat se mnou</h2>
