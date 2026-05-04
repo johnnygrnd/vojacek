@@ -5,7 +5,13 @@ import AnimatedSection from "@/components/sections/AnimatedSection";
 import PageHero from "@/components/sections/PageHero";
 import trainingImg from "@/assets/treninky-hero.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Users, Building2, User } from "lucide-react";
+import { ArrowRight, Users, Building2, User, Clock, MapPin } from "lucide-react";
+
+const verejneTerminy = [
+  { date: "23. května 2026", location: "Praha", status: "Vyprodáno" },
+  { date: "5. června 2026", location: "Praha", status: "Vyprodáno" },
+  { date: "18. června 2026", location: "Praha", status: "Vyprodáno" },
+];
 
 const trainingTypes = [
   {
