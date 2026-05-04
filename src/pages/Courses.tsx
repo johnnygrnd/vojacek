@@ -205,20 +205,22 @@ export default function Courses() {
             <div className="w-10 h-px bg-brass mb-4" />
             <h2 className="heading-lg">Veřejný trénink vyjednávání</h2>
           </AnimatedSection>
-          <div className="max-w-2xl">
-            <AnimatedSection delay={0.1}>
-              <div className="premium-card flex flex-col border-brass/30 border-t-2">
-                <p className="text-xs font-semibold text-brass tracking-[0.15em] uppercase mb-3">Nejoblíbenější</p>
-                <h3 className="heading-sm mb-2">Veřejný trénink vyjednávání</h3>
-                <p className="body-md text-muted-foreground mb-4">
-                  Třídenní intenzivní výcvik. Strategie, psychologie, simulace reálných situací. Nejkomplexnější otevřený trénink vyjednávání v ČR.
-                </p>
-                <div className="space-y-1.5 mb-5 flex-1">
-                  <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Pro koho:</span> Pro jednotlivce i zástupce firem</p>
-                  <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Délka:</span> 3 dny</p>
+          <AnimatedSection delay={0.1}>
+            <div className="premium-card flex flex-col border-brass/30 border-t-2">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
+                <div className="flex-1">
+                  <p className="text-xs font-semibold text-brass tracking-[0.15em] uppercase mb-3">Nejoblíbenější</p>
+                  <h3 className="heading-sm mb-3">Veřejný trénink vyjednávání</h3>
+                  <p className="body-md text-muted-foreground mb-4 max-w-2xl">
+                    Třídenní intenzivní výcvik. Strategie, psychologie, simulace reálných situací. Nejkomplexnější otevřený trénink vyjednávání v ČR.
+                  </p>
+                  <div className="flex flex-wrap gap-x-8 gap-y-1.5">
+                    <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Pro koho:</span> Pro jednotlivce i zástupce firem</p>
+                    <p className="body-sm text-muted-foreground"><span className="font-medium text-foreground">Délka:</span> 3 dny</p>
+                  </div>
                 </div>
-                <div className="flex items-end justify-between gap-4">
-                  <p className="font-serif text-2xl font-semibold text-foreground">39 000 Kč</p>
+                <div className="flex md:flex-col items-end md:items-end justify-between md:justify-start gap-4 shrink-0">
+                  <p className="font-serif text-2xl font-semibold text-foreground whitespace-nowrap">39{"\u00A0"}000{"\u00A0"}Kč</p>
                   <Button variant="premium" size="lg" asChild>
                     <Link to="/kurzy/verejny-trenink">
                       Detail <ArrowRight size={14} className="ml-1" />
@@ -226,8 +228,34 @@ export default function Courses() {
                   </Button>
                 </div>
               </div>
-            </AnimatedSection>
-          </div>
+
+              <div className="border-t border-border/60 pt-6">
+                <p className="text-xs font-semibold text-brass tracking-[0.2em] uppercase mb-4">Nejbližší termíny</p>
+                <ul className="divide-y divide-border/50">
+                  {verejneTerminy.map((t, i) => (
+                    <li
+                      key={i}
+                      className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-6 py-4"
+                    >
+                      <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
+                        <span className="inline-flex items-center gap-2 text-foreground">
+                          <Clock size={16} className="text-brass shrink-0" strokeWidth={1.75} />
+                          <span className="body-md font-medium">{t.date}</span>
+                        </span>
+                        <span className="inline-flex items-center gap-2 text-muted-foreground">
+                          <MapPin size={16} className="text-brass shrink-0" strokeWidth={1.75} />
+                          <span className="body-md">{t.location}</span>
+                        </span>
+                      </div>
+                      <span className="text-xs font-semibold uppercase tracking-[0.18em] text-destructive/80">
+                        {t.status}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
